@@ -23,5 +23,5 @@ jobs:
           server-dir: ./
           dangerous-clean-slate: true
           exclude: |
-            .git*
-            .github/
+            **/.git*
+            **/.git*/**
