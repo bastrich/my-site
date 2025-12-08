@@ -1,7 +1,7 @@
-name: Deploy to FTP
+name: Deploy
 
 on:
-  workflow_dispatch:   # ← включает ручной запуск
+  workflow_dispatch:
 
 jobs:
   ftp-deploy:
@@ -11,6 +11,43 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v6.1.0
+        with:
+          node-version: '20'
+
+      - name: Install minify/obfuscate tools
+        run: |
+          npm install -g html-minifier-terser clean-css-cli terser javascript-obfuscator
+
+      - name: Prepare dist directory
+        run: |
+          rm -rf dist
+          mkdir dist
+          cp -R img dist
+
+      - name: Minify HTML
+        run: |
+          html-minifier-terser \
+            --collapse-whitespace \
+            --remove-comments \
+            --remove-redundant-attributes \
+            --remove-script-type-attributes \
+            --remove-style-link-type-attributes \
+            --use-short-doctype \
+            --minify-css true \
+            --minify-js true \
+            "index.html" -o "dist/index.html"
+
+      - name: Minify CSS
+        run: |
+          cleancss -o "style.css" "dist/style.css"
+
+      - name: Minify and obfuscate JS
+        run: |
+          terser "index.js" -c -m -o "dist/index.js"
+          javascript-obfuscator "dist/index.js" --output "dist/index.js"
+
       - name: Upload to FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
@@ -19,9 +56,6 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftp
           port: 21
-          local-dir: ./
+          local-dir: ./dist
           server-dir: ./
           dangerous-clean-slate: true
-          exclude: |
-            **/.git*
-            **/.git*/**

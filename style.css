@@ -94,8 +94,6 @@ img {
     }
 }
 
-/* Hero */
-
 .hero {
     display: flex;
     flex-direction: column;
@@ -108,7 +106,7 @@ img {
 @media (min-width: 900px) {
     .hero {
         flex-direction: row;
-        align-items: flex-start; /* выравниваем верхушки */
+        align-items: flex-start;
         gap: 40px;
     }
 }
@@ -243,8 +241,6 @@ section + section {
     /*max-width: 720px;*/
 }
 
-/* What I Do cards */
-
 .card-grid {
     margin-top: 18px;
     display: grid;
@@ -276,8 +272,6 @@ section + section {
     color: var(--text-muted);
     text-align: justify;
 }
-
-/* Projects */
 
 .projects-grid {
     margin-top: 18px;
@@ -410,11 +404,6 @@ section + section {
     }
 }
 
-
-
-
-/* Companies / Clients */
-
 .companies-grid {
     margin-top: 18px;
     display: grid;
@@ -439,7 +428,7 @@ section + section {
     border-radius: var(--radius-lg);
     border: 1px solid var(--border-soft);
     box-shadow: 0 10px 25px rgba(15,23,42,0.02);
-    text-decoration: none; /* убираем подчёркивание у ссылки */
+    text-decoration: none;
 }
 
 .company-logo img {
@@ -451,10 +440,10 @@ section + section {
 
 .company-logo {
     display: flex;
-    align-items: center;      /* центрирует сам логотип */
-    justify-content: center;  /* центрирует сам логотип */
-    width: 100%;              /* важно! */
-    height: 100%;             /* важно! */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
 }
 
 .card-body {
@@ -472,7 +461,7 @@ section + section {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-shrink: 0; /* чтобы иконка не сжималась */
+    flex-shrink: 0;
 }
 
 .card-icon svg {
@@ -487,12 +476,6 @@ section + section {
     color: var(--text-muted);
     text-align: justify;
 }
-
-
-
-
-
-/* Contact Modal */
 
 .contact-modal-backdrop {
     position: fixed;
