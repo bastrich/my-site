@@ -41,7 +41,7 @@ jobs:
 
       - name: Minify CSS
         run: |
-          cleancss -o "style.css" "dist/style.css"
+          cleancss -o "dist/style.css" "style.css"
 
       - name: Minify and obfuscate JS
         run: |
