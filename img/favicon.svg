@@ -1,0 +1,150 @@
+<svg
+   width="512"
+   height="512"
+   viewBox="0 0 512 512"
+   version="1.1"
+   id="svg12"
+   xmlns="http://www.w3.org/2000/svg">
+  <defs
+     id="defs11">
+    <linearGradient
+       id="bgGradient"
+       x1="0"
+       y1="512"
+       x2="512"
+       y2="0"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.1420059,0,0,1.1449241,-35.917808,-36.882676)">
+      <stop
+         offset="0"
+         stop-color="#020617"
+         id="stop1" />
+      <stop
+         offset="0.4"
+         stop-color="#041827"
+         id="stop2" />
+      <stop
+         offset="1"
+         stop-color="#022c3a"
+         id="stop3" />
+    </linearGradient>
+    <radialGradient
+       id="innerGlow"
+       cx="256"
+       cy="176"
+       r="204.00001"
+       fx="256"
+       fy="176"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.1420059,0,0,1.1079636,-35.917808,-30.471004)">
+      <stop
+         offset="0"
+         stop-color="#22d3ee"
+         stop-opacity="0.85"
+         id="stop4" />
+      <stop
+         offset="0.5"
+         stop-color="#0ea5e9"
+         stop-opacity="0.5"
+         id="stop5" />
+      <stop
+         offset="1"
+         stop-color="transparent"
+         id="stop6" />
+    </radialGradient>
+    <linearGradient
+       id="boltGradient"
+       x1="275.06575"
+       y1="103.09902"
+       x2="422.56426"
+       y2="250.59753"
+       gradientTransform="matrix(0.85941383,0,0,1.4722837,-35.917808,-30.471004)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#22c55e"
+         id="stop7" />
+      <stop
+         offset="0.5"
+         stop-color="#22d3ee"
+         id="stop8" />
+      <stop
+         offset="1"
+         stop-color="#38bdf8"
+         id="stop9" />
+    </linearGradient>
+    <linearGradient
+       id="netGradient"
+       x1="0"
+       y1="0"
+       x2="1"
+       y2="0">
+      <stop
+         offset="0"
+         stop-color="#0ea5e9"
+         id="stop10" />
+      <stop
+         offset="1"
+         stop-color="#2dd4bf"
+         id="stop11" />
+    </linearGradient>
+    <filter
+       id="softGlow"
+       x="-0.17142857"
+       y="-0.17142857"
+       width="1.3428571"
+       height="1.3428571">
+      <feGaussianBlur
+         stdDeviation="10"
+         result="blur"
+         id="feGaussianBlur11" />
+      <feColorMatrix
+         in="blur"
+         type="matrix"
+         values="0 0 0 0 0.2                 0 0 0 0 0.9                 0 0 0 0 0.8                 0 0 0 0.7 0"
+         id="feColorMatrix11" />
+    </filter>
+  </defs>
+  <rect
+     x="0.62638289"
+     y="-0.24510619"
+     width="512"
+     height="512"
+     rx="137"
+     ry="137"
+     fill="url(#bgGradient)"
+     id="rect11"
+     style="fill:url(#bgGradient);stroke-width:1.14346" />
+  <ellipse
+     fill="url(#innerGlow)"
+     id="circle11"
+     style="fill:url(#innerGlow);stroke-width:1.12485"
+     ry="188.35381"
+     rx="194.14104"
+     cy="202.20132"
+     cx="256.43573" />
+  <path
+     d="m 256.43574,91.712577 c -86.59093,0 -132.16512,71.940073 -132.16512,131.890163 0,83.93009 68.36127,119.90014 85.4516,215.82025 h 93.42705 c 17.09032,-95.92011 85.45159,-131.89016 85.45159,-215.82025 0,-59.95009 -45.57418,-131.890163 -132.16512,-131.890163 z"
+     fill="none"
+     stroke="#0ea5e9"
+     stroke-width="16.3633"
+     stroke-linecap="round"
+     id="path11" />
+  <path
+     d="m 226.7436,124.64388 h 79.94041 l -39.97021,88.6371 h 57.1003 l -91.36049,121.87598 22.84013,-94.17689 h -51.39028 z"
+     fill="url(#boltGradient)"
+     stroke="#ecfeff"
+     stroke-width="6.74913"
+     stroke-linejoin="round"
+     id="path12"
+     style="fill:url(#boltGradient)" />
+  <circle
+     cx="256"
+     cy="220"
+     r="70"
+     fill="#22d3ee"
+     opacity="0.7"
+     filter="url(#softGlow)"
+     id="circle12"
+     transform="matrix(1.1420061,0,0,1.1079635,-35.917811,-30.471003)" />
+</svg>
