@@ -24,7 +24,9 @@ jobs:
         run: |
           rm -rf dist
           mkdir dist
+          mkdir dist/perfect-code-review
           cp -R img dist
+          cp -R perfect-code-review/img dist/perfect-code-review/img
           cp favicon.ico dist
           cp favicon.svg dist
           cp robots.txt dist
@@ -32,7 +34,8 @@ jobs:
 
       - name: Minify HTML
         run: |
-          html-minifier-terser \
+          for file in "index.html" "perfect-code-review/index.html" "contact.html"; do
+            html-minifier-terser \
             --collapse-whitespace \
             --remove-comments \
             --remove-redundant-attributes \
@@ -41,7 +44,8 @@ jobs:
             --use-short-doctype \
             --minify-css true \
             --minify-js true \
-            "index.html" -o "dist/index.html"
+            "$file" -o "dist/$file"
+          done
 
       - name: Minify CSS
         run: |
@@ -49,8 +53,10 @@ jobs:
 
       - name: Minify and obfuscate JS
         run: |
-          terser "index.js" -c -m -o "dist/index.js"
-          javascript-obfuscator "dist/index.js" --output "dist/index.js"
+          for file in "index.js" "perfect-code-review/image-modal.js" "contact.html"; do
+            terser "$file" -c -m -o "dist/$file"
+            javascript-obfuscator "dist/$file" --output "dist/$file"
+          done
 
       - name: Upload to FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
