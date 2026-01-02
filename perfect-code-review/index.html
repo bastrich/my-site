@@ -12,16 +12,20 @@
     <!-- End Google Tag Manager -->
 
     <title>The PERFECT Code Review: How to Reduce Cognitive Load While Improving Quality – Daniil Bastrich</title>
-    <meta name="description" content="A structured approach to code review that maximizes value without exhausting reviewers. Learn the PERFECT principles for effective code reviews.">
-    <meta name="keywords" content="code review, software engineering, PERFECT principles, development process, code quality">
-    <meta property="og:title" content="PERFECT Code Review Principles – Daniil Bastrich">
-    <meta property="og:description" content="A structured approach to code review that maximizes value without exhausting reviewers.">
-    <meta property="og:image" content="https://bastrich.tech/img/og.png">
+    <meta name="description" content="A clear, practical guide to code review: why it matters, the PERFECT principles, and how to build an effective review process.">
+    <meta name="keywords" content="code review, software engineering, PERFECT principles, development process, code quality, team management">
+    <meta property="og:title" content="The PERFECT Code Review: How to Reduce Cognitive Load While Improving Quality – Daniil Bastrich">
+    <meta property="og:description" content="A clear, practical guide to code review: why it matters, the PERFECT principles, and how to build an effective review process.">
+    <meta property="og:image" content="https://bastrich.tech/perfect-code-review/img/og.png">
     <meta property="og:url" content="https://bastrich.tech/perfect-code-review">
     <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Daniil Bastrich – High-Load Engineering Expert">
     <meta name="twitter:card" content="summary_large_image">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="icon" type="image/x-icon" sizes="any" href="favicon.ico">
+    <meta name="twitter:title" content="The PERFECT Code Review: How to Reduce Cognitive Load While Improving Quality – Daniil Bastrich">
+    <meta name="twitter:description" content="A clear, practical guide to code review: why it matters, the PERFECT principles, and how to build an effective review process.">
+    <meta name="twitter:image" content="https://bastrich.tech/perfect-code-review/img/og.png">
+    <link rel="icon" type="image/svg+xml" href="https://bastrich.tech/favicon.svg">
+    <link rel="icon" type="image/x-icon" sizes="any" href="https://bastrich.tech/favicon.ico">
     <link rel="canonical" href="https://bastrich.tech/perfect-code-review">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../style.css">
@@ -39,9 +43,12 @@
                 <div class="hero-left">
                     <div class="hero-main">
                         <div class="top-bar-inside">
-                            <a href="/" style="text-decoration: none; color: inherit;">← Daniil Bastrich</a>
+                            <a href="https://bastrich.tech" class="back-link">
+                                <span class="back-arrow">←</span>
+                                <span>Daniil Bastrich</span>
+                            </a>
                         </div>
-                        <h1 class="hero-title">
+                        <h1 class="article-title">
                             The PERFECT Code Review: How to Reduce Cognitive Load While Improving Quality
                         </h1>
                         <p class="article-lead">
@@ -90,7 +97,7 @@
                         Ideally, you should analyze the trade-off between the time and effort spent on code review and the business value it provides, preferably using metrics, and decide whether the resulting improvements justify that cost. Each project must find its own acceptable balance. Code review is not a collection of strict yes-or-no practices. It is a spectrum of techniques that can be applied independently of each other.
                     </p>
                     <p style="margin-top: 12px;">
-                        That said, the short answer is almost always yes. Even a lightweight but structured review usually costs little and delivers significant value, which makes it reasonable to use in most projects. However, if code review turns into a "cargo cult", when reviews exist only formally, approvals happen without real discussion, and no actual issues are prevented, then you simply don't need peer-to-peer review in this form. In this situation, even basic self-review is likely to be more useful than a poorly executed peer-to-peer review.
+                        That said, the short answer is almost always <strong>yes</strong>. Even a lightweight but structured review usually costs little and delivers significant value, which makes it reasonable to use in most projects. However, if code review turns into a "cargo cult", when reviews exist only formally, approvals happen without real discussion, and no actual issues are prevented, then you simply don't need peer-to-peer review in this form. In this situation, even basic self-review is likely to be more useful than a poorly executed peer-to-peer review.
                     </p>
                     <p style="margin-top: 12px;">
                         If a code review process exposes communication issues or significantly slows down delivery, teams may be tempted to abandon it altogether. While this can bring short-term relief, the long-term outcome is usually negative. A more effective approach is to address the underlying problems, such as communication gaps or an unstructured review process, rather than removing code review entirely.
@@ -174,10 +181,14 @@
                         Unlike business correctness, performance, or security, design questions tend to be more subjective. For this reason, clear arguments and shared agreements are essential to minimize non-constructive discussions and conflicts during review.
                     </p>
                     <p style="margin-top: 12px;">
-                        There are many well-known principles that can be applied, such as SOLID, KISS, DRY, and others. Some of them remain largely subjective, while others provide more concrete criteria and guidance. However, regardless of the specific principle, most design discussions ultimately come down to managing cohesion and coupling. For this reason, I recommend developing a solid understanding of these concepts and applying the High Cohesion / Low Coupling principle in the context of your project, treating other design principles as examples or specific interpretations of this core idea.
+                        There are many well-known principles that can be applied, such as SOLID, KISS, DRY, and others. Some of them remain largely subjective, while others provide more concrete criteria and guidance. However, regardless of the specific principle, most design discussions ultimately come down to managing cohesion and coupling. For this reason, I recommend developing a solid understanding of these concepts and applying the <strong>High Cohesion / Low Coupling</strong> principle in the context of your project, treating other design principles as examples or specific interpretations of this core idea.
                     </p>
-                    <img src="img/CouplingVsCohesion.svg" alt="Coupling and Cohesion" class="article-image">
-                    <p>Source: https://commons.wikimedia.org/wiki/File:CouplingVsCohesion.svg</p>
+                    <figure class="article-figure">
+                        <img src="img/CouplingVsCohesion.svg" alt="Coupling and Cohesion" class="article-image">
+                        <figcaption class="article-caption">
+                            Source: <a href="https://commons.wikimedia.org/wiki/File:CouplingVsCohesion.svg" target="_blank">Wikimedia Commons</a>
+                        </figcaption>
+                    </figure>
                 </div>
             </section>
 
@@ -239,7 +250,7 @@
 
                 <ol style="margin-top: 20px;">
                     <li>
-                        <h3>Establish written review conventions</h3>
+                        <h3>Establish written review conventions.</h3>
                         <div class="card-body">
                             <p>
                                 These should include the principles described above, their concrete implementation in the context of your project, and any other aspects you want reviewers to pay attention to.
@@ -248,7 +259,7 @@
                     </li>
 
                     <li>
-                        <h3>Keep conventions up to date and actionable</h3>
+                        <h3>Keep conventions up to date and actionable.</h3>
                         <div class="card-body">
                             <p>
                                 All criteria should be usable during review at any moment. Whenever you notice a recurring review pattern (comment → discussion → fix), turn it into a convention.
@@ -256,7 +267,7 @@
                         </div>
                     </li>
                     <li>
-                        <h3>Require self-review before peer review</h3>
+                        <h3>Require self-review before peer review.</h3>
                         <div class="card-body">
                             <p>
                                 Everyone should perform self-review using the same conventions before sending code for review by others. This saves time for all participants and helps reviewers build experience and efficiency over time.
@@ -264,7 +275,7 @@
                         </div>
                     </li>
                     <li>
-                        <h3>Integrate code review into the development process</h3>
+                        <h3>Integrate code review into the development process.</h3>
                         <div class="card-body">
                             <p>
                                 Define clear rules for selecting reviewers, the number of reviewers, how comments are written and resolved, how updates are communicated, approval rules, review status visibility, and review SLAs. There should be a clear answer to common questions around code review, instead of uncertainty, anxiety, and unnecessary stress.
@@ -272,15 +283,10 @@
                         </div>
                     </li>
                     <li>
-                        <h3>Automate everything that can be automated</h3>
-                        <div class="card-body">
-                            <p>
-                                Use linters, formatters, static analyzers, and CI pipelines to catch issues automatically. This frees up reviewer time for more complex, human-judgment-dependent aspects of code review.
-                            </p>
-                        </div>
+                        <h3>Automate everything that can be automated.</h3>
                     </li>
                     <li>
-                        <h3>Stop approving with "LGTM"</h3>
+                        <h3>Stop approving with "LGTM".</h3>
                         <div class="card-body">
                             <p>
                                 "LGTM" (Looks Good To Me) often signals that the reviewer did not fully understand the changes and simply wants to move on. While reviewers are not responsible for the final outcome of approved code, such approvals reduce the value of the review itself.
@@ -288,7 +294,7 @@
                         </div>
                     </li>
                     <li>
-                        <h3>Practice code review whenever possible</h3>
+                        <h3>Practice code review whenever possible.</h3>
                         <div class="card-body">
                             <p>
                                 Code review is a skill that improves through deliberate practice. The more experience reviewers gain, the less effort reviews require and the more effective they become. This can be supported through attention to structure, constructive feedback, short workshops, and other focused practices.
@@ -314,7 +320,7 @@
                 <h2 class="section-title">About the Author</h2>
                 <div class="section-body">
                     <p>
-                        My name is Daniil Bastrich. I am a Software Development Engineer with extensive and diverse experience, including building scalable, distributed, high-load systems and leading technical teams. You can find more information about my work and background at <a href="/" style="color: var(--accent); font-weight: 500;">bastrich.tech</a>.
+                        My name is Daniil Bastrich. I am a Software Development Engineer with extensive and diverse experience, including building scalable, distributed, high-load systems and leading technical teams. You can find more information about my work and background at <a href="https://bastrich.tech" style="color: var(--accent); font-weight: 500;">bastrich.tech</a>.
                     </p>
                 </div>
             </section>
@@ -322,6 +328,17 @@
         </div>
     </main>
 </div>
+
+<!-- Image Modal -->
+<div id="imageModal" class="image-modal-backdrop">
+    <button class="image-modal-close" aria-label="Close"></button>
+    <div class="image-modal-wrapper">
+        <img id="modalImage" src="" alt="" class="image-modal-content">
+        <div id="modalCaption" class="image-modal-caption"></div>
+    </div>
+</div>
+
+<script src="image-modal.js"></script>
 
 </body>
 </html>

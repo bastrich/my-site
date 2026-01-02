@@ -643,7 +643,8 @@ section + section {
     opacity: 1;
 }
 
-/* Article Lead/Summary - вариант 3 */
+
+/* Также отцентрируйте lead для симметрии */
 .article-lead {
     width: 100%;
     max-width: 100%;
@@ -653,6 +654,7 @@ section + section {
     color: #475569;
     font-weight: 500;
     font-style: italic;
+    text-align: center; /* Добавьте эту строку */
 }
 
 @media (max-width: 768px) {
@@ -688,4 +690,289 @@ section + section {
     display: block;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+}
+
+/* Акцентные цветные номера */
+#make-it-work ol {
+    margin-top: 20px;
+    counter-reset: list-counter;
+    list-style: none;
+    padding-left: 0;
+}
+
+#make-it-work ol li {
+    margin-bottom: 20px;
+    counter-increment: list-counter;
+    position: relative;
+    padding-left: 45px;
+}
+
+#make-it-work ol li::before {
+    content: counter(list-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 32px;
+    height: 32px;
+    background: #e0edff; /* светлый синий фон */
+    color: var(--accent); /* синий текст */
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 14px;
+    /* тень убрана */
+}
+
+#make-it-work ol li h3 {
+    margin-top: 0;
+    margin-bottom: 6px;
+    font-size: 15.5px; /* немного меньше */
+    font-weight: 600; /* не такой жирный */
+    color: #1e293b; /* темно-серый вместо синего */
+    line-height: 32px;
+}
+
+#make-it-work ol li .card-body {
+    margin-top: 0;
+}
+
+#make-it-work ol li .card-body p {
+    margin: 0;
+    font-size: 15px;
+}
+
+.article-title {
+    font-size: 32px;
+    line-height: 1.1;
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-align: center; /* Добавьте эту строку */
+}
+
+@media (min-width: 768px) {
+    .article-title {
+        font-size: 32px;
+        margin-top: 24px;
+    }
+}
+
+@media (max-width: 600px) {
+    .article-title {
+        font-size: 28px;
+    }
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-soft);
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--text-main);
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.15s ease-out;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+.back-link:hover {
+    background: var(--accent-soft);
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateX(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.12);
+}
+
+.back-arrow {
+    font-size: 18px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    transition: transform 0.15s ease-out;
+}
+
+.back-link:hover .back-arrow {
+    transform: translateX(-2px);
+}
+
+
+/* Курсор увеличения на всех изображениях статьи */
+.article-image {
+    cursor: zoom-in;
+    transition: opacity 0.2s ease-out;
+}
+
+.article-image:hover {
+    opacity: 0.92;
+}
+
+/* Модальное окно для изображений */
+.image-modal-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(255, 255, 255, 0.98);
+    padding: 20px;
+    cursor: zoom-out; /* На фоне уменьшительная линза */
+    animation: fadeIn 0.2s ease-out;
+}
+
+.image-modal-backdrop.is-open {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.image-modal-content {
+    max-width: 100%;
+    max-height: calc(95vh - 80px);
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 25px 50px rgba(15, 23, 42, 0.15);
+    cursor: zoom-out; /* На картинке тоже уменьшительная линза */
+    animation: zoomIn 0.25s ease-out;
+}
+
+
+
+
+.image-modal-close {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    border: 2px solid var(--border-soft);
+    background: var(--bg-card);
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.2s ease-out;
+    z-index: 10000;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.1);
+}
+
+/* Убираем текст и создаем крестик из линий */
+.image-modal-close::before,
+.image-modal-close::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 2px;
+    background: var(--text-main);
+    transition: background 0.2s ease-out;
+}
+
+.image-modal-close::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.image-modal-close::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.image-modal-close:hover {
+    background: var(--accent-soft);
+    border-color: var(--accent);
+    transform: rotate(90deg);
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.2);
+}
+
+.image-modal-close:hover::before,
+.image-modal-close:hover::after {
+    background: var(--accent);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Стили для figure с подписью */
+.article-figure {
+    margin: 28px auto;
+    text-align: center;
+}
+
+.article-figure .article-image {
+    margin: 0 auto;
+}
+
+.article-caption {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #64748b;
+    font-style: italic;
+    text-align: center;
+}
+
+.article-caption a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.article-caption a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Обновленные стили модального окна */
+.image-modal-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 95%;
+    max-height: 95%;
+    cursor: zoom-out; /* На всей обертке уменьшительная линза */
+}
+
+
+
+.image-modal-caption {
+    display: none;
+    margin-top: 16px;
+    padding: 12px 20px;
+    background: var(--bg-card);
+    border-radius: 8px;
+    font-size: 14px;
+    color: #64748b;
+    font-style: italic;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.1);
+    max-width: 600px;
+    cursor: auto; /* Только на подписи обычный курсор */
+}
+
+.image-modal-caption a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer; /* На ссылках указатель */
+}
+
+.image-modal-caption a:hover {
+    text-decoration: underline;
 }
