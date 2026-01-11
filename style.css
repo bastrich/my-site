@@ -643,18 +643,16 @@ section + section {
     opacity: 1;
 }
 
-
-/* Также отцентрируйте lead для симметрии */
 .article-lead {
     width: 100%;
     max-width: 100%;
-    margin: 16px 0 0 0;
+    margin: 8px 0 0 0;
     font-size: 16px;
     line-height: 1.7;
     color: #475569;
     font-weight: 500;
     font-style: italic;
-    text-align: center; /* Добавьте эту строку */
+    text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -663,7 +661,6 @@ section + section {
     }
 }
 
-/* Principle Summary - with icon */
 .principle-summary {
     display: block;
     margin-bottom: 14px;
@@ -684,7 +681,6 @@ section + section {
     font-weight: 700;
 }
 
-/* Centered image */
 .article-image {
     margin: 28px auto;
     display: block;
@@ -692,7 +688,6 @@ section + section {
     box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
 }
 
-/* Акцентные цветные номера */
 #make-it-work ol {
     margin-top: 20px;
     counter-reset: list-counter;
@@ -714,23 +709,22 @@ section + section {
     top: 0;
     width: 32px;
     height: 32px;
-    background: #e0edff; /* светлый синий фон */
-    color: var(--accent); /* синий текст */
+    background: #e0edff;
+    color: var(--accent);
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 600;
     font-size: 14px;
-    /* тень убрана */
 }
 
 #make-it-work ol li h3 {
     margin-top: 0;
     margin-bottom: 6px;
-    font-size: 15.5px; /* немного меньше */
-    font-weight: 600; /* не такой жирный */
-    color: #1e293b; /* темно-серый вместо синего */
+    font-size: 15.5px;
+    font-weight: 600;
+    color: #1e293b;
     line-height: 32px;
 }
 
@@ -748,7 +742,7 @@ section + section {
     line-height: 1.1;
     font-weight: 700;
     margin-bottom: 12px;
-    text-align: center; /* Добавьте эту строку */
+    text-align: center;
 }
 
 @media (min-width: 768px) {
@@ -761,6 +755,7 @@ section + section {
 @media (max-width: 600px) {
     .article-title {
         font-size: 28px;
+        margin-top: 24px;
     }
 }
 
@@ -800,8 +795,6 @@ section + section {
     transform: translateX(-2px);
 }
 
-
-/* Курсор увеличения на всех изображениях статьи */
 .article-image {
     cursor: zoom-in;
     transition: opacity 0.2s ease-out;
@@ -811,7 +804,6 @@ section + section {
     opacity: 0.92;
 }
 
-/* Модальное окно для изображений */
 .image-modal-backdrop {
     display: none;
     position: fixed;
@@ -819,7 +811,7 @@ section + section {
     z-index: 9999;
     background: rgba(255, 255, 255, 0.98);
     padding: 20px;
-    cursor: zoom-out; /* На фоне уменьшительная линза */
+    cursor: zoom-out;
     animation: fadeIn 0.2s ease-out;
 }
 
@@ -838,12 +830,9 @@ section + section {
     object-fit: contain;
     border-radius: 8px;
     box-shadow: 0 25px 50px rgba(15, 23, 42, 0.15);
-    cursor: zoom-out; /* На картинке тоже уменьшительная линза */
+    cursor: zoom-out;
     animation: zoomIn 0.25s ease-out;
 }
-
-
-
 
 .image-modal-close {
     position: fixed;
@@ -860,7 +849,6 @@ section + section {
     box-shadow: 0 4px 12px rgba(15, 23, 42, 0.1);
 }
 
-/* Убираем текст и создаем крестик из линий */
 .image-modal-close::before,
 .image-modal-close::after {
     content: '';
@@ -909,7 +897,6 @@ section + section {
     }
 }
 
-/* Стили для figure с подписью */
 .article-figure {
     margin: 28px auto;
     text-align: center;
@@ -937,19 +924,14 @@ section + section {
     text-decoration: underline;
 }
 
-
-
-/* Обновленные стили модального окна */
 .image-modal-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 95%;
     max-height: 95%;
-    cursor: zoom-out; /* На всей обертке уменьшительная линза */
+    cursor: zoom-out;
 }
-
-
 
 .image-modal-caption {
     display: none;
@@ -963,16 +945,152 @@ section + section {
     text-align: center;
     box-shadow: 0 4px 12px rgba(15, 23, 42, 0.1);
     max-width: 600px;
-    cursor: auto; /* Только на подписи обычный курсор */
+    cursor: auto;
 }
 
 .image-modal-caption a {
     color: var(--accent);
     text-decoration: none;
     font-weight: 500;
-    cursor: pointer; /* На ссылках указатель */
+    cursor: pointer;
 }
 
 .image-modal-caption a:hover {
     text-decoration: underline;
 }
+
+.article-meta {
+    text-align: center;
+    margin-bottom: 8px;
+    padding-bottom: 6px;
+}
+
+.article-date {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.article-date::before {
+    content: '📅';
+    font-size: 16px;
+}
+
+.discussion-block {
+    margin: 48px 0 auto;
+    padding: 32px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 100%;
+}
+
+.discussion-title {
+    margin: 0 0 12px 0;
+    font-size: 22px;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.discussion-text {
+    margin: 0 0 24px 0;
+    font-size: 15px;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+.discussion-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.discussion-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 24px;
+    background: white;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    color: #475569;
+    transition: all 0.2s ease-out;
+}
+
+.discussion-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.1);
+}
+
+.discussion-link.reddit:hover {
+    border-color: #ff4500;
+    color: #ff4500;
+    background: #fff5f0;
+}
+
+.discussion-link.hackernews:hover {
+    border-color: #ff6600;
+    color: #ff6600;
+    background: #fff8f0;
+}
+
+.discussion-link.lobsters:hover {
+    border-color: #9e2929;
+    color: #9e2929;
+    background: #fef2f2;
+}
+
+.link-icon {
+    font-size: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+}
+
+.link-text {
+    font-size: 15px;
+}
+
+.icon-img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.icon-fallback {
+    font-size: 20px;
+}
+
+@media (min-width: 600px) {
+    .discussion-links {
+        flex-direction: row;
+        max-width: 100%;
+    }
+
+    .discussion-link {
+        flex: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    .discussion-block {
+        padding: 24px 20px;
+    }
+
+    .discussion-title {
+        font-size: 20px;
+    }
+}
+
