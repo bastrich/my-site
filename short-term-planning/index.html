@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-MG7SWW8J');</script>
+    <!-- End Google Tag Manager -->
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "The PERFECT Code Review: How to Reduce Cognitive Load While Improving Quality",
+            "datePublished": "2026-01-03T10:00:00Z",
+            "dateModified": "2026-01-03T10:00:00Z",
+            "author": {
+                "@type": "Person",
+                "name": "Daniil Bastrich"
+            }
+        }
+    </script>
+
+    <title>Fix Your Planning and Stop Missing Deadlines: Why Story Points Win – Daniil Bastrich</title>
+    <meta name="description"
+          content="A clear, practical guide to code review: why it matters, the PERFECT principles, and how to build an effective review process.">
+    <meta name="keywords"
+          content="code review, software engineering, PERFECT principles, development process, code quality, team management">
+    <meta property="og:title"
+          content="The PERFECT Code Review: How to Reduce Cognitive Load While Improving Quality – Daniil Bastrich">
+    <meta property="og:description"
+          content="A clear, practical guide to code review: why it matters, the PERFECT principles, and how to build an effective review process.">
+    <meta property="og:image" content="https://bastrich.tech/perfect-code-review/img/og.png">
+    <meta property="og:url" content="https://bastrich.tech/perfect-code-review/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Daniil Bastrich – High-Load Engineering Expert">
+    <meta property="article:published_time" content="2026-01-03T10:00:00Z">
+    <meta property="article:modified_time" content="2026-01-03T10:00:00Z">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title"
+          content="The PERFECT Code Review: How to Reduce Cognitive Load While Improving Quality – Daniil Bastrich">
+    <meta name="twitter:description"
+          content="A clear, practical guide to code review: why it matters, the PERFECT principles, and how to build an effective review process.">
+    <meta name="twitter:image" content="https://bastrich.tech/perfect-code-review/img/og.png">
+    <meta name="twitter:label1" content="Published on">
+    <meta name="twitter:data1" content="January 3, 2026">
+    <link rel="icon" type="image/svg+xml" href="https://bastrich.tech/favicon.svg">
+    <link rel="icon" type="image/x-icon" sizes="any" href="https://bastrich.tech/favicon.ico">
+    <link rel="canonical" href="https://bastrich.tech/perfect-code-review/">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="../style.css?v=2">
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MG7SWW8J"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="page">
+    <main class="shell">
+        <div class="content">
+            <section class="hero">
+                <div class="hero-left">
+                    <div class="hero-main">
+                        <div class="top-bar-inside">
+                            <a href="https://bastrich.tech" class="back-link">
+                                <span class="back-arrow">←</span>
+                                <span>Daniil Bastrich</span>
+                            </a>
+                        </div>
+                        <h1 class="article-title">
+                            Fix Your Planning and Stop Missing Deadlines: Why Story Points Win
+                        </h1>
+                        <div class="article-meta">
+                            <time class="article-date" datetime="2026-01-03">January 3, 2026</time>
+                        </div>
+                        <p class="article-lead">
+                            A clear, practical guide to code review: why it matters, the PERFECT principles, and how to
+                            build an effective review process.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="intro">
+                <div class="section-body">
+                    <p>
+                        Missed deadlines, awkward excuses, and constant replanning have been haunting your team for
+                        months or even years. You might have already decided that this is just the way software
+                        development works, and there is nothing you can do about it.
+                    </p>
+                    <p style="margin-top: 12px;">
+                        But it doesn’t have to be this way. Predictable delivery is achievable, and team seniority is
+                        often not the deciding factor. If your plans collapse every week, you don’t have an execution
+                        problem - you have an estimation problem.
+                    </p>
+                    <p style="margin-top: 12px;">
+                        In this article, I show how to make the estimation process work for short-term planning: why
+                        overestimation destroys predictability, how to forecast delivery using velocity, when and why
+                        story points tend to outperform time-based estimates, and how to make them actually work.
+                        Whether you are an engineering manager or a developer looking to bring more predictability to
+                        your work, the approaches and recommendations below can help you turn estimation from a guessing
+                        game into one of the most effective tools in your planning process.
+                    </p>
+
+                    <figure class="article-figure">
+                        <img src="img/preview.png" alt="PERFECT Code Review Pyramid" class="article-image">
+                        <figcaption class="article-caption">
+                            PERFECT Code Review Pyramid
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section id="what-is-code-review">
+                <h2 class="section-title">Why Care About Estimates?</h2>
+                <div class="section-body">
+                    <p>
+                        Software projects almost always come with deadlines. Whether it's satisfying user needs, meeting
+                        customer expectations, or hitting a market window - delivering late can render the entire effort
+                        meaningless. The ultimate goal is typically a release on an agreed date, which means we need
+                        predictability for developers and for the business alike. For managers, predictability often
+                        matters even more than speed: it's not about how fast you deliver, but how closely your forecast
+                        matches reality.
+                    </p>
+                    <p style="margin-top: 12px;">
+                        Beyond business goals, estimates heavily dictate technical decisions. When evaluating multiple
+                        options for system architecture and design, the final choice is largely driven by time
+                        constraints, not just project requirements or technical merits. Tight deadlines force us to make
+                        calculated trade-offs and discover faster workarounds. Inaccurate estimates in either direction
+                        are costly: underestimates lead to missed deadlines and needlessly sacrificed quality, while
+                        overestimates can result in overengineering and lost momentum.
+                    </p>
+                    <p style="margin-top: 12px;">
+                        Ultimately, the success or failure of a project hinges on the quality of planning and management
+                        decisions informed by our estimates - whether that means allocating resources, balancing
+                        priorities, planning new hires, or even self-management as a solo developer. When I help teams
+                        improve short-term planning across sprints, the biggest win is rarely “perfect accuracy” - it’s
+                        making estimates consistent enough to support better decisions week after week.
+                    </p>
+                </div>
+            </section>
+
+            <section id="do-you-need">
+                <h2 class="section-title">Is Precision Important?</h2>
+                <div class="section-body">
+                    <p>
+                        When we talk about precision in software estimates, we usually mean two different things:
+                        Accuracy - how closely the estimate matches the actual time spent.
+                        Granularity - the smallest unit you use for estimates (hours, days, story points, etc.).
+                        Here, I’ll focus on accuracy while exploring the minimum unit of measurement further below.
+
+                    </p>
+                    <p style="margin-top: 12px;">
+                        At first glance, it may seem that the best strategy for always having a correct estimate is to
+                        pad it as close to the upper bound as possible. For example, if I know I can implement an API in
+                        1 day, then test and release it in 1 more day, I might add another day as a buffer for the
+                        unexpected - and then multiply the final number by 2–5 depending on the overall project state,
+                        the weather, and my mood.
+                    </p>
+                    <p style="margin-top: 12px;">
+
+                        Is such an estimate correct? In a narrow sense, yes - most of the time the task gets finished on
+                        schedule, developers appear to exceed expectations, and everyone is happy.
+
+                    <p style="margin-top: 12px;">
+                        But does this approach help us make better decisions and achieve the goals of planning and
+                        forecasting? No. While heavily padded estimates might protect a team from missing deadlines,
+                        they are not suitable for analytics and bring little to no actual value. In the long run,
+                        arbitrary estimation leads to distorted data and poor decisions. To illustrate, two completely
+                        different tasks may end up with the same estimate because I happened to use different padding
+                        coefficients, or two similar tasks may have wildly different estimates because yesterday I had a
+                        rough conversation with my manager and today I decided to overestimate everything more than
+                        usual.
+                    </p>
+
+                    <p style="margin-top: 12px;">
+                        If we want estimates to be a practical tool, they must be precise on both sides - neither
+                        underestimating nor overestimating too much. The goal is realistic estimates with the highest
+                        possible accuracy, free of magic coefficients. It makes no sense to inflate an estimate "just in
+                        case" without clear, transparent reasoning behind the specific risks and the exact buffer being
+                        applied.
+                    </p>
+
+                    <p style="margin-top: 12px;">
+                        Furthermore, systematic overestimation often worsens underlying team dysfunctions. From an
+                        engineering perspective, artificially inflated estimates tend to trigger Parkinson’s Law - where
+                        work expands to fill the time available - ultimately masking inefficiencies and reducing overall
+                        team velocity. From a business perspective, stakeholders become dangerously conditioned to
+                        developers consistently "beating" deadlines. Yet when an inevitable issue arises and a deadline
+                        is actually missed, the negative consequences are far more severe than if the team had provided
+                        realistic estimates and occasionally missed the mark - which is something every experienced
+                        manager already accounts for.
+                    </p>
+
+                    <figure class="article-figure">
+                        <img src="img/gaussian.jpg" alt="PERFECT Code Review Pyramid" class="article-image">
+                        <figcaption class="article-caption">
+                            PERFECT Code Review Pyramid
+                        </figcaption>
+                    </figure>
+
+                    <p style="margin-top: 12px;">
+                        A useful benchmark for a mature and healthy estimation process is a Gaussian (bell curve)
+                        distribution of estimation error: sometimes you finish early, sometimes you finish late, but
+                        most of the time you land close to the estimate. That’s what makes estimates actionable for
+                        short-term planning across the next few weeks or sprints.
+                    </p>
+                </div>
+            </section>
+
+            <section id="perfect-principles">
+                <h2 class="section-title">Time vs Man-Hours vs Story Points</h2>
+                <div class="section-body">
+                    <p>
+                        From a business perspective, the only estimate that truly matters is time: When will this be
+                        done? However, things get tricky when pure time becomes an internal estimation tool for specific
+                        tasks. This may be obvious to many, but it's worth spelling out.
+                    </p>
+                    <p style="margin-top: 12px;">
+                        Imagine four independent tasks, each estimated at 40 hours (one week). The team starts working
+                        on all of them on Monday, expecting everything to be finished by Friday. But here’s the catch:
+                        there are only two developers, and each can only focus on one task at a time. By the end of the
+                        week, only two tasks are finished. Pure time estimates completely ignore team capacity and
+                        parallelization constraints. While a two-person startup might mentally juggle this discrepancy,
+                        once the team grows bigger, relying on simple time estimates becomes an administrative
+                        nightmare.
+                    </p>
+                    <p style="margin-top: 12px;">
+                        OK, how about man-hours?<br>
+                        At the most basic level, it's the same time estimate but adjusted for the number of people on
+                        the team. This addresses the parallel-work issue, because planning is done against capacity.
+                        However, once you start tracking reality, another pattern shows up: a team plans 30-40 hours for
+                        the week, but consistently delivers 20-30 hours' worth of completed work (meetings, unplanned
+                        support, context switching, review cycles, blocked tasks, etc.). A sensible manager starts
+                        planning based on observed throughput. For example, if for the last six weeks the team completed
+                        an average of 33 hours of planned work per week, planning 33 for the next week will be more
+                        accurate than planning 40 again and again.
+                    </p>
+                    <p style="margin-top: 12px;">
+                        At this point, those “hours” are no longer literal hours. They’re already becoming a
+                        team-specific abstract measure based on historical delivery, not on a clock.
+                    </p>
+                    <p style="margin-top: 12px;">
+                        Furthermore, software development operates in conditions of high uncertainty. Hidden tech debt,
+                        third-party integrations, and legacy systems can instantly derail a schedule. Experienced
+                        managers notice that effort frequently correlates with risks that are often identifiable at the
+                        time of the initial estimate. Therefore, it makes perfect sense to bake risk into the initial
+                        estimate.
+                    </p>
+                    <p style="margin-top: 12px;">
+                        For example: "I estimate creating this new feature will take 3 days. However, it touches a
+                        legacy system that hasn't been deployed in five years. Last time I worked with a similar system,
+                        it took me 2 extra days just to investigate it and 2 more days to safely deploy it. Therefore, I
+                        am adding a calculated risk buffer of 4 days to the original estimate."
+                    </p>
+                    <p style="margin-top: 12px;">
+                        That’s reasonable planning - but again, it shows how “hours” quickly stop being just time. They
+                        become a mixture of time + historical statistics + risk.
+                    </p>
+                    <p style="margin-top: 12px;">
+                        Finally, man-hour estimates inherently depend on the engineer’s context and seniority. But
+                        during planning, it’s not always clear who will take which ticket. That makes the estimate
+                        unstable and hard to reuse. What if there were an estimation approach that doesn't depend on the
+                        performer? This becomes possible when the estimation units are decoupled from time. Whatever
+                        such an approach looks like (more on that later), sticking to hours guarantees that the estimate
+                        won’t be consistent, because the number of hours inevitably differs from person to person.
+                    </p>
+                    <p style="margin-top: 12px;">
+                        It’s time to face a hard truth: using time-based estimates as internal team estimates is, to a
+                        degree, self-deception. We may call them "hours" or "man-hours," but in reality they aren't
+                        hours at all - and there is no clear, consistent mapping between them and real time, like "1
+                        estimation hour = X real hours."
+                    </p>
+                    <p style="margin-top: 12px;">
+                        This is where Story Points come in. In practice, a team starts with man-hours, then layers in
+                        historical performance, known risks, and the reality that they don’t always know who will pick
+                        up the work. After that, those units are no longer “hours” in any meaningful sense - so we call
+                        them Story Points. The name simply makes the abstraction explicit and easier to manage. Story
+                        Points are a notional unit: a team agreement on which factors influence effort, and how those
+                        factors are reflected in an estimate.
+                    </p>
+                    <figure class="article-figure">
+                        <img src="img/preview.png" alt="PERFECT Code Review Pyramid" class="article-image">
+                        <figcaption class="article-caption">
+                            PERFECT Code Review Pyramid
+                        </figcaption>
+                    </figure>
+
+                    <p style="margin-top: 12px;">
+                        To summarize what Story Points offer compared to pure man-hours:
+                    </p>
+
+                    <ol style="margin-top: 20px;">
+                        <li>
+                            <div class="card-body">
+                                <p>
+                                    Better Analytics and Predictability: Post-factum, Story Points track the actual
+                                    amount of delivered value (velocity)
+                                    rather than answering the ambiguous question of "how many hours of work were
+                                    finished within an arbitrary timeframe."
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="card-body">
+                                <p>
+                                    Structured Risk Incorporation: They allow teams to bake complexity and calculated
+                                    risk into an estimate without arbitrarily inflating "hours" and scaring
+                                    stakeholders.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="card-body">
+                                <p>
+                                    No Artificial Capacity Limits: Unlike man-hours, Story Points don't introduce an
+                                    artificial upper bound on how much work can be completed during a given period.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="card-body">
+                                <p>
+                                    Performer-Independent Estimates: A well-calibrated team can give the same task a
+                                    similar estimate regardless of which engineer picks it up.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="card-body">
+                                <p>
+                                    Higher Achievable Precision: Story Points give teams more levers to fine-tune
+                                    accuracy - by choosing which factors matter, grounding estimates in historical data,
+                                    and calibrating against a consistent scale.
+                                </p>
+                            </div>
+                        </li>
+                    </ol>
+
+                    <p style="margin-top: 12px;">
+                        And that's not all - since Story Points are no longer tightly bound to time, teams are free to
+                        introduce whatever new ways of working with them they need.
+                    </p>
+                </div>
+            </section>
+
+            <section id="make-it-work">
+                <h2 class="section-title">How to Convert Story Points into Actual Time?</h2>
+                <div class="section-body">
+                    <p>
+                        Ultimately, the business speaks the language of time. So, how do you translate abstract story
+                        points into concrete timelines without turning story points into “hidden hours”?
+                    </p>
+                    <p style="margin-top: 12px;">
+                        The most reliable approach is to use recent task completion statistics. Take the last 4–6
+                        development cycles (weeks, sprints, iterations - whatever cadence you use) and calculate a
+                        rolling average of completed story points per cycle.
+                    </p>
+                    <p style="margin-top: 12px;">
+                        Then the conversion is straightforward:
+                        Expected number of cycles = Story points estimate / Average velocity
+                        Time estimate = Expected cycles × Cycle duration
+
+                    </p>
+                    <p style="margin-top: 12px;">
+                        Important: this is not a permanent conversion ratio. Treat it as a dynamic exchange rate that
+                        organically adjusts with each completed cycle as the team, scope, tooling, or constraints
+                        change.
+                    </p>
+                    <p style="margin-top: 12px;">
+                        In practice, you will inevitably encounter tasks that cannot be finished within a single
+                        iteration. For instance, development might finish this week, but the feature only moves to
+                        "Done" after next week’s release. This causes your statistics to look like a rollercoaster of
+                        alternating peaks and valleys.
+                    </p>
+                    <p style="margin-top: 12px;">
+                        Using an even-sized rolling window (e.g., 6 cycles instead of 5) can neutralize this distortion.
+                        Conceptually, your real completion rhythm may be closer to two formal cycles, and an even
+                        rolling window is more likely to capture whole real cycles instead of cutting them in half -
+                        often improving precision. More generally, pick a window size that is a multiple of your real
+                        completion cadence.
+
+                    </p>
+
+
+                    <figure class="article-figure">
+                        <img src="img/preview.png" alt="PERFECT Code Review Pyramid" class="article-image">
+                        <figcaption class="article-caption">
+                            PERFECT Code Review Pyramid
+                        </figcaption>
+                    </figure>
+
+                    <p style="margin-top: 12px;">
+                        While you can certainly use this framework to plan your personal workload, story points truly
+                        shine in a team environment where they neutralize individual estimation biases. For solo work,
+                        you will likely find that direct time-based estimation provides similar precision with far less
+                        overhead.
+                    </p>
+                </div>
+            </section>
+
+            <section id="do-you-need-all">
+                <h2 class="section-title">How to Make Story Points Work?</h2>
+                <div class="section-body">
+                    <p>
+                        So, you’ve decided to adopt Story Points or rethink your previous approach to them. How do you
+                        make them actually work? Based on my experience optimizing engineering teams, here are my top,
+                        battle-tested recommendations to get it right.
+                    </p>
+                </div>
+
+
+                <ol style="margin-top: 20px;">
+                    <li>
+                        <h3>Agree on a scale with clear criteria and examples.</h3>
+                        <div class="card-body">
+                            <p>
+                                A scale creates an explicit agreement on what each estimate represents. Examples act as
+                                a calibration tool, adding a second layer of validation and providing a quick reference.
+                                If the team struggles to estimate a new task, they can simply compare it to past work
+                                (“This feels more like Task X, or roughly two tasks similar to Task Y”). This alone
+                                often makes estimation smoother and significantly faster.
+
+                                Such a scale may look like this:
+                            </p>
+                            <table>
+                                <thead>
+                                <tr>
+                                    <th>Story Points</th>
+                                    <th>Criteria</th>
+                                    <th>Examples</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Minimal change in a single component: config tweak, renaming/adding a couple of
+                                        variables.
+                                    </td>
+                                    <td>Task XX-123<br>Task YY-456</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Small change in a single component: a few conditions/loops/queries, a trivial
+                                        API endpoint.
+                                    </td>
+                                    <td>Task XX-111<br>Task YY-222</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Several small changes across one or more components, or one significant change.
+                                        External integration, research, creating tech design documentation.
+                                    </td>
+                                    <td>Task XX-333<br>Task YY-444</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Many complex changes across multiple components. Changing the architecture of a
+                                        component or conducting difficult research.
+                                    </td>
+                                    <td>Task XX-555<br>Task YY-666<br>Task XX-777</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>Architecture changes across several components. Highly complex research.</td>
+                                    <td>Task XX-888<br>Task YY-999</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>Limit the scale and use exponential spacing.</h3>
+                        <div class="card-body">
+                            <p>
+                                The higher an estimate climbs, the greater the complexity and uncertainty—meaning
+                                precision inevitably drops. Most teams can’t reliably explain the difference between 55
+                                and 89, but they can explain the difference between 5 and 8. To maintain clarity, limit
+                                your scale to the first 6-7 values of a Fibonacci-like sequence (e.g., 1, 2, 3, 5, 8,
+                                13), where the gaps widen as the numbers grow. Too many values create false precision;
+                                too few don’t cover your workload.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>Factor in risk explicitly and systematically (don’t hide it inside “gut feel”).</h3>
+                        <div class="card-body">
+                            <p>
+                                It’s impossible to predict everything, but you can usually assess the risk level early.
+                                Instead of adding arbitrary buffers, I recommend shifting the original estimate up the
+                                scale based on risk: by assessing it as Low, Moderate, or High, you can move the
+                                original estimate up by 0, 1, or 2 steps accordingly.
+                                Define what these levels mean in your team's specific context. For example:
+                                Low: No apparent risks. The scope is crystal clear, and no external blockers can stall
+                                the task.
+                                Moderate: Manageable external factors (dependency on another team, unclear integration
+                                docs) or local uncertainty (new library, legacy area).
+                                High: Major factors outside the team's control (unstable external API, highly coupled
+                                monolith with constant changes), or the approach is totally unclear.
+                                This risk-adjusted estimation creates a matrix like the one below, where each column
+                                shows how the original estimate changes depending on the risk level:
+
+                            </p>
+                            <table>
+                                <thead>
+                                <tr>
+                                    <th>Risk / Original Story Points</th>
+                                    <th>1</th>
+                                    <th>2</th>
+                                    <th>3</th>
+                                    <th>5</th>
+                                    <th>8</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Low</td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>5</td>
+                                    <td>8</td>
+                                </tr>
+                                <tr>
+                                    <td>Moderate</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>5</td>
+                                    <td>8</td>
+                                    <td>13</td>
+                                </tr>
+                                <tr>
+                                    <td>High</td>
+                                    <td>3</td>
+                                    <td>5</td>
+                                    <td>8</td>
+                                    <td>13</td>
+                                    <td>21</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>Avoid unjustified and uncertain estimation factors.</h3>
+                        <div class="card-body">
+                            <p>
+                                Eliminate “magic coefficients” and “because it feels like it.” Require a reason:
+                                complexity, scope, dependencies, risks, etc. This not only makes estimates more accurate
+                                but also fosters a better shared understanding of the task across the whole team.
+                                If you use Planning Poker and the votes differ, don’t average them - averaging hides
+                                uncertainty. Instead, ask participants to justify their numbers and re-vote until the
+                                team converges. This practice drives deep technical alignment before a single line of
+                                code is written.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>Prevent estimate drift (inflation or deflation over time).</h3>
+                        <div class="card-body">
+                            <p>
+                                If a very similar task is estimated differently later, that difference should be
+                                explained by changed inputs: risk, scope, system state, team composition, tooling, or
+                                constraints. When in doubt, compare with historical examples from your scale.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>Don’t map Story Points directly to time (e.g., “1 SP = 1 day”).</h3>
+                        <div class="card-body">
+                            <p>
+                                That destroys most of the benefits of Story Points while still confusing the team. If
+                                you want time estimates, use time estimates. Story Points are useful precisely because
+                                they encapsulate more factors than just a fragile calendar promise.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>Estimate based on team capacity, not individual seniority.</h3>
+                        <div class="card-body">
+                            <p>
+                                Estimation should bring each developer's knowledge and experience to a common baseline
+                                and synchronize the team's understanding of a task, minimizing the influence of
+                                individual seniority and reducing the bus factor.
+                                A good approach is to estimate as if the work will be done by an “average team
+                                developer,” so the number stays stable over time. If the team has many inexperienced
+                                developers, treat that as a risk input. Ultimately, you want a stable, objective
+                                baseline - regardless of who picks up the ticket.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>Track team performance statistics and use it for planning. </h3>
+                        <div class="card-body">
+                            <p>
+                                Track how many Story Points the team completes per development cycle to forecast future
+                                capacity and monitor overall performance. Do not use Story Points as an individual
+                                performance metric. Like many isolated metrics, individual velocity is prone to false
+                                negatives: a high number usually indicates a strong performer, but a low number doesn’t
+                                automatically mean poor performance - they might be mentoring, doing complex code
+                                reviews, or other work-related activities without story-pointed tickets.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>Estimate the whole lifecycle of a task.</h3>
+                        <div class="card-body">
+                            <p>
+                                Planning based only on “dev work” is a common reason commitments fail. Estimates must
+                                account for testing, release, and any other activities beyond writing code.
+                                Alternatively, you can spin these activities into separate, explicitly estimated tasks.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>Allow re-estimation.</h3>
+                        <div class="card-body">
+                            <p>
+                                Allowing developers to adjust an estimate upon task completion provides highly accurate
+                                historical data for future planning. Occasional re-estimation acts as a great
+                                calibration tool. However, if estimates are constantly being revised, it’s an indicator
+                                that the scale and estimation techniques need to be updated.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>Minimize assigning tasks in advance.</h3>
+                        <div class="card-body">
+                            <p>
+                                Early assignment makes team members naturally focus only on their individual tasks
+                                during estimation. It encourages local optimization, uneven workload distribution, and
+                                weak collaboration. Prefer a pull model and shared ownership: the team should optimize
+                                for delivering the business goal, not “my tickets.”
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>Pay attention to good task decomposition.</h3>
+                        <div class="card-body">
+                            <p>
+                                Tasks should be large enough to deliver a meaningful outcome, but small enough to
+                                estimate reliably and complete within a single development cycle. A massive estimate is
+                                essentially a disguise for high uncertainty. If a task hits the top of your scale, treat
+                                it as a signal: can it be split? Can you extract a research task first? When multiple
+                                decompositions are possible, prefer the one that enables parallel work and reduces
+                                uncertainty.
+                            </p>
+                        </div>
+                    </li>
+                </ol>
+
+                <div class="section-body">
+                    <p>
+                        Even if you decide to stick with time-based estimates, many of these techniques can still be
+                        useful. But keep in mind that they are all interconnected - if you skip some of them, others may
+                        not work either.
+                    </p>
+                </div>
+            </section>
+
+            <section id="do-you-need-all123">
+                <h2 class="section-title">What Estimation Unit Should I Use?</h2>
+                <div class="section-body">
+                    <p>
+                        Choosing the right estimation approach depends on your role, objectives, and the challenges you're currently facing. If your existing process already delivers reliable results, there's no reason to change it.
+                    </p>
+                    <p style="margin-top: 12px;">
+                        Otherwise, this quick reference table can help you decide:
+                    </p>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>My Role</th>
+                            <th>Recommended Approach</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Solo Developer</td>
+                            <td>Time (hours/days)</td>
+                        </tr>
+                        <tr>
+                            <td>Development Team</td>
+                            <td>Man-hours if they prove reliable; Story Points otherwise</td>
+                        </tr>
+                        <tr>
+                            <td>Engineering Manager</td>
+                            <td>Story Points for internal team alignment; Time when communicating with stakeholders</td>
+                        </tr>
+                        <tr>
+                            <td>Product Manager / Project Manager / Stakeholder</td>
+                            <td>Time; Man-hours if you want to dive deeper</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <p style="margin-top: 12px;">
+                        Regardless of which method you choose, the Story Points recommendations outlined in this article remain valuable and can be applied successfully in any planning process.
+                    </p>
+                </div>
+            </section>
+
+            <section id="about-author">
+                <h2 class="section-title">About the Author</h2>
+                <div class="section-body">
+                    <p>
+                        My name is Daniil Bastrich. I am a Software Development Engineer with extensive and diverse
+                        experience, including building scalable, distributed, high-load systems and leading technical
+                        teams. You can find more information about my work and background at <a
+                            href="https://bastrich.tech"
+                            style="color: var(--accent); font-weight: 500;">bastrich.tech</a>.
+                    </p>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <div class="discussion-block">
+        <h3 class="discussion-title">Join the Discussion</h3>
+        <p class="discussion-text">Have thoughts on this article? Share your feedback and discuss with the
+            community:</p>
+        <div class="discussion-links">
+            <a href="https://www.reddit.com/r/programming/comments/1q5r0a0/the_perfect_code_review_how_to_reduce_cognitive/"
+               class="discussion-link reddit" target="_blank" rel="noopener">
+                <span class="link-icon">
+                    <img src="https://www.redditstatic.com/shreddit/assets/favicon/64x64.png" alt="Reddit"
+                         class="icon-img"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+                    <span class="icon-fallback" style="display: none;">💬</span>
+                </span>
+                <span class="link-text">Discuss on Reddit</span>
+            </a>
+            <a href="https://news.ycombinator.com/item?id=46501905" class="discussion-link hackernews" target="_blank"
+               rel="noopener">
+                <span class="link-icon">
+                    <img src="https://news.ycombinator.com/y18.svg" alt="Hacker News" class="icon-img"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+                     <span class="icon-fallback" style="display: none;">🗨️</span>
+                </span>
+                <span class="link-text">Discuss on Hacker News</span>
+            </a>
+            <a href="https://lobste.rs/s/36qjm9/perfect_code_review_how_reduce_cognitive"
+               class="discussion-link lobsters" target="_blank" rel="noopener">
+                <span class="link-icon">
+                    <img src="https://lobste.rs/favicon.ico" alt="Lobsters" class="icon-img"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+                    <span class="icon-fallback" style="display: none;">🦞</span>
+                </span>
+                <span class="link-text">Discuss on Lobsters</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Image Modal -->
+<div id="imageModal" class="image-modal-backdrop">
+    <button class="image-modal-close" aria-label="Close"></button>
+    <div class="image-modal-wrapper">
+        <img id="modalImage" src="" alt="" class="image-modal-content">
+        <div id="modalCaption" class="image-modal-caption"></div>
+    </div>
+</div>
+
+<script src="image-modal.js?v=1"></script>
+
+</body>
+</html>
