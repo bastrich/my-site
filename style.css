@@ -1107,6 +1107,8 @@ table {
     border-radius: 12px;
     overflow: hidden;
     width: auto;
+    margin: 0 auto;          /* центрирование через margin */
+    text-align: left;
 }
 
 thead th {
@@ -1257,9 +1259,11 @@ td:last-child {
 /* Контейнер для центрирования таблицы */
 .table-wrapper {
     display: flex;
-    justify-content: center;
+    text-align: center;
     width: 100%;
     margin: 32px 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 /* Квадратные ячейки заголовков (Story Points в шапке) */
@@ -1312,14 +1316,10 @@ td:last-child {
 .sp-21 { background-color: #f87171; color: #fff; font-weight: bold; } /* Красный */
 
 
-.units-table {
-    width: max-content;
-}
 
-/* Задаем ширину для первой колонки «My Role» и выравниваем текст внутри (обычно лучше по левому краю) */
 .units-table th:first-child,
 .units-table td:first-child {
-    white-space: nowrap;
+    min-width: 200px;
 }
 
 .summary-list {
