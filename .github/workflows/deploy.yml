@@ -25,8 +25,10 @@ jobs:
           rm -rf dist
           mkdir dist
           mkdir dist/perfect-code-review
+          mkdir dist/story-points
           cp -R img dist
           cp -R perfect-code-review/img dist/perfect-code-review/img
+          cp -R story-points/img dist/story-points/img
           cp favicon.ico dist
           cp favicon.svg dist
           cp robots.txt dist
@@ -34,7 +36,7 @@ jobs:
 
       - name: Minify HTML
         run: |
-          for file in "index.html" "perfect-code-review/index.html"; do
+          for file in "index.html" "perfect-code-review/index.html"; "story-points/index.html"; do
             html-minifier-terser \
             --collapse-whitespace \
             --remove-comments \
@@ -53,7 +55,7 @@ jobs:
 
       - name: Minify and obfuscate JS
         run: |
-          for file in "index.js" "perfect-code-review/image-modal.js"; do
+          for file in "index.js" "image-modal.js"; do
             terser "$file" -c -m -o "dist/$file"
             javascript-obfuscator "dist/$file" --output "dist/$file"
           done

@@ -1321,3 +1321,8 @@ td:last-child {
 .units-table td:first-child {
     white-space: nowrap;
 }
+
+.summary-list {
+    margin-left: 8%;  /* Сдвигает левый край */
+    margin-right: 8%; /* Сдвигает правый край, делая текст уже */
+}
