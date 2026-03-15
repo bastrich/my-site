@@ -34,6 +34,14 @@ jobs:
           cp robots.txt dist
           cp sitemap.xml dist
 
+      - name: Add cache-busting version to CSS/JS imports
+        run: |
+          VERSION="${{ github.run_number }}"
+          for file in "index.html" "perfect-code-review/index.html" "story-points/index.html"; do
+            sed -i -E 's/(href="[^"]+\.css)(")/\1?v='"$VERSION"'\2/g' "$file"
+            sed -i -E 's/(src="[^"]+\.js)(")/\1?v='"$VERSION"'\2/g' "$file"
+          done
+
       - name: Minify HTML
         run: |
           for file in "index.html" "perfect-code-review/index.html"; "story-points/index.html"; do
