@@ -312,7 +312,7 @@
 
                     <ol style="margin-top: 20px;">
                         <li>
-                            <div class="card-body">
+                            <div class="li-body">
                                 <p>
                                     Better Analytics and Predictability: Post-factum, Story Points track the actual
                                     amount of delivered value (velocity)
@@ -322,7 +322,7 @@
                             </div>
                         </li>
                         <li>
-                            <div class="card-body">
+                            <div class="li-body">
                                 <p>
                                     Structured Risk Incorporation: They allow teams to bake complexity and calculated
                                     risk into an estimate without arbitrarily inflating "hours" and scaring
@@ -331,7 +331,7 @@
                             </div>
                         </li>
                         <li>
-                            <div class="card-body">
+                            <div class="li-body">
                                 <p>
                                     No Artificial Capacity Limits: Unlike man-hours, Story Points don't introduce an
                                     artificial upper bound on how much work can be completed during a given period.
@@ -339,7 +339,7 @@
                             </div>
                         </li>
                         <li>
-                            <div class="card-body">
+                            <div class="li-body">
                                 <p>
                                     Performer-Independent Estimates: A well-calibrated team can give the same task a
                                     similar estimate regardless of which engineer picks it up.
@@ -347,7 +347,7 @@
                             </div>
                         </li>
                         <li>
-                            <div class="card-body">
+                            <div class="li-body">
                                 <p>
                                     Higher Achievable Precision: Story Points give teams more levers to fine-tune
                                     accuracy - by choosing which factors matter, grounding estimates in historical data,
@@ -376,17 +376,41 @@
                         development cycles (weeks, sprints, iterations - whatever cadence you use) and calculate a
                         rolling average of completed story points per cycle.
                     </p>
-                    <p style="margin-top: 12px;">
-                        Then the conversion is straightforward:
-                        Expected number of cycles = Story points estimate / Average velocity
-                        Time estimate = Expected cycles × Cycle duration
 
-                    </p>
-                    <p style="margin-top: 12px;">
-                        Important: this is not a permanent conversion ratio. Treat it as a dynamic exchange rate that
-                        organically adjusts with each completed cycle as the team, scope, tooling, or constraints
-                        change.
-                    </p>
+                    <p style="margin-top: 12px;">Then the conversion is straightforward:</p>
+
+                    <div class="formula-wrapper">
+                        <div class="formula-box">
+                            <div class="formula-item">
+                                <strong>Expected number of cycles</strong> =
+                                <div class="fraction">
+                                    <span class="numerator">Story points estimate</span>
+                                    <span class="denominator">Average velocity</span>
+                                </div>
+                            </div>
+
+                            <div class="formula-item">
+                                <strong>Time estimate</strong> = Expected cycles &times; Cycle duration
+                            </div>
+                        </div>
+                    </div>
+
+
+<!--                    <p style="margin-top: 12px;">-->
+<!--                        Then the conversion is straightforward:-->
+<!--                        Expected number of cycles = Story points estimate / Average velocity-->
+<!--                        Time estimate = Expected cycles × Cycle duration-->
+
+<!--                    </p>-->
+
+                    <div class="section-body, important-block">
+                        <p style="margin: 0;">
+                            <strong>Important:</strong> This is not a permanent conversion ratio. Treat it as a dynamic exchange rate that
+                            organically adjusts with each completed cycle as the team, scope, tooling, or constraints
+                            change.
+                        </p>
+                    </div>
+
                     <p style="margin-top: 12px;">
                         In practice, you will inevitably encounter tasks that cannot be finished within a single
                         iteration. For instance, development might finish this week, but the feature only moves to
@@ -430,10 +454,10 @@
                 </div>
 
 
-                <ol style="margin-top: 20px;">
+                <ol class="square-bullet-list" style="margin-top: 20px;">
                     <li>
                         <h3>Agree on a scale with clear criteria and examples.</h3>
-                        <div class="card-body">
+                        <div class="li-body">
                             <p>
                                 A scale creates an explicit agreement on what each estimate represents. Examples act as
                                 a calibration tool, adding a second layer of validation and providing a quick reference.
@@ -491,7 +515,7 @@
                     </li>
                     <li>
                         <h3>Limit the scale and use exponential spacing.</h3>
-                        <div class="card-body">
+                        <div class="li-body">
                             <p>
                                 The higher an estimate climbs, the greater the complexity and uncertainty—meaning
                                 precision inevitably drops. Most teams can’t reliably explain the difference between 55
@@ -504,7 +528,7 @@
                     </li>
                     <li>
                         <h3>Factor in risk explicitly and systematically (don’t hide it inside “gut feel”).</h3>
-                        <div class="card-body">
+                        <div class="li-body">
                             <p>
                                 It’s impossible to predict everything, but you can usually assess the risk level early.
                                 Instead of adding arbitrary buffers, I recommend shifting the original estimate up the
@@ -563,7 +587,7 @@
                     </li>
                     <li>
                         <h3>Avoid unjustified and uncertain estimation factors.</h3>
-                        <div class="card-body">
+                        <div class="li-body">
                             <p>
                                 Eliminate “magic coefficients” and “because it feels like it.” Require a reason:
                                 complexity, scope, dependencies, risks, etc. This not only makes estimates more accurate
@@ -577,7 +601,7 @@
                     </li>
                     <li>
                         <h3>Prevent estimate drift (inflation or deflation over time).</h3>
-                        <div class="card-body">
+                        <div class="li-body">
                             <p>
                                 If a very similar task is estimated differently later, that difference should be
                                 explained by changed inputs: risk, scope, system state, team composition, tooling, or
@@ -587,7 +611,7 @@
                     </li>
                     <li>
                         <h3>Don’t map Story Points directly to time (e.g., “1 SP = 1 day”).</h3>
-                        <div class="card-body">
+                        <div class="li-body">
                             <p>
                                 That destroys most of the benefits of Story Points while still confusing the team. If
                                 you want time estimates, use time estimates. Story Points are useful precisely because
@@ -597,7 +621,7 @@
                     </li>
                     <li>
                         <h3>Estimate based on team capacity, not individual seniority.</h3>
-                        <div class="card-body">
+                        <div class="li-body">
                             <p>
                                 Estimation should bring each developer's knowledge and experience to a common baseline
                                 and synchronize the team's understanding of a task, minimizing the influence of
@@ -611,7 +635,7 @@
                     </li>
                     <li>
                         <h3>Track team performance statistics and use it for planning. </h3>
-                        <div class="card-body">
+                        <div class="li-body">
                             <p>
                                 Track how many Story Points the team completes per development cycle to forecast future
                                 capacity and monitor overall performance. Do not use Story Points as an individual
@@ -624,7 +648,7 @@
                     </li>
                     <li>
                         <h3>Estimate the whole lifecycle of a task.</h3>
-                        <div class="card-body">
+                        <div class="li-body">
                             <p>
                                 Planning based only on “dev work” is a common reason commitments fail. Estimates must
                                 account for testing, release, and any other activities beyond writing code.
@@ -634,7 +658,7 @@
                     </li>
                     <li>
                         <h3>Allow re-estimation.</h3>
-                        <div class="card-body">
+                        <div class="li-body">
                             <p>
                                 Allowing developers to adjust an estimate upon task completion provides highly accurate
                                 historical data for future planning. Occasional re-estimation acts as a great
@@ -645,7 +669,7 @@
                     </li>
                     <li>
                         <h3>Minimize assigning tasks in advance.</h3>
-                        <div class="card-body">
+                        <div class="li-body">
                             <p>
                                 Early assignment makes team members naturally focus only on their individual tasks
                                 during estimation. It encourages local optimization, uneven workload distribution, and
@@ -656,7 +680,7 @@
                     </li>
                     <li>
                         <h3>Pay attention to good task decomposition.</h3>
-                        <div class="card-body">
+                        <div class="li-body">
                             <p>
                                 Tasks should be large enough to deliver a meaningful outcome, but small enough to
                                 estimate reliably and complete within a single development cycle. A massive estimate is
