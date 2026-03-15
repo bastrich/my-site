@@ -1107,7 +1107,7 @@ table {
     border-radius: 12px;
     overflow: hidden;
     width: auto;
-    margin: 0 auto;          /* центрирование через margin */
+    margin: 0 auto;
     text-align: left;
 }
 
@@ -1158,18 +1158,16 @@ td:last-child {
     border-left: 4px solid #ffc107;
 }
 
-/* Общий контейнер */
 .formula-wrapper {
     margin: 32px 0;
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Центрируем весь блок по горизонтали */
+    align-items: center;
 }
 
-/* Строгий блок с формулами */
 .formula-box {
-    width: fit-content; /* Запрещаем блоку растягиваться на 100%, ширина по контенту */
+    width: fit-content;
     background: #f8fafc;
     border: 1px solid #e2e8f0;
     border-left: 4px solid #4a90d9;
@@ -1180,53 +1178,46 @@ td:last-child {
     color: #475569;
 }
 
-/* Строка отдельной формулы */
 .formula-item {
     display: flex;
-    align-items: center; /* Центрируем текст по вертикали относительно центра дроби */
-    gap: 8px; /* Аккуратный отступ между = и самой формулой */
+    align-items: center;
+    gap: 8px;
     margin: 0;
     padding: 12px 0;
 }
 
-/* Разделитель между формулами */
 .formula-item:not(:last-child) {
     border-bottom: 1px dashed #e2e8f0;
 }
 
-/* Выделение искомого результата */
 .formula-item strong {
     color: #1e293b;
     font-weight: 600;
 }
 
-/* --- Стили для дроби --- */
 .fraction {
     display: inline-flex;
-    flex-direction: column; /* Ставим элементы друг под другом */
-    align-items: center; /* Центрируем текст внутри дроби */
+    flex-direction: column;
+    align-items: center;
     margin: 0 4px;
 }
 
-/* Числитель (верхняя часть) */
 .numerator {
     padding: 0 8px 4px;
-    border-bottom: 1px solid #475569; /* Горизонтальная черта деления */
+    border-bottom: 1px solid #475569;
 }
 
-/* Знаменатель (нижняя часть) */
 .denominator {
     padding: 4px 8px 0;
 }
 
-/* Адаптивность для телефонов */
 @media (max-width: 768px) {
     .formula-box {
         padding: 12px 16px;
         font-size: 13px;
     }
     .formula-item {
-        flex-wrap: wrap; /* Позволяет формуле переноситься на узких экранах */
+        flex-wrap: wrap;
     }
 }
 
@@ -1234,14 +1225,12 @@ td:last-child {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* Используем ваши стандартные отступы */
     padding: 4px 0;
 }
 
 .split-header .top-label {
     text-align: right;
     font-size: 13px;
-    /* Делаем текст чуть более прозрачным для визуальной иерархии */
     color: rgba(255, 255, 255, 0.85);
 }
 
@@ -1250,13 +1239,11 @@ td:last-child {
     font-size: 15px;
     font-weight: bold;
     color: #fff;
-    /* Добавляем аккуратный разделитель сверху */
     border-top: 1px solid rgba(255, 255, 255, 0.3);
     margin-top: 6px;
     padding-top: 6px;
 }
 
-/* Контейнер для центрирования таблицы */
 .table-wrapper {
     display: flex;
     text-align: center;
@@ -1266,7 +1253,6 @@ td:last-child {
     -webkit-overflow-scrolling: touch;
 }
 
-/* Квадратные ячейки заголовков (Story Points в шапке) */
 .risk-matrix thead th.sp-cell {
     width: 64px;
     height: 64px;
@@ -1279,7 +1265,6 @@ td:last-child {
     box-sizing: border-box;
 }
 
-/* Квадратные ячейки в теле таблицы (значения SP) */
 .risk-matrix tbody td.sp-cell {
     width: 64px;
     height: 64px;
@@ -1293,27 +1278,23 @@ td:last-child {
     box-sizing: border-box;
 }
 
-/* Столбец с названием уровня риска — обычная ячейка */
-/* Ячейки с названием уровня риска */
 .risk-matrix thead th.risk-label,
 .risk-matrix tbody td.risk-label {
     padding: 12px 16px;
     white-space: nowrap;
     text-align: left;
-    vertical-align: middle; /* ← ключевое свойство */
-    height: 64px;           /* совпадает с высотой квадратных SP-ячеек */
+    vertical-align: middle;
+    height: 64px;
     box-sizing: border-box;
 }
 
-/* Цветовая палитра для выделения Story Points (лесенка) */
-/* Оттенки идут от зеленого (легко) к красному (очень сложно) */
-.sp-1  { background-color: #d1fae5; } /* Светло-салатовый */
-.sp-2  { background-color: #a7f3d0; } /* Зеленый */
-.sp-3  { background-color: #fef08a; } /* Желтый */
-.sp-5  { background-color: #fde047; } /* Темно-желтый */
-.sp-8  { background-color: #fdba74; } /* Оранжевый */
-.sp-13 { background-color: #fca5a5; } /* Светло-красный */
-.sp-21 { background-color: #f87171; color: #fff; font-weight: bold; } /* Красный */
+.sp-1  { background-color: #d1fae5; }
+.sp-2  { background-color: #a7f3d0; }
+.sp-3  { background-color: #fef08a; }
+.sp-5  { background-color: #fde047; }
+.sp-8  { background-color: #fdba74; }
+.sp-13 { background-color: #fca5a5; }
+.sp-21 { background-color: #f87171; color: #fff; font-weight: bold; }
 
 
 
@@ -1323,6 +1304,6 @@ td:last-child {
 }
 
 .summary-list {
-    margin-left: 8%;  /* Сдвигает левый край */
-    margin-right: 8%; /* Сдвигает правый край, делая текст уже */
+    margin-left: 8%;
+    margin-right: 8%;
 }
