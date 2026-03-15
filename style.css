@@ -1113,14 +1113,17 @@ thead th {
     background-color: #4a90d9;
     color: #fff;
     padding: 12px 16px;
-    text-align: left;
+    text-align: center;
     font-size: 15px;
 }
+
+
 
 tbody td {
     padding: 12px 16px;
     border-bottom: 1px solid #e0e0e0;
-    vertical-align: top;
+    vertical-align: middle;
+
     font-size: 14px;
     color: #333;
 }
@@ -1307,3 +1310,14 @@ td:last-child {
 .sp-8  { background-color: #fdba74; } /* Оранжевый */
 .sp-13 { background-color: #fca5a5; } /* Светло-красный */
 .sp-21 { background-color: #f87171; color: #fff; font-weight: bold; } /* Красный */
+
+
+.units-table {
+    width: max-content;
+}
+
+/* Задаем ширину для первой колонки «My Role» и выравниваем текст внутри (обычно лучше по левому краю) */
+.units-table th:first-child,
+.units-table td:first-child {
+    white-space: nowrap;
+}
