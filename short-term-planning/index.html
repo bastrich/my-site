@@ -467,50 +467,52 @@
 
                                 Such a scale may look like this:
                             </p>
-                            <table>
-                                <thead>
-                                <tr>
-                                    <th>Story Points</th>
-                                    <th>Criteria</th>
-                                    <th>Examples</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Minimal change in a single component: config tweak, renaming/adding a couple of
-                                        variables.
-                                    </td>
-                                    <td>Task XX-123<br>Task YY-456</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Small change in a single component: a few conditions/loops/queries, a trivial
-                                        API endpoint.
-                                    </td>
-                                    <td>Task XX-111<br>Task YY-222</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Several small changes across one or more components, or one significant change.
-                                        External integration, research, creating tech design documentation.
-                                    </td>
-                                    <td>Task XX-333<br>Task YY-444</td>
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td>Many complex changes across multiple components. Changing the architecture of a
-                                        component or conducting difficult research.
-                                    </td>
-                                    <td>Task XX-555<br>Task YY-666<br>Task XX-777</td>
-                                </tr>
-                                <tr>
-                                    <td>8</td>
-                                    <td>Architecture changes across several components. Highly complex research.</td>
-                                    <td>Task XX-888<br>Task YY-999</td>
-                                </tr>
-                                </tbody>
-                            </table>
+                            <div class="table-wrapper">
+                                <table>
+                                    <thead>
+                                    <tr>
+                                        <th>Story Points</th>
+                                        <th>Criteria</th>
+                                        <th>Examples</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Minimal change in a single component: config tweak, renaming/adding a couple of
+                                            variables.
+                                        </td>
+                                        <td>Task XX-123<br>Task YY-456</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Small change in a single component: a few conditions/loops/queries, a trivial
+                                            API endpoint.
+                                        </td>
+                                        <td>Task XX-111<br>Task YY-222</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Several small changes across one or more components, or one significant change.
+                                            External integration, research, creating tech design documentation.
+                                        </td>
+                                        <td>Task XX-333<br>Task YY-444</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Many complex changes across multiple components. Changing the architecture of a
+                                            component or conducting difficult research.
+                                        </td>
+                                        <td>Task XX-555<br>Task YY-666<br>Task XX-777</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>Architecture changes across several components. Highly complex research.</td>
+                                        <td>Task XX-888<br>Task YY-999</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </li>
                     <li>
@@ -545,44 +547,51 @@
                                 shows how the original estimate changes depending on the risk level:
 
                             </p>
-                            <table>
-                                <thead>
-                                <tr>
-                                    <th>Risk / Original Story Points</th>
-                                    <th>1</th>
-                                    <th>2</th>
-                                    <th>3</th>
-                                    <th>5</th>
-                                    <th>8</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>Low</td>
-                                    <td>1</td>
-                                    <td>2</td>
-                                    <td>3</td>
-                                    <td>5</td>
-                                    <td>8</td>
-                                </tr>
-                                <tr>
-                                    <td>Moderate</td>
-                                    <td>2</td>
-                                    <td>3</td>
-                                    <td>5</td>
-                                    <td>8</td>
-                                    <td>13</td>
-                                </tr>
-                                <tr>
-                                    <td>High</td>
-                                    <td>3</td>
-                                    <td>5</td>
-                                    <td>8</td>
-                                    <td>13</td>
-                                    <td>21</td>
-                                </tr>
-                                </tbody>
-                            </table>
+                            <div class="table-wrapper">
+                                <table class="risk-matrix">
+                                    <thead>
+                                    <tr>
+                                        <th>
+                                            <div class="split-header">
+                                                <span class="top-label">Original Story Points</span>
+                                                <span class="bottom-label">Risk</span>
+                                            </div>
+                                        </th>
+                                        <th class="sp-cell">1</th>
+                                        <th class="sp-cell">2</th>
+                                        <th class="sp-cell">3</th>
+                                        <th class="sp-cell">5</th>
+                                        <th class="sp-cell">8</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td class="risk-label">Low</td>
+                                        <td class="sp-cell sp-1">1</td>
+                                        <td class="sp-cell sp-2">2</td>
+                                        <td class="sp-cell sp-3">3</td>
+                                        <td class="sp-cell sp-5">5</td>
+                                        <td class="sp-cell sp-8">8</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="sp-cell risk-label">Moderate</td>
+                                        <td class="sp-cell sp-2">2</td>
+                                        <td class="sp-cell sp-3">3</td>
+                                        <td class="sp-cell sp-5">5</td>
+                                        <td class="sp-cell sp-8">8</td>
+                                        <td class="sp-cell sp-13">13</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="risk-label">High</td>
+                                        <td class="sp-cell sp-3">3</td>
+                                        <td class="sp-cell sp-5">5</td>
+                                        <td class="sp-cell sp-8">8</td>
+                                        <td class="sp-cell sp-13">13</td>
+                                        <td class="sp-cell sp-21">21</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </li>
                     <li>
@@ -713,32 +722,34 @@
                     <p style="margin-top: 12px;">
                         Otherwise, this quick reference table can help you decide:
                     </p>
-                    <table>
-                        <thead>
-                        <tr>
-                            <th>My Role</th>
-                            <th>Recommended Approach</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>Solo Developer</td>
-                            <td>Time (hours/days)</td>
-                        </tr>
-                        <tr>
-                            <td>Development Team</td>
-                            <td>Man-hours if they prove reliable; Story Points otherwise</td>
-                        </tr>
-                        <tr>
-                            <td>Engineering Manager</td>
-                            <td>Story Points for internal team alignment; Time when communicating with stakeholders</td>
-                        </tr>
-                        <tr>
-                            <td>Product Manager / Project Manager / Stakeholder</td>
-                            <td>Time; Man-hours if you want to dive deeper</td>
-                        </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th>My Role</th>
+                                <th>Recommended Approach</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Solo Developer</td>
+                                <td>Time (hours/days)</td>
+                            </tr>
+                            <tr>
+                                <td>Development Team</td>
+                                <td>Man-hours if they prove reliable; Story Points otherwise</td>
+                            </tr>
+                            <tr>
+                                <td>Engineering Manager</td>
+                                <td>Story Points for internal team alignment; Time when communicating with stakeholders</td>
+                            </tr>
+                            <tr>
+                                <td>Product Manager / Project Manager / Stakeholder</td>
+                                <td>Time; Man-hours if you want to dive deeper</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
                     <p style="margin-top: 12px;">
                         Regardless of which method you choose, the Story Points recommendations outlined in this article
                         remain valuable and can be applied successfully in any planning process.

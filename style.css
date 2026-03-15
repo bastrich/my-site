@@ -1102,10 +1102,11 @@ ol.square-bullet-list li .card-body p {
 
 table {
     border-collapse: collapse;
-    width: 100%;
-    max-width: 900px;
     background-color: #fff;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    width: auto;
 }
 
 thead th {
@@ -1223,3 +1224,86 @@ td:last-child {
         flex-wrap: wrap; /* Позволяет формуле переноситься на узких экранах */
     }
 }
+
+.split-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Используем ваши стандартные отступы */
+    padding: 4px 0;
+}
+
+.split-header .top-label {
+    text-align: right;
+    font-size: 13px;
+    /* Делаем текст чуть более прозрачным для визуальной иерархии */
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.split-header .bottom-label {
+    text-align: left;
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+    /* Добавляем аккуратный разделитель сверху */
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin-top: 6px;
+    padding-top: 6px;
+}
+
+/* Контейнер для центрирования таблицы */
+.table-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 32px 0;
+}
+
+/* Квадратные ячейки заголовков (Story Points в шапке) */
+.risk-matrix thead th.sp-cell {
+    width: 64px;
+    height: 64px;
+    min-width: 64px;
+    min-height: 64px;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+
+/* Квадратные ячейки в теле таблицы (значения SP) */
+.risk-matrix tbody td.sp-cell {
+    width: 64px;
+    height: 64px;
+    min-width: 64px;
+    min-height: 64px;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 18px;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+/* Столбец с названием уровня риска — обычная ячейка */
+/* Ячейки с названием уровня риска */
+.risk-matrix thead th.risk-label,
+.risk-matrix tbody td.risk-label {
+    padding: 12px 16px;
+    white-space: nowrap;
+    text-align: left;
+    vertical-align: middle; /* ← ключевое свойство */
+    height: 64px;           /* совпадает с высотой квадратных SP-ячеек */
+    box-sizing: border-box;
+}
+
+/* Цветовая палитра для выделения Story Points (лесенка) */
+/* Оттенки идут от зеленого (легко) к красному (очень сложно) */
+.sp-1  { background-color: #d1fae5; } /* Светло-салатовый */
+.sp-2  { background-color: #a7f3d0; } /* Зеленый */
+.sp-3  { background-color: #fef08a; } /* Желтый */
+.sp-5  { background-color: #fde047; } /* Темно-желтый */
+.sp-8  { background-color: #fdba74; } /* Оранжевый */
+.sp-13 { background-color: #fca5a5; } /* Светло-красный */
+.sp-21 { background-color: #f87171; color: #fff; font-weight: bold; } /* Красный */
