@@ -473,7 +473,7 @@
 
 
                 <ol class="square-bullet-list" style="margin-top: 20px;">
-                    <li>
+                    <li class="square-bullet-list-item">
                         <h3>Agree on a scale with clear criteria and examples.</h3>
                         <div class="li-body">
                             <p>
@@ -482,7 +482,8 @@
                                 If the team struggles to estimate a new task, they can simply compare it to past work
                                 (“This feels more like Task X, or roughly two tasks similar to Task Y”). This alone
                                 often makes estimation smoother and significantly faster.
-
+                            </p>
+                            <p style="margin-top: 12px;">
                                 Such a scale may look like this:
                             </p>
                             <div class="table-wrapper">
@@ -533,20 +534,20 @@
                             </div>
                         </div>
                     </li>
-                    <li>
+                    <li class="square-bullet-list-item">
                         <h3>Limit the scale and use exponential spacing.</h3>
                         <div class="li-body">
                             <p>
-                                The higher an estimate climbs, the greater the complexity and uncertainty—meaning
-                                precision inevitably drops. Most teams can’t reliably explain the difference between 55
-                                and 89, but they can explain the difference between 5 and 8. To maintain clarity, limit
+                                The higher an estimate climbs, the greater the complexity and uncertainty - meaning
+                                precision inevitably drops. Most teams can’t reliably explain the difference between 7
+                                and 8, but they can explain the difference between 5 and 8. To maintain clarity, limit
                                 your scale to the first 6-7 values of a Fibonacci-like sequence (e.g., 1, 2, 3, 5, 8,
                                 13), where the gaps widen as the numbers grow. Too many values create false precision;
                                 too few don’t cover your workload.
                             </p>
                         </div>
                     </li>
-                    <li>
+                    <li class="square-bullet-list-item">
                         <h3>Factor in risk explicitly and systematically (don’t hide it inside “gut feel”).</h3>
                         <div class="li-body">
                             <p>
@@ -554,16 +555,41 @@
                                 Instead of adding arbitrary buffers, I recommend shifting the original estimate up the
                                 scale based on risk: by assessing it as Low, Moderate, or High, you can move the
                                 original estimate up by 0, 1, or 2 steps accordingly.
+                            </p>
+                            <p style="margin-top: 12px;">
                                 Define what these levels mean in your team's specific context. For example:
-                                Low: No apparent risks. The scope is crystal clear, and no external blockers can stall
-                                the task.
-                                Moderate: Manageable external factors (dependency on another team, unclear integration
-                                docs) or local uncertainty (new library, legacy area).
-                                High: Major factors outside the team's control (unstable external API, highly coupled
-                                monolith with constant changes), or the approach is totally unclear.
+                            </p>
+
+                            <ul style="margin-top: 20px;" class="summary-list">
+                                <li>
+                                    <div class="li-body">
+                                        <p>
+                                            <strong>Low:</strong> No apparent risks. The scope is crystal clear, and no external blockers can stall
+                                            the task.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="li-body">
+                                        <p>
+                                            <strong>Moderate:</strong> Manageable external factors (dependency on another team, unclear integration
+                                            docs) or local uncertainty (new library, legacy area).
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="li-body">
+                                        <p>
+                                            <strong>High:</strong> Major factors outside the team's control (unstable external API, highly coupled
+                                            monolith with constant changes), or the approach is totally unclear.
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <p style="margin-top: 12px;">
                                 This risk-adjusted estimation creates a matrix like the one below, where each column
                                 shows how the original estimate changes depending on the risk level:
-
                             </p>
                             <div class="table-wrapper">
                                 <table class="risk-matrix">
@@ -612,13 +638,15 @@
                             </div>
                         </div>
                     </li>
-                    <li>
+                    <li class="square-bullet-list-item">
                         <h3>Avoid unjustified and uncertain estimation factors.</h3>
                         <div class="li-body">
                             <p>
                                 Eliminate “magic coefficients” and “because it feels like it.” Require a reason:
                                 complexity, scope, dependencies, risks, etc. This not only makes estimates more accurate
                                 but also fosters a better shared understanding of the task across the whole team.
+                            </p>
+                            <p style="margin-top: 12px;">
                                 If you use Planning Poker and the votes differ, don’t average them - averaging hides
                                 uncertainty. Instead, ask participants to justify their numbers and re-vote until the
                                 team converges. This practice drives deep technical alignment before a single line of
@@ -626,7 +654,7 @@
                             </p>
                         </div>
                     </li>
-                    <li>
+                    <li class="square-bullet-list-item">
                         <h3>Prevent estimate drift (inflation or deflation over time).</h3>
                         <div class="li-body">
                             <p>
@@ -636,7 +664,7 @@
                             </p>
                         </div>
                     </li>
-                    <li>
+                    <li class="square-bullet-list-item">
                         <h3>Don’t map Story Points directly to time (e.g., “1 SP = 1 day”).</h3>
                         <div class="li-body">
                             <p>
@@ -646,13 +674,15 @@
                             </p>
                         </div>
                     </li>
-                    <li>
+                    <li class="square-bullet-list-item">
                         <h3>Estimate based on team capacity, not individual seniority.</h3>
                         <div class="li-body">
                             <p>
                                 Estimation should bring each developer's knowledge and experience to a common baseline
                                 and synchronize the team's understanding of a task, minimizing the influence of
                                 individual seniority and reducing the bus factor.
+                            </p>
+                            <p style="margin-top: 12px;">
                                 A good approach is to estimate as if the work will be done by an “average team
                                 developer,” so the number stays stable over time. If the team has many inexperienced
                                 developers, treat that as a risk input. Ultimately, you want a stable, objective
@@ -660,7 +690,7 @@
                             </p>
                         </div>
                     </li>
-                    <li>
+                    <li class="square-bullet-list-item">
                         <h3>Track team performance statistics and use it for planning. </h3>
                         <div class="li-body">
                             <p>
@@ -673,7 +703,7 @@
                             </p>
                         </div>
                     </li>
-                    <li>
+                    <li class="square-bullet-list-item">
                         <h3>Estimate the whole lifecycle of a task.</h3>
                         <div class="li-body">
                             <p>
@@ -683,7 +713,7 @@
                             </p>
                         </div>
                     </li>
-                    <li>
+                    <li class="square-bullet-list-item">
                         <h3>Allow re-estimation.</h3>
                         <div class="li-body">
                             <p>
@@ -694,7 +724,7 @@
                             </p>
                         </div>
                     </li>
-                    <li>
+                    <li class="square-bullet-list-item">
                         <h3>Minimize assigning tasks in advance.</h3>
                         <div class="li-body">
                             <p>
@@ -705,7 +735,7 @@
                             </p>
                         </div>
                     </li>
-                    <li>
+                    <li class="square-bullet-list-item">
                         <h3>Pay attention to good task decomposition.</h3>
                         <div class="li-body">
                             <p>
@@ -759,7 +789,7 @@
                             </tr>
                             <tr>
                                 <td>Engineering Manager</td>
-                                <td>Story Points for internal team alignment; Time when communicating with stakeholders</td>
+                                <td>Man-hours or Story Points for internal team alignment; Time when communicating with stakeholders</td>
                             </tr>
                             <tr>
                                 <td>Product Manager / Project Manager / Stakeholder</td>

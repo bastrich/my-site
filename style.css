@@ -701,14 +701,14 @@ ol.square-bullet-list {
     padding-left: 0;
 }
 
-ol.square-bullet-list li {
+ol.square-bullet-list li.square-bullet-list-item {
     margin-bottom: 20px;
     counter-increment: list-counter;
     position: relative;
     padding-left: 45px;
 }
 
-ol.square-bullet-list li::before {
+ol.square-bullet-list li.square-bullet-list-item::before {
     content: counter(list-counter);
     position: absolute;
     left: 0;
@@ -725,7 +725,7 @@ ol.square-bullet-list li::before {
     font-size: 14px;
 }
 
-ol.square-bullet-list li h3 {
+ol.square-bullet-list li.square-bullet-list-item h3 {
     margin-top: 0;
     margin-bottom: 6px;
     font-size: 15.5px;
@@ -734,11 +734,11 @@ ol.square-bullet-list li h3 {
     line-height: 32px;
 }
 
-ol.square-bullet-list li .card-body {
+ol.square-bullet-list li.square-bullet-list-item .card-body {
     margin-top: 0;
 }
 
-ol.square-bullet-list li .card-body p {
+ol.square-bullet-list li.square-bullet-list-item .card-body p {
     margin: 0;
     font-size: 15px;
 }
