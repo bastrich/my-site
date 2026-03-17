@@ -1,0 +1,122 @@
+.hero-kicker {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--accent-green);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+}
+
+.hero-title {
+    font-size: 32px;
+    line-height: 1.1;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+@media (min-width: 768px) {
+    .hero-title {
+        font-size: 32px;
+        margin-top: 76px;
+    }
+}
+
+.hero-subtitle {
+    font-size: 15px;
+    color: var(--text-muted);
+    max-width: 520px;
+    margin-bottom: 20px;
+}
+
+.hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 22px;
+    border-radius: 999px;
+    border: none;
+    background: var(--accent);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
+    transition: transform 0.12s ease-out, box-shadow 0.12s ease-out,
+    background 0.15s ease-out;
+}
+
+.hero-cta:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 14px 32px rgba(37, 99, 235, 0.45);
+    background: #1d4ed8;
+}
+
+.hero-cta:active {
+    transform: translateY(0);
+    box-shadow: 0 8px 18px rgba(37, 99, 235, 0.35);
+}
+
+.hero-cta-icon {
+    font-size: 16px;
+    line-height: 1;
+}
+
+.hero-side {
+    flex: 1;
+    max-width: 320px;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-side img {
+    border-radius: 24px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card-grid {
+    margin-top: 18px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+@media (min-width: 768px) {
+    .card-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+.card-body {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+.card-body p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--text-muted);
+    text-align: justify;
+}
+
+.card {
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-soft);
+    padding: 16px 16px 18px;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.02);
+}
+
+.card h3 {
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.card p {
+    font-size: 14px;
+    color: var(--text-muted);
+    text-align: justify;
+}

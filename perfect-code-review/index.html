@@ -53,7 +53,7 @@
     <link rel="icon" type="image/x-icon" sizes="any" href="https://bastrich.tech/favicon.ico">
     <link rel="canonical" href="https://bastrich.tech/perfect-code-review/">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -384,7 +384,7 @@
                 </div>
             </section>
 
-            <section id="make-it-work">
+            <section>
                 <h2 class="section-title">How to Make It Actually Work</h2>
                 <div class="section-body">
                     <p>
@@ -401,9 +401,9 @@
                 </div>
 
                 <ol class="square-bullet-list" style="margin-top: 20px;">
-                    <li>
+                    <li class="square-bullet-list-item">
                         <h3>Establish written review conventions.</h3>
-                        <div class="card-body">
+                        <div class="li-body">
                             <p>
                                 These should include the principles described above, their concrete implementation in
                                 the context of your project, and any other aspects you want reviewers to pay attention
@@ -412,18 +412,18 @@
                         </div>
                     </li>
 
-                    <li>
+                    <li class="square-bullet-list-item">
                         <h3>Keep conventions up to date and actionable.</h3>
-                        <div class="card-body">
+                        <div class="li-body">
                             <p>
                                 All criteria should be usable during review at any moment. Whenever you notice a
                                 recurring review pattern (comment → discussion → fix), turn it into a convention.
                             </p>
                         </div>
                     </li>
-                    <li>
+                    <li class="square-bullet-list-item">
                         <h3>Require self-review before peer review.</h3>
-                        <div class="card-body">
+                        <div class="li-body">
                             <p>
                                 Everyone should perform self-review using the same conventions before sending code for
                                 review by others. This saves time for all participants and helps reviewers build
@@ -431,9 +431,9 @@
                             </p>
                         </div>
                     </li>
-                    <li>
+                    <li class="square-bullet-list-item">
                         <h3>Integrate code review into the development process.</h3>
-                        <div class="card-body">
+                        <div class="li-body">
                             <p>
                                 Define clear rules for selecting reviewers, the number of reviewers, how comments are
                                 written and resolved, how updates are communicated, approval rules, review status
@@ -442,12 +442,12 @@
                             </p>
                         </div>
                     </li>
-                    <li>
+                    <li class="square-bullet-list-item">
                         <h3>Automate everything that can be automated.</h3>
                     </li>
-                    <li>
+                    <li class="square-bullet-list-item">
                         <h3>Stop approving with "LGTM".</h3>
-                        <div class="card-body">
+                        <div class="li-body">
                             <p>
                                 "LGTM" (Looks Good To Me) often signals that the reviewer did not fully understand the
                                 changes and simply wants to move on. While reviewers are not responsible for the final
@@ -455,9 +455,9 @@
                             </p>
                         </div>
                     </li>
-                    <li>
+                    <li class="square-bullet-list-item">
                         <h3>Practice code review whenever possible.</h3>
-                        <div class="card-body">
+                        <div class="li-body">
                             <p>
                                 Code review is a skill that improves through deliberate practice. The more experience
                                 reviewers gain, the less effort reviews require and the more effective they become. This

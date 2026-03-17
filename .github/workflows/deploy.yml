@@ -38,6 +38,7 @@ jobs:
         run: |
           VERSION="${{ github.run_number }}"
           for file in "index.html" "perfect-code-review/index.html" "story-points/index.html"; do
+            sed -i 's|href="css/main.css"|href="style.css"|g' "$file"
             sed -i -E 's/(href="[^"]+\.css)(")/\1?v='"$VERSION"'\2/g' "$file"
             sed -i -E 's/(src="[^"]+\.js)(")/\1?v='"$VERSION"'\2/g' "$file"
           done
@@ -57,9 +58,9 @@ jobs:
             "$file" -o "dist/$file"
           done
 
-      - name: Minify CSS
+      - name: Minify and bundle CSS
         run: |
-          cleancss -o "dist/style.css" "style.css"
+          cleancss --inline all -o "dist/style.css" "css/main.css"
 
       - name: Minify and obfuscate JS
         run: |
