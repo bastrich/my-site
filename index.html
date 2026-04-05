@@ -79,7 +79,6 @@
         </header>
 
         <main id="top">
-            <!-- Above the fold: hero + featured articles -->
             <section class="above-fold">
                 <section class="hero" aria-label="Intro">
                     <p class="kicker">Performance • Scalability • Reliability</p>
@@ -88,27 +87,31 @@
                         Software Development Engineer
                     </h1>
 
+
+
                     <p class="hero__subtitle">
                         Designing and building mission-critical systems that stay correct and resilient from day one - for the long run. Focus on your business - I’ll take care of architecture, scalability, and production reliability, keeping performance and stability predictable as you grow.
                     </p>
 
-                    <ul class="hero__bullets">
-                        <li>12+ years in Software Engineering & Distributed Systems</li>
-                        <li>Hands-on + Advisory: from POCs to production systems</li>
-                        <li>Solving urgent, business-critical problems</li>
-                        <li>Tackling problems others consider “impossible”</li>
-                        <li>Based in Spain, working with Europe & North America</li>
-                    </ul>
 
-                    <div class="hero__actions">
-                        <a class="btn btn--primary" href="#contact-modal">Let’s talk</a>
-                        <a class="btn btn--ghost" href="#work">View case studies</a>
+                    <div class="hero__row">
+                        <ul class="hero__bullets">
+                            <li>12+ years in Software Engineering & Distributed Systems</li>
+                            <li>Hands-on + Advisory: from POCs to production systems</li>
+                            <li>Solving urgent, business-critical problems</li>
+                            <li>Tackling problems others consider “impossible”</li>
+                            <li>Based in Spain, working with Europe & North America</li>
+                        </ul>
+
+                        <div class="hero__actions">
+                            <a class="btn btn--primary" href="#contact-modal">Let’s talk</a>
+                            <a class="btn btn--ghost" href="#work">View case studies</a>
+                        </div>
+
+                        <aside class="hero-side">
+                            <img src="img/photo.png" alt="Daniil Bastrich">
+                        </aside>
                     </div>
-
-                    <aside class="hero-side">
-                        <img src="img/photo.png" alt="Daniil Bastrich">
-                    </aside>
-
                 </section>
 
                 <aside class="featured" id="articles" aria-label="Featured articles">
@@ -157,31 +160,37 @@
                             <li>reviews & RFCs</li>
                             <li>performance planning</li>
                             <li>migration strategy</li>
-                            <div class="card-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg"
-                                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <circle cx="11" cy="11" r="4" />
-                                    <path d="M14 14l4 4" />
-                                    <path d="M6 7l2 2" />
-                                    <path d="M16 7l-2 2" />
-                                </svg>
 
-                            </div>
-                            <li>Analysis & Consultation: High-level expertise for strategic decisions: architecture reviews, scaling recommendations, technical strategy, and risk assessments. Actionable insights - not generic advice.</li>
-                            <div class="card-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg"
-                                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <rect x="4" y="4" width="7" height="5" rx="1.5" />
-                                    <rect x="13" y="4" width="7" height="5" rx="1.5" />
-                                    <rect x="9" y="15" width="6" height="5" rx="1.5" />
-                                    <path d="M7.5 9v3.5H12" />
-                                    <path d="M16.5 9v3.5H12" />
-                                </svg>
+                            <li>
+                                <div class="card-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="11" cy="11" r="4" />
+                                        <path d="M14 14l4 4" />
+                                        <path d="M6 7l2 2" />
+                                        <path d="M16 7l-2 2" />
+                                    </svg>
 
-                            </div>
-                            <li>System & Architecture Design: Designing scalable, reliable, and cost-efficient systems from scratch or re-architecting existing ones - with clear documentation, diagrams, and implementation roadmap.</li>
+                                </div>
+                                Analysis & Consultation: High-level expertise for strategic decisions: architecture reviews, scaling recommendations, technical strategy, and risk assessments. Actionable insights - not generic advice.
+                            </li>
+
+                            <li>
+                                <div class="card-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="4" y="4" width="7" height="5" rx="1.5" />
+                                        <rect x="13" y="4" width="7" height="5" rx="1.5" />
+                                        <rect x="9" y="15" width="6" height="5" rx="1.5" />
+                                        <path d="M7.5 9v3.5H12" />
+                                        <path d="M16.5 9v3.5H12" />
+                                    </svg>
+
+                                </div>
+                                System & Architecture Design: Designing scalable, reliable, and cost-efficient systems from scratch or re-architecting existing ones - with clear documentation, diagrams, and implementation roadmap.
+                            </li>
                         </ul>
                     </article>
 
@@ -195,27 +204,33 @@
                             <li>thin vertical slices</li>
                             <li>production hardening</li>
                             <li>POC → MVP → production</li>
-                            <div class="card-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg"
-                                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M14.5 3.5A5 5 0 0 0 9 9l-5.5 5.5a2.5 2.5 0 1 0 3.5 3.5L12.5 12A5 5 0 0 0 20.5 9" />
-                                    <circle cx="18" cy="6" r="1.5" />
-                                </svg>
 
-                            </div>
-                            <li>Engineering & Implementation: Hands-on development of backend, frontend, infrastructure, integrations, and data pipelines - built with clean architecture, clear documentation, and long-term maintainability so any future team can continue development effortlessly.</li>
-                            <div class="card-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg"
-                                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M10 3h4" />
-                                    <path d="M11 3v5l-4 7a3 3 0 0 0 2.6 4.5h6.8A3 3 0 0 0 19 15l-4-7V3" />
-                                    <path d="M9 14h6" />
-                                </svg>
+                            <li>
+                                <div class="card-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M14.5 3.5A5 5 0 0 0 9 9l-5.5 5.5a2.5 2.5 0 1 0 3.5 3.5L12.5 12A5 5 0 0 0 20.5 9" />
+                                        <circle cx="18" cy="6" r="1.5" />
+                                    </svg>
 
-                            </div>
-                            <li>Research, Prototyping, Fast and focused prototyping - from idea validation to working MVPs ready for investor demos or early production use.</li>
+                                </div>
+                                Engineering & Implementation: Hands-on development of backend, frontend, infrastructure, integrations, and data pipelines - built with clean architecture, clear documentation, and long-term maintainability so any future team can continue development effortlessly.
+                            </li>
+
+                            <li>
+                                <div class="card-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M10 3h4" />
+                                        <path d="M11 3v5l-4 7a3 3 0 0 0 2.6 4.5h6.8A3 3 0 0 0 19 15l-4-7V3" />
+                                        <path d="M9 14h6" />
+                                    </svg>
+
+                                </div>
+                                Research, Prototyping, Fast and focused prototyping - from idea validation to working MVPs ready for investor demos or early production use.
+                            </li>
                         </ul>
                     </article>
 
@@ -228,35 +243,42 @@
                             <li>tech strategy</li>
                             <li>process & quality</li>
                             <li>team effectiveness</li>
-                            <div class="card-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg"
-                                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <rect x="5" y="3" width="14" height="18" rx="2" />
-                                    <path d="M9 8h6" />
-                                    <path d="M9 12h6" />
-                                    <path d="M9 16h3" />
-                                    <path d="M7 8l-1 1" />
-                                    <path d="M7 12l-1 1" />
-                                </svg>
 
-                            </div>
-                            <li>Technical Audit: Comprehensive inspection of architecture, codebase, performance, infrastructure, cost optimization, security, data models, and delivery processes -  highlighting risks, bottlenecks, and opportunities for improvement.</li>
-                            <div class="card-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg"
-                                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <circle cx="12" cy="7" r="3" />
-                                    <path d="M6 19c0-2.5 2.2-4.5 6-4.5s6 2 6 4.5" />
-                                    <circle cx="5" cy="6" r="1.5" />
-                                    <circle cx="19" cy="6" r="1.5" />
-                                    <line x1="6.5" y1="6" x2="9" y2="7" />
-                                    <line x1="15" y1="7" x2="17.5" y2="6" />
-                                </svg>
+                            <li>
+                                <div class="card-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="5" y="3" width="14" height="18" rx="2" />
+                                        <path d="M9 8h6" />
+                                        <path d="M9 12h6" />
+                                        <path d="M9 16h3" />
+                                        <path d="M7 8l-1 1" />
+                                        <path d="M7 12l-1 1" />
+                                    </svg>
 
-                            </div>
-                            <li>Ongoing technical leadership for startups and scaling companies — covering architecture, engineering processes, product delivery, hiring, and long-term technical strategy without requiring a full-time CTO.</li>
-                            <div class="card-body">
+                                </div>
+                                Technical Audit: Comprehensive inspection of architecture, codebase, performance, infrastructure, cost optimization, security, data models, and delivery processes -  highlighting risks, bottlenecks, and opportunities for improvement.
+                            </li>
+
+                            <li>
+                                <div class="card-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="7" r="3" />
+                                        <path d="M6 19c0-2.5 2.2-4.5 6-4.5s6 2 6 4.5" />
+                                        <circle cx="5" cy="6" r="1.5" />
+                                        <circle cx="19" cy="6" r="1.5" />
+                                        <line x1="6.5" y1="6" x2="9" y2="7" />
+                                        <line x1="15" y1="7" x2="17.5" y2="6" />
+                                    </svg>
+
+                                </div>
+                                Ongoing technical leadership for startups and scaling companies — covering architecture, engineering processes, product delivery, hiring, and long-term technical strategy without requiring a full-time CTO.
+                            </li>
+
+                            <li>
                                 <div class="card-icon">
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
                                          xmlns="http://www.w3.org/2000/svg"
@@ -269,7 +291,8 @@
                                     </svg>
 
                                 </div>
-                            <li>Team Leadership Consulting: Helping teams improve delivery speed, quality, communication, prioritization, engineering culture, technical decision-making, and reduce chaos in development.</li>
+                                Team Leadership Consulting: Helping teams improve delivery speed, quality, communication, prioritization, engineering culture, technical decision-making, and reduce chaos in development.
+                            </li>
                         </ul>
                     </article>
 
@@ -282,18 +305,21 @@
                             <li>runbooks</li>
                             <li>monitoring & alerting</li>
                             <li>postmortems without blame</li>
-                            <div class="card-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg"
-                                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <circle cx="12" cy="12" r="8" />
-                                    <path d="M12 8v4l3 2" />
-                                    <path d="M4 12a8 8 0 0 1 8-8" />
-                                    <path d="M12 20a8 8 0 0 0 8-8" />
-                                </svg>
 
-                            </div>
-                            <li>24/7 Production Support: Supporting live systems, ensuring stability, preventing and processing incidents, monitoring, on-call coverage - including emergency troubleshooting when needed.</li>
+                            <li>
+                                <div class="card-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="8" />
+                                        <path d="M12 8v4l3 2" />
+                                        <path d="M4 12a8 8 0 0 1 8-8" />
+                                        <path d="M12 20a8 8 0 0 0 8-8" />
+                                    </svg>
+
+                                </div>
+                                24/7 Production Support: Supporting live systems, ensuring stability, preventing and processing incidents, monitoring, on-call coverage - including emergency troubleshooting when needed.
+                            </li>
                         </ul>
                     </article>
 
