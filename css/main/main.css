@@ -37,7 +37,6 @@ body {
 }
 
 a { color: inherit; text-decoration: none; }
-img { max-width: 100%; display: block; }
 
 .page {
     min-height: 100vh;
@@ -213,11 +212,15 @@ img { max-width: 100%; display: block; }
 }
 
 .article-item {
-    padding: 10px 12px;
     border-radius: 16px;
     border: 1px solid var(--border-soft);
     background: #fbfcff;
     transition: transform 0.12s ease, border-color 0.12s ease, box-shadow 0.12s ease;
+}
+
+.article-item a {
+    display: block;
+    padding: 10px 12px;
 }
 
 .article-item:hover {
@@ -785,11 +788,7 @@ img { max-width: 100%; display: block; }
     transition: all 0.12s ease-out;
 }
 
-.article-link:hover {
-    border-color: var(--accent);
-    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.08);
-    transform: translateX(4px);
-}
+
 
 .article-link-title {
     font-size: 15px;

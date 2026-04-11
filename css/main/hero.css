@@ -44,7 +44,7 @@
     margin-bottom: 12px;
 }
 
-.hero__bullets{ grid-column: 1; grid-row: 1; margin: 0; }
+.hero__bullets{ grid-column: 1; grid-row: 1; margin: 0; font-size: 17px}
 .hero__actions{ grid-column: 1; grid-row: 2; margin: 0; }
 
 
@@ -118,13 +118,33 @@
     line-height: 1;
 }
 
-/* справа */
+.hero__row{
+    display: grid;
+    grid-template-columns: 1fr clamp(200px, 32%, 380px);
+    grid-template-rows: auto auto;
+    gap: 14px 24px;
+    align-items: stretch;
+}
+
 .hero-side{
     grid-column: 2;
     grid-row: 1 / span 2;
-    align-self: stretch;
+    position: relative;
+    overflow: hidden;
+
+    min-height: 0;          /* на всякий случай для grid */
+}
+
+.hero-side img{
+    position: absolute;
+    inset: 0;
     width: 100%;
-    max-width: none;     /* важно: убрать ограничения типа 200/230px */
+    height: 100%;
+    object-fit: contain;
+    object-position: center bottom;
+    display: block;
+    border-radius: 24px;
+
 }
 
 
@@ -134,25 +154,18 @@
     }
 }
 
-.hero-side img{
-    display: block;
-    width: 100%;
-    height: 100%;        /* важно: чтобы заполняло высоту hero-side */
-    object-fit: cover;
-    object-position: center bottom;
-    border-radius: 24px;
-}
+
 
 @media (max-width: 767px){
     .hero__row{ grid-template-columns: 1fr; }
-    .hero-side{ grid-column: 1; grid-row: 3; max-width: 320px; justify-self: center; }
-    .hero-side img{ height: auto; }  /* на мобилке лучше не растягивать по высоте */
+    .hero-side{
+        position: static;
+        overflow: visible;
+    }
+    .hero-side img{
+        position: static;
+        width: 100%;
+        height: auto;
+    }
 }
 
-.hero__row{
-    display: grid;
-    grid-template-columns: 1fr clamp(260px, 35%, 380px);
-    grid-template-rows: auto auto;
-    gap: 14px 24px;
-    align-items: stretch;
-}
