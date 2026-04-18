@@ -132,7 +132,6 @@ a { color: inherit; text-decoration: none; }
 }
 .section-subtitle {
     color: var(--text-muted);
-    max-width: 70ch;
 }
 .muted { color: var(--text-muted); }
 .hint { margin-top: 12px; color: var(--text-muted); font-size: 14px; }
