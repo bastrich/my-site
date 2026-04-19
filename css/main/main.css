@@ -440,3 +440,34 @@ a { color: inherit; text-decoration: none; }
     display: grid;
     gap: 6px;
 }
+
+/* Мобилка: 2 колонки в первой строке, навигация второй строкой */
+@media (max-width: 919px) {
+    .header{
+        grid-template-columns: 1fr auto;
+        grid-template-areas:
+      "brand cta"
+      "nav   nav";
+        align-items: center;
+    }
+
+    .brand { grid-area: brand; }
+    .header__cta { grid-area: cta; }
+    .nav { grid-area: nav; }
+}
+
+@media (max-width: 919px) {
+    .nav{
+        flex-wrap: nowrap;          /* вместо wrap [1] */
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        gap: 8px;
+        padding-bottom: 6px;        /* чтобы скролл не “прилипал” */
+    }
+
+    .nav__link{
+        white-space: nowrap;
+        padding: 6px 8px;           /* чуть компактнее на мобилке */
+    }
+}
