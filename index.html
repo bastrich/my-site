@@ -756,24 +756,27 @@
                 </div>
             </section>
 
-            <section class="section" id="about" aria-label="About">
-                <div class="section-head">
+            <section class="section section--about" id="about" aria-label="About">
+                <header class="section-head section-head--about">
                     <h2 class="section-title">About</h2>
+
                     <p class="section-subtitle">
                         I favor clarity over hype. As a Software Engineer and Tech Lead, my goal is building stable systems and ensuring predictable delivery. I help companies design, scale, and stabilize mission-critical systems.
                     </p>
-                    <p class="section-subtitle">
-                       My core expertise lies high-load distributed architectures and complex migrations. I am usually brought in when teams are stuck, when a system must work flawlessly from day one, or when a challenge seems unsolvable. I speak English, Spanish, and Russian, effectively bridging the gap between business goals and technical execution for teams of any size.
-                    </p>
-                </div>
 
-                <section id="advantages">
-                    <h2 class="section-title">Why Work With Me (Not Just Another Freelancer)</h2>
-                    <div class="card-grid">
-                        <article class="card">
+                    <p class="section-subtitle">
+                        My core expertise lies high-load distributed architectures and complex migrations. I am usually brought in when teams are stuck, when a system must work flawlessly from day one, or when a challenge seems unsolvable. I speak English, Spanish, and Russian, effectively bridging the gap between business goals and technical execution for teams of any size.
+                    </p>
+                </header>
+
+                <div class="about-block" id="advantages" aria-label="Why Work With Me">
+                    <h3 class="about-block-title">Why Work With Me (Not Just Another Freelancer)</h3>
+
+                    <div class="grid grid--work about-advantages-grid">
+                        <article class="card about-card">
                             <h3>Industrial-grade systems</h3>
-                            <div class="card-body">
-                                <div class="card-icon">
+                            <div class="card-body about-card-body">
+                                <div class="card-icon about-card-icon" aria-hidden="true">
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
                                          xmlns="http://www.w3.org/2000/svg"
                                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -783,35 +786,33 @@
                                         <path d="M11 15h2" />
                                         <path d="M15 15h2" />
                                     </svg>
-
-
                                 </div>
                                 <p>
                                     If software were construction, I wouldn’t build sheds - I build factories, power plants, and tunnels. My systems are engineered for longevity, reliability, and scale.
                                 </p>
                             </div>
                         </article>
-                        <article class="card">
+
+                        <article class="card about-card">
                             <h3>Fully Committed</h3>
-                            <div class="card-body">
-                                <div class="card-icon">
+                            <div class="card-body about-card-body">
+                                <div class="card-icon about-card-icon" aria-hidden="true">
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
                                          xmlns="http://www.w3.org/2000/svg"
                                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <path d="M5 9c2 0 3 2 5 3.5C12 14 13 16 15 16c2 0 4-1.5 4-3.5S17 9 15 9c-2 0-3 2-5 3.5C8 14 7 16 5 16c-2 0-4-1.5-4-3.5S3 9 5 9z" />
                                     </svg>
-
-
                                 </div>
                                 <p>
                                     I stay with you through the entire lifecycle—from problem discovery to stable production. I am present and accessible when reliability truly matters.
                                 </p>
                             </div>
                         </article>
-                        <article class="card">
+
+                        <article class="card about-card">
                             <h3>Navigating the "impossible"</h3>
-                            <div class="card-body">
-                                <div class="card-icon">
+                            <div class="card-body about-card-body">
+                                <div class="card-icon about-card-icon" aria-hidden="true">
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
                                          xmlns="http://www.w3.org/2000/svg"
                                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -821,8 +822,6 @@
                                         <path d="M5 5l2 1" />
                                         <path d="M19 5l-2 1" />
                                     </svg>
-
-
                                 </div>
                                 <p>
                                     Even when the original idea seems technically impossible, I analyze underlying business constraints to find alternative strategies and deliver a clear path forward.
@@ -830,29 +829,31 @@
                             </div>
                         </article>
                     </div>
-                </section>
+                </div>
 
-                <div class="grid grid--about">
-                    <article class="card">
-                        <h3 class="card-title">How I Work</h3>
-                        <ul class="about-mini-list">
-                            <li>Conduct a rapid audit of goals, constraints, and risks.</li>
-                            <li>Prioritize changes that drive core business value and mitigate risks first.</li>
-                            <li>Document decisions clearly via RFCs to keep scope realistic.</li>
-                            <li>Deliver sustainable improvements your team can maintain without me.</li>
-                        </ul>
-                    </article>
+                <div class="about-block about-block--compact" aria-label="How I Work and Good Fit">
+                    <div class="grid grid--about about-stack">
+                        <article class="card about-card">
+                            <h3 class="card-title">How I Work</h3>
+                            <ul class="about-mini-list">
+                                <li>Conduct a rapid audit of goals, constraints, and risks.</li>
+                                <li>Prioritize changes that drive core business value and mitigate risks first.</li>
+                                <li>Document decisions clearly via RFCs to keep scope realistic.</li>
+                                <li>Deliver sustainable improvements your team can maintain without me.</li>
+                            </ul>
+                        </article>
 
-                    <article class="card">
-                        <h3 class="card-title">Good Fit If You Need</h3>
-                        <ul class="about-mini-list">
-                            <li>Resolution for scaling bottlenecks and performance regressions.</li>
-                            <li>Incident reduction and a healthier on-call environment.</li>
-                            <li>A breakthrough on complex engineering problems your team considers impossible.</li>
-                            <li>Architecture cleanup without a massive, risky rewrite.</li>
-                            <li>Advisory support and technical mentorship for a growing team.</li>
-                        </ul>
-                    </article>
+                        <article class="card about-card">
+                            <h3 class="card-title">Good Fit If You Need</h3>
+                            <ul class="about-mini-list">
+                                <li>Resolution for scaling bottlenecks and performance regressions.</li>
+                                <li>Incident reduction and a healthier on-call environment.</li>
+                                <li>A breakthrough on complex engineering problems your team considers impossible.</li>
+                                <li>Architecture cleanup without a massive, risky rewrite.</li>
+                                <li>Advisory support and technical mentorship for a growing team.</li>
+                            </ul>
+                        </article>
+                    </div>
                 </div>
             </section>
         </main>
