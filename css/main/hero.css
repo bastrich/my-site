@@ -8,10 +8,6 @@
     overflow: hidden;
 }
 
-@media (min-width: 768px) {
-    .hero { padding: 22px; }
-}
-
 .kicker {
     display: inline-flex;
     align-items: center;
@@ -31,10 +27,6 @@
     line-height: 1.12;
     letter-spacing: -0.03em;
     margin-bottom: 10px;
-}
-
-@media (min-width: 768px) {
-    .hero__title { font-size: 38px; }
 }
 
 .hero__subtitle {
@@ -76,14 +68,6 @@
     font-weight: 700;
     margin-bottom: 12px;
 }
-
-@media (min-width: 768px) {
-    .hero-title {
-        font-size: 32px;
-        margin-top: 76px;
-    }
-}
-
 
 
 .hero-cta {
@@ -155,11 +139,21 @@
     }
 }
 
+@media (max-width: 768px){
 
+    .hero { padding: 22px; }
 
-@media (max-width: 767px){
-    .hero__row{ grid-template-columns: 1fr; }
+    .hero__title { font-size: 38px; }
+
+    .hero__row{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    /* 1) Фото первым и в первой колонке */
     .hero-side{
+        grid-column: 1;
+        grid-row: 1;
         position: static;
         overflow: visible;
     }
@@ -168,5 +162,25 @@
         width: 100%;
         height: auto;
     }
-}
 
+    /* 2) Список после фото, на всю ширину */
+    .hero__bullets{
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    /* 3) Кнопки после списка и в одну строку */
+    .hero__actions{
+        grid-column: 1;
+        grid-row: 3;
+
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        flex-wrap: nowrap; /* чтобы не вставали столбиком */
+    }
+
+    .hero__actions .btn{
+        white-space: nowrap;
+    }
+}
