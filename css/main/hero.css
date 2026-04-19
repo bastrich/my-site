@@ -1,0 +1,186 @@
+/* Hero */
+.hero {
+    background: linear-gradient(180deg, rgba(37,99,235,0.08), rgba(255,255,255,0.0));
+    border: 1px solid var(--border-soft);
+    border-radius: 28px;
+    padding: 18px;
+    position: relative;
+    overflow: hidden;
+}
+
+.kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-weight: 800;
+    font-size: 13px;
+    width: fit-content;
+    margin-bottom: 10px;
+}
+
+.hero__title {
+    font-size: 30px;
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+    margin-bottom: 10px;
+}
+
+.hero__subtitle {
+    color: var(--text-muted);
+    font-size: 16px;
+    /*max-width: 70ch;*/
+    margin-bottom: 12px;
+}
+
+.hero__bullets{
+    grid-column: 1;
+    grid-row: 1;
+    margin: 0;
+    font-size: 17px;
+    color: var(--text-muted);
+}
+.hero__actions{ grid-column: 1; grid-row: 2; margin: 0; }
+
+
+.hero__trust {
+    border-top: 1px dashed var(--border-soft);
+    padding-top: 12px;
+    display: grid;
+    gap: 8px;
+}
+
+.hero-kicker {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--accent-green);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+}
+
+.hero-title {
+    font-size: 32px;
+    line-height: 1.1;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+
+.hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 22px;
+    border-radius: 999px;
+    border: none;
+    background: var(--accent);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
+    transition: transform 0.12s ease-out, box-shadow 0.12s ease-out,
+    background 0.15s ease-out;
+}
+
+.hero-cta:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 14px 32px rgba(37, 99, 235, 0.45);
+    background: #1d4ed8;
+}
+
+.hero-cta:active {
+    transform: translateY(0);
+    box-shadow: 0 8px 18px rgba(37, 99, 235, 0.35);
+}
+
+.hero-cta-icon {
+    font-size: 16px;
+    line-height: 1;
+}
+
+.hero__row{
+    display: grid;
+    grid-template-columns: 1fr clamp(200px, 32%, 380px);
+    grid-template-rows: auto auto;
+    gap: 14px 24px;
+    align-items: stretch;
+}
+
+.hero-side{
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    position: relative;
+    overflow: hidden;
+
+    min-height: 0;          /* на всякий случай для grid */
+}
+
+.hero-side img{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center bottom;
+    display: block;
+    border-radius: 24px;
+
+}
+
+
+@media (max-width: 600px) {
+    .hero-title {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 768px){
+
+    .hero { padding: 22px; }
+
+    .hero__title { font-size: 38px; }
+
+    .hero__row{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    /* 1) Фото первым и в первой колонке */
+    .hero-side{
+        grid-column: 1;
+        grid-row: 1;
+        position: static;
+        overflow: visible;
+    }
+    .hero-side img{
+        position: static;
+        width: 100%;
+        height: auto;
+    }
+
+    /* 2) Список после фото, на всю ширину */
+    .hero__bullets{
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    /* 3) Кнопки после списка и в одну строку */
+    .hero__actions{
+        grid-column: 1;
+        grid-row: 3;
+
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        flex-wrap: nowrap; /* чтобы не вставали столбиком */
+    }
+
+    .hero__actions .btn{
+        white-space: nowrap;
+    }
+}
