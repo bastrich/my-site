@@ -1,0 +1,15 @@
+.grid--about {
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 880px) {
+    .grid--about { grid-template-columns: repeat(2, 1fr); }
+}
+
+.about-mini-list {
+    margin-top: 10px;
+    padding-left: 18px;
+    color: var(--text-muted);
+    display: grid;
+    gap: 6px;
+}

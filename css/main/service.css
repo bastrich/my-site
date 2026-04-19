@@ -1,3 +1,11 @@
+.grid--services {
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 880px) {
+    .grid--services { grid-template-columns: repeat(2, 1fr); }
+}
+
 .service-list {
     margin-top: 10px;
     padding-left: 18px;
