@@ -73,9 +73,10 @@
                 <a class="nav__link" href="#about">About</a>
             </nav>
 
-            <div class="header__cta">
-                <a class="btn btn--primary btn--sm" href="#contact-modal">Let’s talk</a>
-            </div>
+            <button class="hero-cta header__cta">
+                <span>Let’s talk</span>
+                <span class="hero-cta-icon">↗</span>
+            </button>
         </header>
 
         <main id="top">
@@ -101,7 +102,10 @@
                         </ul>
 
                         <div class="hero__actions">
-                            <a class="btn btn--primary" href="#contact-modal">Let’s talk</a>
+                            <button class="btn hero-cta header__cta">
+                                <span>Let’s talk</span>
+                                <span class="hero-cta-icon">↗</span>
+                            </button>
                             <a class="btn btn--ghost" href="#work">View case studies</a>
                         </div>
 
@@ -857,10 +861,10 @@
     </div>
 </div>
 
-<!-- Sticky CTA -->
-<a class="sticky-cta" href="#contact-modal" aria-label="Open contact modal">
-    Let’s talk
-</a>
+<button class="sticky-cta hero-cta header__cta">
+    <span>Let’s talk</span>
+    <span class="hero-cta-icon">↗</span>
+</button>
 
 <div class="contact-modal-backdrop" id="contact-modal">
     <div class="contact-modal" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
