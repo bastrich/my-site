@@ -17,8 +17,7 @@
             domainParts: ['bastrich.tech']
         },
         whatsapp: {
-            numberParts: ['+34', '663', '909951'],
-            labelParts: ['@', 'daniil.', 'bastrich']
+            numberParts: ['+34', '663', '909', '951'],
         },
         telegram: {
             usernameParts: ['pla', 'strich']
@@ -36,7 +35,7 @@
         return cfg.numberParts.join('');
     }
     function buildWhatsAppLabel(cfg) {
-        return cfg.labelParts.join('');
+        return cfg.numberParts[0] + ' ' + cfg.numberParts[1] + '-' + cfg.numberParts[2] + '-' + cfg.numberParts[3];
     }
     function buildTelegramUser(cfg) {
         return cfg.usernameParts.join('');
@@ -51,23 +50,31 @@
             const email = buildEmail(contactData.email);
             emailLink.href = 'mailto:' + email;
             emailText.textContent = email;
+            const copyBtn = emailLink.querySelector('.contact-copy-btn');
+            if (copyBtn) copyBtn.setAttribute('data-copy', email);
         }
         if (waLink && waText) {
             const waNumber = buildWhatsAppNumber(contactData.whatsapp);
             const waLabel = buildWhatsAppLabel(contactData.whatsapp);
             waLink.href = 'https://' + 'wa.me/' + waNumber;
             waText.textContent = waLabel;
+            const copyBtn = waLink.querySelector('.contact-copy-btn');
+            if (copyBtn) copyBtn.setAttribute('data-copy', waNumber);
         }
         if (tgLink && tgText) {
             const username = buildTelegramUser(contactData.telegram);
             tgLink.href = 'https://' + 't.me/' + username;
             tgText.textContent = '@' + username;
+            const copyBtn = tgLink.querySelector('.contact-copy-btn');
+            if (copyBtn) copyBtn.setAttribute('data-copy', '@' + username);
         }
         if (lnLink && lnText) {
             const path = buildLinkedInPath(contactData.linkedin);
             const url = 'https://' + 'www.linkedin.com/' + 'in/' + path + '/';
             lnLink.href = url;
             lnText.textContent = 'linkedin.com/in/' + path;
+            const copyBtn = lnLink.querySelector('.contact-copy-btn');
+            if (copyBtn) copyBtn.setAttribute('data-copy', url);
         }
         contactsInitialized = true;
     }
@@ -93,5 +100,34 @@
         if (e.key === 'Escape' && modal.classList.contains('is-open')) {
             closeModal();
         }
+    });
+
+
+    const copyButtons = document.querySelectorAll('.contact-copy-btn');
+    copyButtons.forEach(btn => {
+        btn.addEventListener('click', async (e) => {
+            // Останавливаем клик, чтобы не сработал переход по ссылке .contact-item
+            e.preventDefault();
+            e.stopPropagation();
+
+            const textToCopy = btn.getAttribute('data-copy');
+            if (!textToCopy) return;
+
+            try {
+                // Копируем текст в буфер
+                await navigator.clipboard.writeText(textToCopy);
+
+                // Добавляем класс для красивой анимации (замена на зеленую галочку)
+                btn.classList.add('copied');
+
+                // Возвращаем исходную иконку через 2 секунды
+                setTimeout(() => {
+                    btn.classList.remove('copied');
+                }, 2000);
+
+            } catch (err) {
+                console.error('Failed to copy text: ', err);
+            }
+        });
     });
 })();

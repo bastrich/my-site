@@ -123,6 +123,7 @@
 }
 
 .contact-item-body {
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 1px;
@@ -141,4 +142,44 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+/* --- Новые стили для кнопки копирования --- */
+.contact-copy-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: transparent;
+    color: var(--text-muted); /* Используем вашу переменную цвета */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.contact-copy-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+.contact-copy-btn:hover {
+    background: rgba(37, 99, 235, 0.1);
+    color: #2563eb; /* Синий цвет при наведении */
+}
+
+/* Стиль при успешном копировании */
+.contact-copy-btn.copied {
+    color: #10b981; /* Зеленый цвет */
+    background: rgba(16, 185, 129, 0.1);
+}
+
+.contact-copy-btn.copied .copy-icon {
+    display: none;
+}
+
+.contact-copy-btn.copied .check-icon {
+    display: block !important;
 }
