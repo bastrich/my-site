@@ -101,8 +101,6 @@
 .contact-item-icon {
     width: 32px;
     height: 32px;
-    border-radius: 999px;
-    background: #ffffff;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -111,11 +109,17 @@
     font-weight: 600;
 }
 
+.contact-fallback-circle {
+    background: #ffffff;
+    border-radius: 999px;
+}
+
 .contact-item-icon-ln {
     background: #0a66c2;
     color: #ffffff;
     font-size: 15px;
     font-weight: 700;
+    border-radius: 999px;
 }
 
 .contact-item-body {
