@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8">
 
     <!-- Google Tag Manager -->
     <script>(function (w, d, s, l, i) {
@@ -67,7 +67,7 @@
     <link rel="icon" type="image/svg+xml" href="https://bastrich.tech/favicon.svg">
     <link rel="icon" type="image/x-icon" sizes="any" href="https://bastrich.tech/favicon.ico">
     <link rel="canonical" href="https://bastrich.tech/story-points/">
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css/article/article.css">
 </head>
 <body>
@@ -858,7 +858,7 @@
         </div>
     </main>
 
-        <div class="discussion-block">
+    <div class="discussion-block">
             <h3 class="discussion-title">Join the Discussion</h3>
             <p class="discussion-text">Have thoughts on this article? Share your feedback and discuss with the
                 community:</p>
@@ -893,6 +893,316 @@
                 <!--            </a>-->
             </div>
         </div>
+
+    <section class="discussion-addendum" aria-label="Community discussion addendum">
+        <div
+                class="discussion-section discussion-section--takeaways"
+                role="region"
+                aria-labelledby="discussion-takeaways-title"
+        >
+            <header class="discussion-section__header">
+                <h2 id="discussion-takeaways-title" class="discussion-section__title">
+                    <strong>Key Takeaways from the Discussion</strong>
+                </h2>
+
+                <p class="discussion-section__subtitle">
+                    <em>The main insights and conclusions from the community discussion of this article</em>
+                </p>
+            </header>
+
+            <ol class="discussion-takeaways square-bullet-list">
+                <li class="discussion-takeaway square-bullet-list-item-green">
+                    <div class="li-body">
+                        <p>
+                            Delivery First. Estimation and processes don’t matter if no value is being delivered. EMs should work on convincing stakeholders and senior management to focus more on fast delivery of the most important work than on processes, while also supporting and enabling that delivery. Some people even suggest not bothering with estimates at all and instead delivering results in the smallest possible chunks that are still useful. While I don’t think that is always feasible, we can still strive for it. If delivery is fast, estimates and tracking become less important and can often be ignored. In that case, the most important challenge for an EM is to organize frequent, meaningful delivery, potentially using feature toggles, canary releases, and other progressive delivery methods. Fast delivery also makes it easier for everyone to agree that estimates are not a firm 100% commitment, but rather a benchmark for high-level planning.
+                        </p>
+                    </div>
+                </li>
+                <li class="discussion-takeaway square-bullet-list-item-green">
+                    <div class="li-body">
+                        <p>
+                            Story Points help align expectations between stakeholders and developers. Even if you estimate in days, those "days" are not literal calendar days. However, many stakeholders tend to interpret them as actual working days. For developers, using Story Points helps decouple estimates from the "days" trap and enables sprint-level forecasting based on velocity. For stakeholders and managers, they provide a rough way to quantify the work completed during a sprint.
+                        </p>
+                    </div>
+                </li>
+                <li class="discussion-takeaway square-bullet-list-item-green">
+                    <div class="li-body">
+                        <p>
+                            If you use Planning Poker, treat it as a meeting with a clear structure, an active moderator, and a very concrete objective: to build a shared understanding of the tasks that is sufficient to estimate them reasonably accurately.
+                        </p>
+                        <p>
+                            If a team simply gathers and talks through tickets while trying to estimate them, they may get some incidental benefits from the discussion. At the same time, they will achieve neither better accuracy nor a better understanding of most of the tickets.
+
+                        </p>
+                        <p>
+                            To make it work, you need at least one person - usually the Engineering Manager - who leads the discussion, keeps it focused, and drives discussion and re-estimation until the estimates converge, without guessing or passive agreement. This person should ensure that everyone participates, sometimes drawing out opinions from people who are reluctant to speak or take an active part in the discussion. Everyone has to put in real effort, and that is a lot of work. But in my experience, it pays off.
+                        </p>
+                        <p>
+                            For example, during such discussions we often discover important factors that were known to only one team member. We often remember old but important details. Potential consequences and required steps come up during the discussion. As a result, when we start implementation, we very rarely encounter something completely unexpected.
+                        </p>
+                        <p>
+                            If such a discussion takes a long time, it means the requirements, the approach, and the solution are not obvious, and we do need to spend time discussing them before implementation - instead of discovering after a week of work that we went in the wrong direction, when a 30-minute discussion could have revealed it upfront.
+
+                        </p>
+                        <p>
+                            If the discussion would take more time than the implementation itself - for example, when using an LLM - just go ahead and implement it. But be careful with this approach, because there is still a high probability that you will implement the wrong thing if you skip the discussion.
+                        </p>
+                    </div>
+
+                </li>
+                <li class="discussion-takeaway square-bullet-list-item-green">
+                    <div class="li-body">
+                        <p>
+                            Using Story Points to compare the performance of different people and teams is a bad idea. Teams use different estimation scales and processes, and work on different types of tasks. People have different responsibilities and contribute in ways that aren’t always captured by the team’s estimated tasks. Business impact also doesn’t necessarily correlate with the effort spent on a task. Comparing these numbers won’t give you reliable results but will only demotivate developers. Moreover, whether you use story points or something else, tracking performance based on initial estimates is meaningless: they reflect the estimated amount of work, not the actual amount of work done.
+                        </p>
+                    </div>
+                </li>
+                <li class="discussion-takeaway square-bullet-list-item-green">
+                    <div class="li-body">
+                        <p>
+                            Keeping individual developer velocity in mind is useful for making team capacity adjustments during planning when a developer is OOO.
+                        </p>
+                    </div>
+                </li>
+                <li class="discussion-takeaway square-bullet-list-item-green">
+                    <div class="li-body">
+                        <p>
+                            Story Points are often used in counterproductive ways, but that doesn’t mean we shouldn’t use them - provided we clearly understand whether we need them and what specific advantages they offer.
+                        </p>
+                    </div>
+                </li>
+                <li class="discussion-takeaway square-bullet-list-item-green">
+                    <div class="li-body">
+                        <p>
+                            Whatever estimation approach you use, don’t give in to pressure from upper management to lower the estimate. If you’re forced to lower it, reduce or otherwise adjust the scope accordingly. It’s better to have that fight during estimation and planning than to make excuses later.
+                        </p>
+                    </div>
+                </li>
+                <li class="discussion-takeaway square-bullet-list-item-green">
+                    <div class="li-body">
+                        <p>
+                            Whatever estimation approach you use, it is still possible to put bounds on the scope instead of simply giving up in the face of uncertainty:
+                        </p>
+                        <ol>
+                            <li>Complexity is often frustrating, so breaking a single huge task into smaller chunks makes both estimating and working on the task much easier.</li>
+                            <li>If not all of those chunks are known in advance, we can isolate the known component and define it so that completing it reveals the unknown part.</li>
+                            <li>We can set an upper bound on the unknown work, explicitly stating that we don’t guarantee full completion of the task at this stage. Once the planned capacity has been used up, we can decide whether to move forward based on the results achieved, try another iteration, change the scope, or cancel the task.</li>
+                            <li>We can sit down and spend more time than usual defining the task more clearly. For some tasks, that’s worth it.</li>
+                        </ol>
+                        <p>
+                            Usually, it’s impossible to eliminate uncertainty completely, but it’s often possible to reduce it to a workable level. The longer a team works on a project, the fewer unknowns remain, provided the work is properly organized: expertise and experience are shared among team members, documentation and instructions are written, and so on.
+                        </p>
+                    </div>
+                </li>
+                <li class="discussion-takeaway square-bullet-list-item-green">
+                    <div class="li-body">
+                        <p>
+                            We can make estimates quite accurate if we spend a lot of time thoroughly researching everything related to the task, to the point where the requirements start to look like pseudocode. But producing such an estimate may take more time than the development itself, and probably doesn’t pay off in most cases. We can and should adjust the required level of planning detail and estimate accuracy for different tasks based on relevant criticality and risk factors: expected execution context and scope (front-end code running in a single browser and user session vs. back-end code running as a long-running process serving many users; or a one-off script vs. an API endpoint handling 100 RPS), and health, financial, and compliance risks. For example, I usually don’t need to plan every detail of how I’m going to implement a local project setup script, but I do need to dive deep, carefully plan the work, and investigate all edge cases for an automatic train braking system.
+                        </p>
+                    </div>
+                </li>
+                <li class="discussion-takeaway square-bullet-list-item-green">
+                    <div class="li-body">
+                        <p>
+                            If tickets are roughly the same size, we can simply count them instead of using story points. When that’s possible, it’s clearly the better approach. However, that often isn’t the case, which is why we may still need story points.
+                        </p>
+                    </div>
+                </li>
+                <li class="discussion-takeaway square-bullet-list-item-green">
+                    <div class="li-body">
+                        <p>
+                            Even if tickets vary in size, I think that, in the long run, the average number of tickets completed per development cycle, or the average time per ticket/feature, can be useful for monitoring changes in team performance at scale, as well as for long-term planning - provided we know either how many tickets/features we plan to work on or the time period we are planning for. Although I haven’t tested either approach, it seems like a valid idea to try. But I don’t think it will work in the short term, because ticket effort and duration can vary a lot over short periods.
+                        </p>
+                    </div>
+                </li>
+                <li class="discussion-takeaway square-bullet-list-item-green">
+                    <div class="li-body">
+                        <p>
+                            Don’t overestimate just for the sake of it. Overestimation is much more useful when it is based on a clear rationale: exactly how much are we increasing the estimate, and why? For example, instead of saying, "I’d estimate it at 8 story points instead of 3 because that’s how it feels," we can say, "I’d estimate it at 5 story points: the task itself is about 3 points, but it involves an external integration that uses a very outdated TLS version and a SOAP API, so we’ll need to implement support for that deprecated stack in our modern system." I usually try to avoid unjustified overestimation, because it’s very easy to fall into the trap of adding arbitrary buffers to everything, which significantly reduces the accuracy and predictive power of the entire planning process.
+                        </p>
+                    </div>
+                </li>
+                <li class="discussion-takeaway square-bullet-list-item-green">
+                    <div class="li-body">
+                        <p>
+                            We naturally tend to make time estimates less structured because time feels more straightforward. At the same time, such estimates are almost always based on intuition. Story point estimates, on the other hand, allow for a clearer structure with well-defined scales and techniques. I’m not saying time estimates can’t be structured, but in practice, people usually don’t approach them that way.
+                        </p>
+                        <p>
+                            As a result, with Story Points we estimate similar tickets consistently, it’s much easier to justify the estimate, and we can reconstruct that reasoning later if needed. With time estimates, it can be difficult to remember why we said "5 days" instead of "2 days."
+                        </p>
+                    </div>
+                </li>
+                <li class="discussion-takeaway square-bullet-list-item-green">
+                    <div class="li-body">
+                        <p>
+                            Don’t equate story points with time. If you’ve carefully researched the topic of story points, including this article and the articles referenced below, but still plan to equate them with time, either do the research again or just use time estimates directly. Keep in mind, though, that time estimates are often interpreted differently by different developers and managers: one person may understand them as calendar days, another as actual work time, and someone else as person-hours.
+                        </p>
+                        <p>
+                            If you need to communicate timelines to stakeholders, talk in terms of development cycles mapped to calendar time. The number of story points usually doesn’t mean much to stakeholders.
+                        </p>
+                    </div>
+                </li>
+                <li class="discussion-takeaway square-bullet-list-item-green">
+                    <div class="li-body">
+                        <p>
+                            Burndown charts probably don’t make much sense. We usually don’t want to break down the estimate for a single ticket into smaller parts, and we don’t want to track time spent on work. Both practices are rather flawed: they require more micromanagement, extra time, and redundant analysis, and may still have low accuracy, while the benefits are unclear. If we can easily split a ticket’s estimate, it’s better to create separate tickets instead.
+                        </p>
+                        <p>
+                            In that case, burndown charts,  whether based on time or story points, are almost completely irrelevant. For example, if I have four people working on four 5-point tickets, and all of them are completed at the end of the development cycle, the chart will just show a long horizontal line followed by a sharp drop at the very end. This is a bit of an extreme case, but I think the general idea is clear.
+                        </p>
+                        <p>
+                            If we need to know the team’s current progress, we can just look at the board and ask developers during daily meetings. If we need to communicate progress to stakeholders, it’s better to do it at the level of a development cycle. If they need finer-grained updates, we can update them after the daily meeting, or maybe let them participate in it if we think it’s safe.
+                        </p>
+                        <p>
+                            If you have to communicate detailed progress on each task, you can, of course, build a process for doing that and for producing an accurate burndown chart. But this will create a huge amount of administrative overhead. It would be better to spend that effort on delivering real results faster.
+                        </p>
+                    </div>
+                </li>
+                <li class="discussion-takeaway square-bullet-list-item-green">
+                    <div class="li-body">
+                        <p>
+                            If you are forced to use Story Points, try to get some value out of them instead of fighting them or merely imitating acceptance.
+                        </p>
+                    </div>
+                </li>
+                <li class="discussion-takeaway square-bullet-list-item-green">
+                    <div class="li-body">
+                        <p>
+                            Specialization - when a developer works only on specific components - can make estimates and planning more accurate over time, but it also introduces significant risks of delays and instability if that developer leaves or becomes unavailable. It also limits options for distributing and parallelizing work. I usually prefer an ownership model, in which a developer owns certain components: they make decisions, perform code reviews, and maintain deeper context, while other developers can still work on tasks in those components. This approach delivers nearly the same benefits as specialization, while minimizing risks and allowing for more comprehensive planning.
+                        </p>
+                    </div>
+                </li>
+                <li class="discussion-takeaway square-bullet-list-item-green">
+                    <div class="li-body">
+                        <p>
+                            Our work is indeed variable and unpredictable. There is nothing we can do about that. I believe more complex work inevitably requires more sophisticated processes. We shouldn’t avoid the complexity of planning, we should embrace it and use it to our advantage.
+                        </p>
+                    </div>
+                </li>
+                <li class="discussion-takeaway square-bullet-list-item-green">
+                    <div class="li-body">
+                        <p>
+                            As Dwight D. Eisenhower said, "Plans are worthless, but planning is everything." The purpose of planning is not only to clarify what needs to be done, when, and how, but also to analyze current and future factors that may affect our goals. If we plan only once and then try to follow that plan no matter what, in most cases we either achieve nothing or achieve something that is no longer relevant. We need to periodically analyze changing circumstances, re-estimate and re-plan our work, and sometimes even adjust the goal in order to achieve a meaningful result.
+                        </p>
+                    </div>
+                </li>
+                <li class="discussion-takeaway square-bullet-list-item-green">
+                    <div class="li-body">
+                        <p>
+                            Often, a team isn’t working on just one task but on several tasks at once. In such cases, it’s easier to plan the team’s work by starting with the scope that needs to be implemented rather than with an agreed-upon deadline. We then check whether that scope can be delivered by the deadline, adjust the scope and priorities if necessary, and repeat the cycle until the plan is settled.
+                        </p>
+                    </div>
+                </li>
+                <li class="discussion-takeaway square-bullet-list-item-green">
+                    <div class="li-body">
+                        <p>
+                            One participant in the discussion proposed an interesting approach to deterministic and balanced priority calculation. We estimate three numbers using Planning Poker and Fibonacci numbers:
+                        </p>
+                        <ol>
+                            <li>Value: the expected benefit if the task is completed.</li>
+                            <li>Effort: the expected amount of work required to complete it.</li>
+                            <li>Uncertainty: the level of doubt in the Effort estimate, i.e. how likely it is that the effort assumptions are wrong.</li>
+                        </ol>
+                        <p>
+                            Then we calcualte PriorityScore = Value / (Effort × Uncertainty). In other words, this is the value per uncertainty-adjusted unit of effort. This approach should help preserve more information than traditional story points.
+                        </p>
+                        <p>
+                        I think this approach is at least worth trying when priority is not dictated directly by stakeholder preferences, or when those preferences are already factored into the Value estimate.
+                        </p>
+                    </div>
+                </li>
+
+
+            </ol>
+        </div>
+
+        <div
+                class="discussion-section discussion-section--reading"
+                role="region"
+                aria-labelledby="discussion-reading-title"
+        >
+            <header class="discussion-section__header">
+
+                <h2 id="discussion-reading-title" class="discussion-section__title">
+                    <strong>Further Reading from the Discussion</strong>
+                </h2>
+
+                <p class="discussion-section__subtitle">
+                    <em>Additional articles and resources shared by the community during the discussion</em>
+                </p>
+            </header>
+
+            <ul class="discussion-reading discussion-reading--simple">
+                <li class="discussion-reading__item">
+                    <a class="discussion-reading__link" href="https://ronjeffries.com/articles/019-01ff/story-points/Index.html" target="_blank" >
+                        <span class="discussion-reading__text">
+                        <span class="discussion-reading__title">Story Points Revisited</span>
+                        <span class="discussion-reading__author">Ron Jeffries</span>
+                        </span>
+                        <span class="discussion-reading__arrow" aria-hidden="true">↗</span>
+                    </a>
+                </li>
+                <li class="discussion-reading__item">
+                    <a class="discussion-reading__link" href="https://www.mountaingoatsoftware.com/blog/dont-equate-story-points-to-hours" target="_blank" >
+                        <span class="discussion-reading__text">
+                        <span class="discussion-reading__title">Don’t Equate Story Points to Hours</span>
+                        <span class="discussion-reading__author">Mike Cohn</span>
+                        </span>
+                        <span class="discussion-reading__arrow" aria-hidden="true">↗</span>
+                    </a>
+                </li>
+                <li class="discussion-reading__item">
+                    <a class="discussion-reading__link" href="https://archive.ph/QpdLb" target="_blank" >
+                        <span class="discussion-reading__text">
+                        <span class="discussion-reading__title">They Write the Right Stuff</span>
+                        <span class="discussion-reading__author">Charles Fishman</span>
+                        </span>
+                        <span class="discussion-reading__arrow" aria-hidden="true">↗</span>
+                    </a>
+                </li>
+                <li class="discussion-reading__item">
+                    <a class="discussion-reading__link" href="https://www.lloydatkinson.net/posts/2022/one-teams-eight-points-is-another-teams-two-points/" target="_blank" >
+                        <span class="discussion-reading__text">
+                        <span class="discussion-reading__title">Eight Points for One Team Is Two Points for Another Team</span>
+                        <span class="discussion-reading__author">Lloyd Atkinson</span>
+                        </span>
+                        <span class="discussion-reading__arrow" aria-hidden="true">↗</span>
+                    </a>
+                </li>
+                <li class="discussion-reading__item">
+                    <a class="discussion-reading__link" href="https://alex.corcoles.net/notes/tech/on-software-development" target="_blank" >
+                        <span class="discussion-reading__text">
+                        <span class="discussion-reading__title">On software development</span>
+                        <span class="discussion-reading__author">Alex Córcoles</span>
+                        </span>
+                        <span class="discussion-reading__arrow" aria-hidden="true">↗</span>
+                    </a>
+                </li>
+                <li class="discussion-reading__item">
+                    <a class="discussion-reading__link" href="https://linear.app/method" target="_blank" >
+                        <span class="discussion-reading__text">
+                        <span class="discussion-reading__title">The Linear Method - Practices for building</span>
+                        </span>
+                        <span class="discussion-reading__arrow" aria-hidden="true">↗</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <footer class="copyright">
+        <small>
+            &copy; <span id="copyright-years">2025</span> Daniil Bastrich. All rights reserved.
+        </small>
+    </footer>
+
+    <script>
+        const startYear = 2025;
+        const currentYear = new Date().getFullYear();
+
+        document.getElementById('copyright-years').textContent =
+            currentYear > startYear ? `${startYear}–${currentYear}` : String(startYear);
+    </script>
 </div>
 
 <!-- Image Modal -->

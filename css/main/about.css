@@ -14,12 +14,10 @@
     gap: 6px;
 }
 
-/* About layout polish */
 .section--about {
     width: 100%;
 }
 
-/* Intro (head) */
 .section-head--about {
     margin-bottom: 14px;
 }
@@ -30,7 +28,6 @@
     line-height: 1.65;
 }
 
-/* Blocks inside About */
 .about-block {
     margin-top: 14px;
     padding: 16px;
@@ -58,9 +55,7 @@
     color: var(--text-main);
 }
 
-/* Advantage cards */
 .about-advantages-grid {
-    /* grid behavior comes from .grid + .grid--work */
     gap: 12px;
 }
 
@@ -76,7 +71,6 @@
     }
 }
 
-/* Make icon + text align nicely, override global justify for this area */
 .section--about .about-card-body {
     display: flex;
     gap: 12px;
@@ -89,23 +83,20 @@
     text-align: left;
 }
 
-/* Icon style */
 .section--about .about-card-icon {
     background: var(--accent-soft);
     color: var(--accent);
     border: 1px solid rgba(37, 99, 235, 0.12);
 }
 
-/* Lists: a bit more breathing room inside cards */
 .section--about .about-mini-list {
-    margin-top: 10px; /* already exists in your CSS; keeps consistent */
+    margin-top: 10px;
 }
 
 .section--about .about-mini-list li {
     line-height: 1.55;
 }
 
-/* Optional: slightly tighter spacing between the last block and grid */
 .about-stack {
     gap: 12px;
 }

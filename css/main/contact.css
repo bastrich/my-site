@@ -3,10 +3,7 @@
     position: fixed;
     inset: 0;
     padding: 16px;
-
     background: rgba(15, 23, 42, 0.55);
-    /*background: rgba(15, 23, 42, 0.45);*/
-
     align-items: center;
     justify-content: center;
     z-index: 999;
@@ -58,7 +55,6 @@
 .contact-modal-title {
     font-size: 20px;
     font-weight: 900;
-    /*700*/
     margin-bottom: 4px;
 }
 
@@ -82,7 +78,6 @@
     padding: 10px 12px;
     border-radius: var(--radius-lg);
     background: #eff3ff;
-    /*border: 1px solid rgba(37, 99, 235, 0.14);*/
     font-weight: 800;
     border: 1px solid var(--border-soft);
     text-decoration: none;
@@ -144,7 +139,6 @@
     text-overflow: ellipsis;
 }
 
-/* --- Новые стили для кнопки копирования --- */
 .contact-copy-btn {
     display: flex;
     align-items: center;
@@ -153,7 +147,7 @@
     height: 32px;
     border: none;
     background: transparent;
-    color: var(--text-muted); /* Используем вашу переменную цвета */
+    color: var(--text-muted);
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -167,12 +161,11 @@
 
 .contact-copy-btn:hover {
     background: rgba(37, 99, 235, 0.1);
-    color: #2563eb; /* Синий цвет при наведении */
+    color: #2563eb;
 }
 
-/* Стиль при успешном копировании */
 .contact-copy-btn.copied {
-    color: #10b981; /* Зеленый цвет */
+    color: #10b981;
     background: rgba(16, 185, 129, 0.1);
 }
 

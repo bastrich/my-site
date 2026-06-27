@@ -52,3 +52,35 @@ ol.square-bullet-list li.square-bullet-list-item .li-body p {
     align-items: flex-start;
     margin-top: 10px;
 }
+
+
+ol.square-bullet-list li.square-bullet-list-item-green {
+    margin-bottom: 20px;
+    counter-increment: list-counter;
+    position: relative;
+    padding-left: 45px;
+}
+
+ol.square-bullet-list li.square-bullet-list-item-green::before {
+    content: counter(list-counter);
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 32px;
+    height: 32px;
+    align-items: center;
+    justify-content: center;
+    font-weight:  700;
+    font-size: 14px;
+    flex: 0 0 auto;
+    display: inline-flex;
+    border-radius: 10px;
+    background: rgba(16, 185, 129, 0.12);
+    color: #047857;
+}
+
+ol.square-bullet-list li.square-bullet-list-item-green .li-body {
+    margin: 0 0 0 6px;
+    font-size: 15px;
+    text-align: justify;
+}

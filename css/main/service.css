@@ -19,7 +19,7 @@
 
 .service-list > li {
     position: relative;
-    padding-left: 46px;     /* 34px + зазор */
+    padding-left: 46px;
     min-height: 34px;
 }
 
@@ -27,7 +27,7 @@
     content: "";
     position: absolute;
     left: 0;
-    top: 0;                /* при необходимости подстройте */
+    top: 0;
     width: 34px;
     height: 34px;
     border-radius: 10px;
