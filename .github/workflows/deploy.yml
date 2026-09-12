@@ -82,3 +82,13 @@ jobs:
           local-dir: ./dist/
           server-dir: /bastrich-tech/
           dangerous-clean-slate: true
+
+      - name: Install CDN CLI
+        run: npm install -g @bunny.net/cli@0.17.0
+
+      - name: Purge CDN cache
+        env:
+          CDN_API_KEY: ${{ secrets.CDN_API_KEY }}
+          CDN_PULL_ZONE_ID: ${{ secrets.CDN_PULL_ZONE_ID }}
+        run: |
+          bunny api POST "/pullzone/${CDN_PULL_ZONE_ID}/purgeCache"
