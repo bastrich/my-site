@@ -88,7 +88,7 @@ jobs:
 
       - name: Purge CDN cache
         env:
-          CDN_API_KEY: ${{ secrets.CDN_API_KEY }}
+          BUNNYNET_API_KEY: ${{ secrets.CDN_API_KEY }}
           CDN_PULL_ZONE_ID: ${{ secrets.CDN_PULL_ZONE_ID }}
         run: |
           bunny api POST "/pullzone/${CDN_PULL_ZONE_ID}/purgeCache"
