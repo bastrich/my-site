@@ -23,7 +23,7 @@
         {
             "@context": "https://schema.org",
             "@type": "Article",
-            "headline": "Story Points: Explicit, Honest, Predictable. Already in Use.",
+            "headline": "Back to Coupling and Cohesion",
             "image": [
                 "https://bastrich.tech/story-points/img/thumbnail.png?v=1",
                 "https://bastrich.tech/story-points/img/4x3.png?v=1",
@@ -39,16 +39,16 @@
         }
     </script>
 
-    <title>Story Points: Explicit, Honest, Predictable. Already in Use. – Daniil Bastrich</title>
+    <title>Back to Coupling and Cohesion – Daniil Bastrich</title>
     <meta name="description"
-          content='Every time a software estimate is inflated to absorb uncertainty and daily overhead, it stops measuring actual time and turns into a messy abstraction. Once your "hours" and "days" become a proxy for effort rather than the clock, you are already using Story Points implicitly. Dropping the self-deception and openly embracing this abstraction brings structure to your planning and helps reliably predict delivery without the guessing game.'>
+          content="Coupling and Cohesion in practice: meaningful quantitative metrics and the common ground behind software design principles.">
     <meta name="keywords"
           content="story points, short-term planning, planning, man-hours, estimation, sprint planning, risks, software engineering, development process, team management">
     <meta name="author" content="Daniil Bastrich">
     <meta property="og:title"
-          content="Story Points: Explicit, Honest, Predictable. Already in Use. – Daniil Bastrich">
+          content="Back to Coupling and Cohesion – Daniil Bastrich">
     <meta property="og:description"
-          content='Every time a software estimate is inflated to absorb uncertainty and daily overhead, it stops measuring actual time and turns into a messy abstraction. Once your "hours" and "days" become a proxy for effort rather than the clock, you are already using Story Points implicitly. Dropping the self-deception and openly embracing this abstraction brings structure to your planning and helps reliably predict delivery without the guessing game.'>
+          content="Coupling and Cohesion in practice: meaningful quantitative metrics and the common ground behind software design principles.">
     <meta property="og:image" content="https://bastrich.tech/story-points/img/og.png?v=2">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -60,9 +60,9 @@
     <meta property="og:type" content="article">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title"
-          content="Story Points: Explicit, Honest, Predictable. Already in Use. – Daniil Bastrich">
+          content="Back to Coupling and Cohesion – Daniil Bastrich">
     <meta name="twitter:description"
-          content='Every time a software estimate is inflated to absorb uncertainty and daily overhead, it stops measuring actual time and turns into a messy abstraction. Once your "hours" and "days" become a proxy for effort rather than the clock, you are already using Story Points implicitly. Dropping the self-deception and openly embracing this abstraction brings structure to your planning and helps reliably predict delivery without the guessing game.'>
+          content="Coupling and Cohesion in practice: meaningful quantitative metrics and the common ground behind software design principles.">
     <meta name="twitter:image" content="https://bastrich.tech/story-points/img/og.png?v=1">
     <meta name="twitter:label1" content="Published on">
     <meta name="twitter:data1" content="May 30, 2026">
@@ -93,17 +93,13 @@
                             </a>
                         </div>
                         <h1 class="article-title">
-                            Story Points: Explicit, Honest, Predictable. Already in Use.
+                            Back to Coupling and Cohesion
                         </h1>
                         <div class="article-meta">
                             <time class="article-date" datetime="2026-05-30">May 30, 2026</time>
                         </div>
                         <p class="article-lead">
-                            Every time a software estimate is inflated to absorb uncertainty and daily overhead, it
-                            stops measuring actual time and turns into a messy abstraction. Once your "hours" and "days"
-                            become a proxy for effort rather than the clock, you are already using Story Points
-                            implicitly. Dropping the self-deception and openly embracing this abstraction brings
-                            structure to your planning and helps reliably predict delivery without the guessing game.
+                            Coupling and Cohesion in practice: meaningful quantitative metrics and the common ground behind software design principles.
                         </p>
                     </div>
                 </div>
@@ -153,93 +149,68 @@
             <section>
                 <div class="section-body">
                     <p>
-                        Missed deadlines, awkward excuses, and constant replanning have been haunting your team for
-                        months or even years. You might have already decided that this is just the way software
-                        development works, and there is nothing you can do about it.
+                        A <strong>SOLID</strong> <strong>GRASP</strong> and <strong>KISS</strong> can get you fired. Yet in software engineering, that’s exactly how you get hired. Beginner developers and clean code fanatics often misuse these terms and overapply the associated practices, turning a codebase into an impressive but difficult-to-maintain illustration of these principles. Whether you are just starting your career, believe every developer should live by SOLID, or have ever been unfairly accused of not understanding software design principles, this article is for you.
                     </p>
-                    <p style="margin-top: 12px;">
-                        Yet, predictable delivery is achievable, and team seniority is often not the deciding factor.
-                        If your plans collapse every week, the root cause is rarely poor execution. Usually,
-                        it comes down to a flawed estimation process.
-                    </p>
-
                     <figure class="article-figure">
-                        <img src="img/thumbnail.png" alt="Thumbnail" class="article-image">
+                        <img src="img/meme.jpg" alt="Meme" class="article-image">
                     </figure>
-
                     <p style="margin-top: 12px;">
-                        In this article, I step away from abstract theory to share practical, battle-tested insights
-                        forged across multiple real projects. I will show how to make the estimation process work for
-                        short-term planning: why overestimation destroys predictability, how to forecast delivery using
-                        velocity, when and why Story Points tend to outperform time-based estimates, and how to make
-                        them actually work. Whether you are an engineering manager or a developer looking to bring more
-                        predictability to your work, the approaches and recommendations below can help you turn
-                        estimation from a guessing game into one of the most effective tools in your planning process.
+                        In practice, such principles ultimately come down to managing coupling and cohesion in all their forms and at every level of a system. And once we have a good grasp of coupling and cohesion, there is little point in memorizing the alphabet soup of design principles, let alone fetishizing them.
                     </p>
                 </div>
             </section>
 
             <section>
-                <h2 class="section-title">Why Care About Estimates?</h2>
+                <h2 class="section-title">What are Coupling and Cohesion?</h2>
                 <div class="section-body">
                     <p>
-                        Software projects almost always come with deadlines. Whether it's satisfying user needs, meeting
-                        customer expectations, or hitting a market window - delivering late can render the entire effort
-                        meaningless. The ultimate goal is typically a release on an agreed date, which means we need
-                        predictability for developers and for the business alike. For managers, predictability often
-                        matters even more than speed: it's not about how fast you deliver, but how closely your forecast
-                        matches reality.
+                        Coupling is a measure of how strongly components are interconnected, such that a change to one component can require changes to others.
                     </p>
                     <p style="margin-top: 12px;">
-                        Beyond business goals, estimates heavily dictate technical decisions. When evaluating multiple
-                        options for system architecture and design, the final choice is largely driven by time
-                        constraints, not just project requirements or technical merits. Tight deadlines force us to make
-                        calculated trade-offs and discover faster workarounds. Inaccurate estimates in either direction
-                        are costly: underestimates lead to missed deadlines and needlessly sacrificed quality, while
-                        overestimates can result in overengineering and lost momentum.
+                        Cohesion is a measure of how closely all the parts of a component align with a single purpose.
                     </p>
                     <p style="margin-top: 12px;">
-                        Ultimately, the success or failure of a project hinges on the quality of planning and management
-                        decisions informed by our estimates - whether that means allocating resources, balancing
-                        priorities, planning new hires, or even self-management as a solo developer. When I help teams
-                        improve short-term planning across sprints, the biggest win is rarely "perfect accuracy" - it’s
-                        making estimates consistent enough to support better decisions week after week.
+                        For example, suppose my function sorts an array of integers. If I have to modify the function to make it sort an array of strings, the function is coupled to the integer type.  If, instead, the function works with an abstract Comparable type, I can use it with any type that satisfies that contract without modifying the function itself. In other words, it is not coupled to any specific element type, although it is still coupled to the Comparable contract. At the same time, if the function is responsible only for sorting the array it receives - with no unrelated transformations, business-rule validation, and so on - it has high cohesion.
+                    </p>
+                    <figure class="article-figure">
+                        <img src="img/example.png" alt="Example" class="article-image">
+                    </figure>
+                    <p style="margin-top: 12px;">
+                        You may already see that neither coupling nor cohesion is an absolute measure. Both depend on the particular changes we consider, the kinds of components involved, and the relationships between them. Coupling can be unidirectional or bidirectional. There are many classifications of coupling and cohesion, but they are rarely needed in practice.
                     </p>
                 </div>
             </section>
 
             <section id="do-you-need">
-                <h2 class="section-title">Is Precision Important?</h2>
+                <h2 class="section-title">How to Measure Coupling and Cohesion?</h2>
                 <div class="section-body">
                     <p>
-                        When we talk about precision in software estimates, we usually mean two different things:
+                        Usually, if a project has problems because of suboptimal coupling and cohesion, you don't need quantitative metrics to notice them. After working on the project for some time, you can just tell. But if you need concrete numbers to support a report, justify a decision, or justify work to be done, the approach described below can be useful.
+                    </p>
+                    <p style="margin-top: 12px;">
+                        Since we are more interested in the practical rather than theoretical application of these concepts, I usually recommend an approach based on collecting statistics from actual work. We need to track:
                     </p>
                     <ol style="margin-top: 20px;" class="summary-list">
                         <li>
                             <div class="li-body">
                                 <p>
-                                    <strong>Accuracy</strong> - how closely the estimate matches the actual time spent.
+                                    For <strong>coupling</strong> - the number of components touched while working on a single task and how the effort is distributed between them.
                                 </p>
                             </div>
                         </li>
                         <li>
                             <div class="li-body">
                                 <p>
-                                    <strong>Granularity</strong> - the smallest unit you use for estimates (hours, days,
-                                    Story Points, etc.).
+                                    For <strong>cohesion </strong> - the number of distinct concerns to keep in mind while working on a single component and how the effort is distributed between them.
                                 </p>
                             </div>
                         </li>
                     </ol>
                     <p style="margin-top: 12px;">
-                        Here, I’ll focus on accuracy while exploring the minimum unit of measurement further below.
+                        In both cases, the result should look like a list of numbers. Effort can be measured using any consistent unit appropriate for your context, such as percentages, hours, or some arbitrary relative scale.
                     </p>
                     <p style="margin-top: 12px;">
-                        At first glance, it may seem that the best strategy for always having a correct estimate is to
-                        pad it as close to the upper bound as possible. For example, if I know I can implement an API in
-                        1 day, then test and release it in 1 more day, I might add another day as a buffer for the
-                        unexpected - and then multiply the final number by 2–5 depending on the overall project state,
-                        the weather, and my mood.
+                        For coupling, we then have:
                     </p>
                     <p style="margin-top: 12px;">
 
