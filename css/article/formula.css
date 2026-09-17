@@ -60,3 +60,7 @@
         flex-wrap: wrap;
     }
 }
+
+.formula-item .katex-display {
+    margin: 0;
+}
