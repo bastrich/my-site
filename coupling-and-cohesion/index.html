@@ -25,9 +25,9 @@
             "@type": "Article",
             "headline": "Back to Coupling and Cohesion",
             "image": [
-                "https://bastrich.tech/story-points/img/thumbnail.png?v=1",
-                "https://bastrich.tech/story-points/img/4x3.png?v=1",
-                "https://bastrich.tech/story-points/img/16x9.png?v=1"
+                "https://bastrich.tech/coupling-and-cohesion/img/1x1.jpg",
+                "https://bastrich.tech/coupling-and-cohesion/img/4x3.jpg",
+                "https://bastrich.tech/coupling-and-cohesion/img/16x9.jpg"
             ],
             "datePublished": "2026-05-30T10:00:00Z",
             "dateModified": "2026-05-30T10:00:00Z",
@@ -43,16 +43,16 @@
     <meta name="description"
           content="Coupling and Cohesion in practice: meaningful quantitative metrics and the common ground behind software design principles.">
     <meta name="keywords"
-          content="story points, short-term planning, planning, man-hours, estimation, sprint planning, risks, software engineering, development process, team management">
+          content="coupling, cohesion, solid, low coupling, high cohesion, kiss, dry, grasp, single responsibility Principle, open closed principle, liskov substitution principle, interface segregation principle, dependency inversion principle, law of demeter, software engineering, development process">
     <meta name="author" content="Daniil Bastrich">
     <meta property="og:title"
           content="Back to Coupling and Cohesion - Daniil Bastrich">
     <meta property="og:description"
           content="Coupling and Cohesion in practice: meaningful quantitative metrics and the common ground behind software design principles.">
-    <meta property="og:image" content="https://bastrich.tech/story-points/img/og.png?v=2">
+    <meta property="og:image" content="https://bastrich.tech/coupling-and-cohesion/img/og.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:url" content="https://bastrich.tech/story-points/">
+    <meta property="og:url" content="https://bastrich.tech/coupling-and-cohesion/">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="Daniil Bastrich - Software Development Engineer">
     <meta property="article:published_time" content="2026-05-30T10:00:00Z">
@@ -63,12 +63,12 @@
           content="Back to Coupling and Cohesion - Daniil Bastrich">
     <meta name="twitter:description"
           content="Coupling and Cohesion in practice: meaningful quantitative metrics and the common ground behind software design principles.">
-    <meta name="twitter:image" content="https://bastrich.tech/story-points/img/og.png?v=1">
+    <meta name="twitter:image" content="https://bastrich.tech/coupling-and-cohesion/img/og.jpg">
     <meta name="twitter:label1" content="Published on">
     <meta name="twitter:data1" content="May 30, 2026">
     <link rel="icon" type="image/svg+xml" href="https://bastrich.tech/favicon.svg">
     <link rel="icon" type="image/x-icon" sizes="any" href="https://bastrich.tech/favicon.ico">
-    <link rel="canonical" href="https://bastrich.tech/story-points/">
+    <link rel="canonical" href="https://bastrich.tech/coupling-and-cohesion/">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css/article/article.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.18.7/dist/katex.min.css">
@@ -558,41 +558,41 @@
         </div>
     </main>
 
-    <div class="discussion-block">
-        <h3 class="discussion-title">Join the Discussion</h3>
-        <p class="discussion-text">Have thoughts on this article? Share your feedback and discuss with the
-            community:</p>
-        <div class="discussion-links">
-            <a href="https://www.reddit.com/r/programming/comments/1tsyfhk/story_points_explicit_honest_predictable_already/"
-               class="discussion-link reddit" target="_blank" rel="noopener">
-                    <span class="link-icon">
-                        <img src="https://www.redditstatic.com/shreddit/assets/favicon/64x64.png" alt="Reddit"
-                             class="icon-img"
-                             onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
-                        <span class="icon-fallback" style="display: none;">💬</span>
-                    </span>
-                <span class="link-text">Discuss on Reddit</span>
-            </a>
-            <a href="https://news.ycombinator.com/item?id=48352590" class="discussion-link hackernews" target="_blank"
-               rel="noopener">
-                    <span class="link-icon">
-                        <img src="https://news.ycombinator.com/y18.svg" alt="Hacker News" class="icon-img"
-                             onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
-                         <span class="icon-fallback" style="display: none;">🗨️</span>
-                    </span>
-                <span class="link-text">Discuss on Hacker News</span>
-            </a>
-            <!--            <a href="https://lobste.rs/s/36qjm9/perfect_code_review_how_reduce_cognitive"-->
-            <!--               class="discussion-link lobsters" target="_blank" rel="noopener">-->
-            <!--                <span class="link-icon">-->
-            <!--                    <img src="https://lobste.rs/favicon.ico" alt="Lobsters" class="icon-img"-->
-            <!--                         onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">-->
-            <!--                    <span class="icon-fallback" style="display: none;">🦞</span>-->
-            <!--                </span>-->
-            <!--                <span class="link-text">Discuss on Lobsters</span>-->
-            <!--            </a>-->
-        </div>
-    </div>
+<!--    <div class="discussion-block">-->
+<!--        <h3 class="discussion-title">Join the Discussion</h3>-->
+<!--        <p class="discussion-text">Have thoughts on this article? Share your feedback and discuss with the-->
+<!--            community:</p>-->
+<!--        <div class="discussion-links">-->
+<!--            <a href="https://www.reddit.com/r/programming/comments/1tsyfhk/story_points_explicit_honest_predictable_already/"-->
+<!--               class="discussion-link reddit" target="_blank" rel="noopener">-->
+<!--                    <span class="link-icon">-->
+<!--                        <img src="https://www.redditstatic.com/shreddit/assets/favicon/64x64.png" alt="Reddit"-->
+<!--                             class="icon-img"-->
+<!--                             onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">-->
+<!--                        <span class="icon-fallback" style="display: none;">💬</span>-->
+<!--                    </span>-->
+<!--                <span class="link-text">Discuss on Reddit</span>-->
+<!--            </a>-->
+<!--            <a href="https://news.ycombinator.com/item?id=48352590" class="discussion-link hackernews" target="_blank"-->
+<!--               rel="noopener">-->
+<!--                    <span class="link-icon">-->
+<!--                        <img src="https://news.ycombinator.com/y18.svg" alt="Hacker News" class="icon-img"-->
+<!--                             onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">-->
+<!--                         <span class="icon-fallback" style="display: none;">🗨️</span>-->
+<!--                    </span>-->
+<!--                <span class="link-text">Discuss on Hacker News</span>-->
+<!--            </a>-->
+<!--            &lt;!&ndash;            <a href="https://lobste.rs/s/36qjm9/perfect_code_review_how_reduce_cognitive"&ndash;&gt;-->
+<!--            &lt;!&ndash;               class="discussion-link lobsters" target="_blank" rel="noopener">&ndash;&gt;-->
+<!--            &lt;!&ndash;                <span class="link-icon">&ndash;&gt;-->
+<!--            &lt;!&ndash;                    <img src="https://lobste.rs/favicon.ico" alt="Lobsters" class="icon-img"&ndash;&gt;-->
+<!--            &lt;!&ndash;                         onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">&ndash;&gt;-->
+<!--            &lt;!&ndash;                    <span class="icon-fallback" style="display: none;">🦞</span>&ndash;&gt;-->
+<!--            &lt;!&ndash;                </span>&ndash;&gt;-->
+<!--            &lt;!&ndash;                <span class="link-text">Discuss on Lobsters</span>&ndash;&gt;-->
+<!--            &lt;!&ndash;            </a>&ndash;&gt;-->
+<!--        </div>-->
+<!--    </div>-->
 
     <footer class="copyright">
         <small>
