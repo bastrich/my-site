@@ -380,102 +380,125 @@
                         I will use just a few examples to illustrate the idea without making the article too long. If
                         you don’t see a principle here, let me know in the discussion, and I will reduce it too.
                     </p>
-                    <p style="margin-top: 12px;">
-                        SOLID - Single Responsibility Principle
-                    </p>
-                    <p style="margin-top: 12px;">
-                        A class should never have more than one reason to change.
-                    </p>
-                    <p style="margin-top: 12px;">
-                        This is essentially a direct expression of the High Cohesion principle.
-                    </p>
-                    <p style="margin-top: 12px;">
-                        SOLID - Open/Closed Principle
-                    </p>
-                    <p style="margin-top: 12px;">
-                        Software entities should be open for extension, but closed for modification.
-                    </p>
-                    <p style="margin-top: 12px;">
-                        If adding new functionality requires modifying an existing entity, that functionality becomes
+                    <div class="principle-card">
+                        <h3 class="principle-card__title">
+                            <span class="principle-card__tag">SOLID</span>
+                            Single Responsibility Principle
+                        </h3>
+                        <blockquote class="principle-card__definition">
+                            A class should never have more than one reason to change.
+                        </blockquote>
+                        <p class="principle-card__reduction">
+                            This is essentially a direct expression of the High Cohesion principle.
+                        </p>
+                    </div>
+                    <div class="principle-card">
+                        <h3 class="principle-card__title">
+                            <span class="principle-card__tag">SOLID</span>
+                            Open/Closed Principle
+                        </h3>
+                        <blockquote class="principle-card__definition">
+                            Software entities should be open for extension, but closed for modification.
+                        </blockquote>
+                        <p class="principle-card__reduction">
+                            If adding new functionality requires modifying an existing entity, that functionality becomes
                         coupled to the entity itself and potentially to its existing extensions. If, instead, we add the
                         functionality by extending the entity without modifying it, we preserve its original cohesion
                         and keep the new functionality isolated from the existing code. So this principle helps keep
                         coupling low and cohesion high as the system evolves.
-                    </p>
-                    <p style="margin-top: 12px;">
-                        SOLID - Liskov Substitution Principle
-                    </p>
-                    <p style="margin-top: 12px;">
-                        Functions that use pointers or references to base classes must be able to use pointers or
+                        </p>
+                    </div>
+                    <div class="principle-card">
+                        <h3 class="principle-card__title">
+                            <span class="principle-card__tag">SOLID</span>
+                            Liskov Substitution Principle
+                        </h3>
+                        <blockquote class="principle-card__definition">
+                            Functions that use pointers or references to base classes must be able to use pointers or
                         references of derived classes without knowing it.
-                    </p>
-                    <p style="margin-top: 12px;">
-                        If code using a base class has to handle specific subclasses as special cases, it becomes
+                        </blockquote>
+                        <p class="principle-card__reduction">
+                            If code using a base class has to handle specific subclasses as special cases, it becomes
                         coupled to their implementations. Then changing one subclass may require changes in the code
                         using the base class or even coordinated changes in other subclasses. The principle therefore
                         helps avoid such unnecessary coupling.
-                    </p>
-                    <p style="margin-top: 12px;">
-                        SOLID - Interface Segregation Principle
-                    </p>
-                    <p style="margin-top: 12px;">
-                        No code should be forced to depend on methods it does not use
-                    </p>
-                    <p style="margin-top: 12px;">
-                        This principle prevents us from creating “super-interfaces” that cover many unrelated
+                        </p>
+                    </div>
+                    <div class="principle-card">
+                        <h3 class="principle-card__title">
+                            <span class="principle-card__tag">SOLID</span>
+                            Interface Segregation Principle
+                        </h3>
+                        <blockquote class="principle-card__definition">
+                            No code should be forced to depend on methods it does not use
+                        </blockquote>
+                        <p class="principle-card__reduction">
+                            This principle prevents us from creating “super-interfaces” that cover many unrelated
                         responsibilities at once. Smaller, more focused interfaces increase cohesion and reduce
                         unnecessary dependencies between clients and functionality they do not use. So this principle is
                         intended to increase cohesion and reduce coupling.
-                    </p>
-                    <p style="margin-top: 12px;">
-                        SOLID - Dependency Inversion Principle
-                    </p>
-                    <p style="margin-top: 12px;">
-                        One should depend upon abstractions, not concrete implementations.
-                    </p>
-                    <p style="margin-top: 12px;">
-                        When depending on concrete implementations, the code depends not only on the abstraction they
+                        </p>
+                    </div>
+                    <div class="principle-card">
+                        <h3 class="principle-card__title">
+                            <span class="principle-card__tag">SOLID</span>
+                            Dependency Inversion Principle
+                        </h3>
+                        <blockquote class="principle-card__definition">
+                            One should depend upon abstractions, not concrete implementations.
+                        </blockquote>
+                        <p class="principle-card__reduction">
+                            When depending on concrete implementations, the code depends not only on the abstraction they
                         provide but also on implementation details that may change. When depending on an abstraction,
                         the code is isolated from many of these implementation changes. So by reducing dependencies on
                         implementation details, this principle reduces coupling.
-                    </p>
-                    <p style="margin-top: 12px;">
-                        DRY - Don't Repeat Yourself
-                    </p>
-                    <p style="margin-top: 12px;">
-                        Every piece of knowledge must have a single, unambiguous, authoritative representation within a
+                        </p>
+                    </div>
+                    <div class="principle-card">
+                        <h3 class="principle-card__title">
+                            <span class="principle-card__tag">DRY</span>
+                            Don't Repeat Yourself
+                        </h3>
+                        <blockquote class="principle-card__definition">
+                            Every piece of knowledge must have a single, unambiguous, authoritative representation within a
                         system.
-                    </p>
-                    <p style="margin-top: 12px;">
-                        When the same logic is duplicated in several places, changing it in one place will often require
+                        </blockquote>
+                        <p class="principle-card__reduction">
+                            When the same logic is duplicated in several places, changing it in one place will often require
                         changing it in all the others, introducing logical coupling between them. So this principle is
                         intended to reduce coupling.
-                    </p>
-                    <p style="margin-top: 12px;">
-                        Law of Demeter
-                    </p>
-                    <p style="margin-top: 12px;">
-                        Interact only with your immediate dependencies.
-                    </p>
-                    <p style="margin-top: 12px;">
-                        Interacting with dependencies of dependencies makes the code depend on their structure and
+                        </p>
+                    </div>
+                    <div class="principle-card">
+                        <h3 class="principle-card__title">
+                            Law of Demeter
+                        </h3>
+                        <blockquote class="principle-card__definition">
+                            Interact only with your immediate dependencies.
+                        </blockquote>
+                        <p class="principle-card__reduction">
+                            Interacting with dependencies of dependencies makes the code depend on their structure and
                         additional interfaces, increasing coupling. It can also reduce cohesion by making the code
                         responsible for navigating relationships outside its own concern. So this principle is intended
                         primarily to reduce coupling while also supporting cohesion.
-                    </p>
-                    <p style="margin-top: 12px;">
-                        KISS
-                    </p>
-                    <p style="margin-top: 12px;">
-                        Keep It Simple, Stupid: systems should be as simple as possible.
-                    </p>
-                    <p style="margin-top: 12px;">
-                        This principle does not provide strict definitions of complexity or simplicity, so everyone may
+                        </p>
+                    </div>
+                    <div class="principle-card">
+                        <h3 class="principle-card__title">
+                            <span class="principle-card__tag">KISS</span>
+                            Keep It Simple, Stupid
+                        </h3>
+                        <blockquote class="principle-card__definition">
+                            Systems should be as simple as possible.
+                        </blockquote>
+                        <p class="principle-card__reduction">
+                            This principle does not provide strict definitions of complexity or simplicity, so everyone may
                         interpret them somewhat differently. But if we consider complexity to be the amount of
                         information that has to be kept in mind simultaneously, the “Low Coupling, High Cohesion”
                         principle, as described above, directly helps reduce that amount, i.e. reduce complexity and
                         make the system simpler.
-                    </p>
+                        </p>
+                    </div>
                 </div>
             </section>
 
