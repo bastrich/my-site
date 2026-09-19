@@ -1,6 +1,7 @@
 import json
 import os
 from pathlib import Path
+from urllib.error import HTTPError
 from urllib.request import Request, urlopen
 
 
@@ -14,8 +15,18 @@ def api(method, path="", rule=None):
             "Content-Type": "application/json",
         },
     )
-    with urlopen(request, timeout=30) as response:
-        return response.read()
+    try:
+        with urlopen(request, timeout=30) as response:
+            return response.read()
+    except HTTPError as error:
+        with error:
+            detail = error.read().decode("utf-8", errors="replace").strip()
+        detail = detail.replace(os.environ["BUNNYNET_API_KEY"], "[REDACTED]")
+        name = f" for rule {rule['Description']!r}" if rule is not None else ""
+        raise RuntimeError(
+            f"Bunny API {method} {path or '/'}{name}: HTTP {error.code} "
+            f"{error.reason}. Response: {detail or '(empty response body)'}"
+        ) from None
 
 
 def main():

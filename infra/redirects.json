@@ -17,11 +17,7 @@
           "pattern:^https?://bastrich%.tech/+$",
           "pattern:^https?://bastrich%.tech/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*$",
           "pattern:^https?://www%.bastrich%.tech/+$",
-          "pattern:^https?://www%.bastrich%.tech/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*$",
-          "pattern:^https?://bastrich%.tech/+%%2[fF]/*$",
-          "pattern:^https?://bastrich%.tech/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$",
-          "pattern:^https?://www%.bastrich%.tech/+%%2[fF]/*$",
-          "pattern:^https?://www%.bastrich%.tech/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$"
+          "pattern:^https?://www%.bastrich%.tech/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*$"
         ]
       },
       {
@@ -58,7 +54,77 @@
           "pattern:^https?://bastrich%.tech/+$",
           "pattern:^https?://bastrich%.tech/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*$",
           "pattern:^https?://www%.bastrich%.tech/+$",
-          "pattern:^https?://www%.bastrich%.tech/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*$",
+          "pattern:^https?://www%.bastrich%.tech/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*$"
+        ]
+      },
+      {
+        "Type": 0,
+        "PatternMatchingType": 2,
+        "PatternMatches": [
+          "https://bastrich.tech/"
+        ]
+      },
+      {
+        "Type": 6,
+        "PatternMatchingType": 0,
+        "PatternMatches": [
+          "pattern:^.+$"
+        ]
+      }
+    ]
+  },
+  {
+    "Description": "Canonical home encoded trailing slash without query",
+    "Enabled": true,
+    "ActionType": 1,
+    "ActionParameter1": "https://bastrich.tech/",
+    "ActionParameter2": "301",
+    "ActionParameter3": "",
+    "ExtraActions": [],
+    "OrderIndex": 12,
+    "TriggerMatchingType": 1,
+    "Triggers": [
+      {
+        "Type": 0,
+        "PatternMatchingType": 0,
+        "PatternMatches": [
+          "pattern:^https?://bastrich%.tech/+%%2[fF]/*$",
+          "pattern:^https?://bastrich%.tech/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$",
+          "pattern:^https?://www%.bastrich%.tech/+%%2[fF]/*$",
+          "pattern:^https?://www%.bastrich%.tech/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$"
+        ]
+      },
+      {
+        "Type": 0,
+        "PatternMatchingType": 2,
+        "PatternMatches": [
+          "https://bastrich.tech/"
+        ]
+      },
+      {
+        "Type": 6,
+        "PatternMatchingType": 2,
+        "PatternMatches": [
+          "pattern:^.+$"
+        ]
+      }
+    ]
+  },
+  {
+    "Description": "Canonical home encoded trailing slash with query",
+    "Enabled": true,
+    "ActionType": 1,
+    "ActionParameter1": "https://bastrich.tech/?%{Request.QueryString}",
+    "ActionParameter2": "301",
+    "ActionParameter3": "",
+    "ExtraActions": [],
+    "OrderIndex": 13,
+    "TriggerMatchingType": 1,
+    "Triggers": [
+      {
+        "Type": 0,
+        "PatternMatchingType": 0,
+        "PatternMatches": [
           "pattern:^https?://bastrich%.tech/+%%2[fF]/*$",
           "pattern:^https?://bastrich%.tech/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$",
           "pattern:^https?://www%.bastrich%.tech/+%%2[fF]/*$",
@@ -99,11 +165,7 @@
           "pattern:^https?://bastrich%.tech/+story%-points/*$",
           "pattern:^https?://bastrich%.tech/+story%-points/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*$",
           "pattern:^https?://www%.bastrich%.tech/+story%-points/*$",
-          "pattern:^https?://www%.bastrich%.tech/+story%-points/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*$",
-          "pattern:^https?://bastrich%.tech/+story%-points/*%%2[fF]/*$",
-          "pattern:^https?://bastrich%.tech/+story%-points/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$",
-          "pattern:^https?://www%.bastrich%.tech/+story%-points/*%%2[fF]/*$",
-          "pattern:^https?://www%.bastrich%.tech/+story%-points/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$"
+          "pattern:^https?://www%.bastrich%.tech/+story%-points/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*$"
         ]
       },
       {
@@ -140,7 +202,77 @@
           "pattern:^https?://bastrich%.tech/+story%-points/*$",
           "pattern:^https?://bastrich%.tech/+story%-points/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*$",
           "pattern:^https?://www%.bastrich%.tech/+story%-points/*$",
-          "pattern:^https?://www%.bastrich%.tech/+story%-points/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*$",
+          "pattern:^https?://www%.bastrich%.tech/+story%-points/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*$"
+        ]
+      },
+      {
+        "Type": 0,
+        "PatternMatchingType": 2,
+        "PatternMatches": [
+          "https://bastrich.tech/story-points/"
+        ]
+      },
+      {
+        "Type": 6,
+        "PatternMatchingType": 0,
+        "PatternMatches": [
+          "pattern:^.+$"
+        ]
+      }
+    ]
+  },
+  {
+    "Description": "Canonical story-points encoded trailing slash without query",
+    "Enabled": true,
+    "ActionType": 1,
+    "ActionParameter1": "https://bastrich.tech/story-points/",
+    "ActionParameter2": "301",
+    "ActionParameter3": "",
+    "ExtraActions": [],
+    "OrderIndex": 22,
+    "TriggerMatchingType": 1,
+    "Triggers": [
+      {
+        "Type": 0,
+        "PatternMatchingType": 0,
+        "PatternMatches": [
+          "pattern:^https?://bastrich%.tech/+story%-points/*%%2[fF]/*$",
+          "pattern:^https?://bastrich%.tech/+story%-points/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$",
+          "pattern:^https?://www%.bastrich%.tech/+story%-points/*%%2[fF]/*$",
+          "pattern:^https?://www%.bastrich%.tech/+story%-points/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$"
+        ]
+      },
+      {
+        "Type": 0,
+        "PatternMatchingType": 2,
+        "PatternMatches": [
+          "https://bastrich.tech/story-points/"
+        ]
+      },
+      {
+        "Type": 6,
+        "PatternMatchingType": 2,
+        "PatternMatches": [
+          "pattern:^.+$"
+        ]
+      }
+    ]
+  },
+  {
+    "Description": "Canonical story-points encoded trailing slash with query",
+    "Enabled": true,
+    "ActionType": 1,
+    "ActionParameter1": "https://bastrich.tech/story-points/?%{Request.QueryString}",
+    "ActionParameter2": "301",
+    "ActionParameter3": "",
+    "ExtraActions": [],
+    "OrderIndex": 23,
+    "TriggerMatchingType": 1,
+    "Triggers": [
+      {
+        "Type": 0,
+        "PatternMatchingType": 0,
+        "PatternMatches": [
           "pattern:^https?://bastrich%.tech/+story%-points/*%%2[fF]/*$",
           "pattern:^https?://bastrich%.tech/+story%-points/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$",
           "pattern:^https?://www%.bastrich%.tech/+story%-points/*%%2[fF]/*$",
@@ -181,11 +313,7 @@
           "pattern:^https?://bastrich%.tech/+perfect%-code%-review/*$",
           "pattern:^https?://bastrich%.tech/+perfect%-code%-review/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*$",
           "pattern:^https?://www%.bastrich%.tech/+perfect%-code%-review/*$",
-          "pattern:^https?://www%.bastrich%.tech/+perfect%-code%-review/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*$",
-          "pattern:^https?://bastrich%.tech/+perfect%-code%-review/*%%2[fF]/*$",
-          "pattern:^https?://bastrich%.tech/+perfect%-code%-review/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$",
-          "pattern:^https?://www%.bastrich%.tech/+perfect%-code%-review/*%%2[fF]/*$",
-          "pattern:^https?://www%.bastrich%.tech/+perfect%-code%-review/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$"
+          "pattern:^https?://www%.bastrich%.tech/+perfect%-code%-review/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*$"
         ]
       },
       {
@@ -222,7 +350,77 @@
           "pattern:^https?://bastrich%.tech/+perfect%-code%-review/*$",
           "pattern:^https?://bastrich%.tech/+perfect%-code%-review/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*$",
           "pattern:^https?://www%.bastrich%.tech/+perfect%-code%-review/*$",
-          "pattern:^https?://www%.bastrich%.tech/+perfect%-code%-review/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*$",
+          "pattern:^https?://www%.bastrich%.tech/+perfect%-code%-review/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*$"
+        ]
+      },
+      {
+        "Type": 0,
+        "PatternMatchingType": 2,
+        "PatternMatches": [
+          "https://bastrich.tech/perfect-code-review/"
+        ]
+      },
+      {
+        "Type": 6,
+        "PatternMatchingType": 0,
+        "PatternMatches": [
+          "pattern:^.+$"
+        ]
+      }
+    ]
+  },
+  {
+    "Description": "Canonical perfect-code-review encoded trailing slash without query",
+    "Enabled": true,
+    "ActionType": 1,
+    "ActionParameter1": "https://bastrich.tech/perfect-code-review/",
+    "ActionParameter2": "301",
+    "ActionParameter3": "",
+    "ExtraActions": [],
+    "OrderIndex": 32,
+    "TriggerMatchingType": 1,
+    "Triggers": [
+      {
+        "Type": 0,
+        "PatternMatchingType": 0,
+        "PatternMatches": [
+          "pattern:^https?://bastrich%.tech/+perfect%-code%-review/*%%2[fF]/*$",
+          "pattern:^https?://bastrich%.tech/+perfect%-code%-review/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$",
+          "pattern:^https?://www%.bastrich%.tech/+perfect%-code%-review/*%%2[fF]/*$",
+          "pattern:^https?://www%.bastrich%.tech/+perfect%-code%-review/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$"
+        ]
+      },
+      {
+        "Type": 0,
+        "PatternMatchingType": 2,
+        "PatternMatches": [
+          "https://bastrich.tech/perfect-code-review/"
+        ]
+      },
+      {
+        "Type": 6,
+        "PatternMatchingType": 2,
+        "PatternMatches": [
+          "pattern:^.+$"
+        ]
+      }
+    ]
+  },
+  {
+    "Description": "Canonical perfect-code-review encoded trailing slash with query",
+    "Enabled": true,
+    "ActionType": 1,
+    "ActionParameter1": "https://bastrich.tech/perfect-code-review/?%{Request.QueryString}",
+    "ActionParameter2": "301",
+    "ActionParameter3": "",
+    "ExtraActions": [],
+    "OrderIndex": 33,
+    "TriggerMatchingType": 1,
+    "Triggers": [
+      {
+        "Type": 0,
+        "PatternMatchingType": 0,
+        "PatternMatches": [
           "pattern:^https?://bastrich%.tech/+perfect%-code%-review/*%%2[fF]/*$",
           "pattern:^https?://bastrich%.tech/+perfect%-code%-review/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$",
           "pattern:^https?://www%.bastrich%.tech/+perfect%-code%-review/*%%2[fF]/*$",
@@ -263,11 +461,7 @@
           "pattern:^https?://bastrich%.tech/+coupling%-and%-cohesion/*$",
           "pattern:^https?://bastrich%.tech/+coupling%-and%-cohesion/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*$",
           "pattern:^https?://www%.bastrich%.tech/+coupling%-and%-cohesion/*$",
-          "pattern:^https?://www%.bastrich%.tech/+coupling%-and%-cohesion/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*$",
-          "pattern:^https?://bastrich%.tech/+coupling%-and%-cohesion/*%%2[fF]/*$",
-          "pattern:^https?://bastrich%.tech/+coupling%-and%-cohesion/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$",
-          "pattern:^https?://www%.bastrich%.tech/+coupling%-and%-cohesion/*%%2[fF]/*$",
-          "pattern:^https?://www%.bastrich%.tech/+coupling%-and%-cohesion/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$"
+          "pattern:^https?://www%.bastrich%.tech/+coupling%-and%-cohesion/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*$"
         ]
       },
       {
@@ -304,7 +498,77 @@
           "pattern:^https?://bastrich%.tech/+coupling%-and%-cohesion/*$",
           "pattern:^https?://bastrich%.tech/+coupling%-and%-cohesion/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*$",
           "pattern:^https?://www%.bastrich%.tech/+coupling%-and%-cohesion/*$",
-          "pattern:^https?://www%.bastrich%.tech/+coupling%-and%-cohesion/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*$",
+          "pattern:^https?://www%.bastrich%.tech/+coupling%-and%-cohesion/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*$"
+        ]
+      },
+      {
+        "Type": 0,
+        "PatternMatchingType": 2,
+        "PatternMatches": [
+          "https://bastrich.tech/coupling-and-cohesion/"
+        ]
+      },
+      {
+        "Type": 6,
+        "PatternMatchingType": 0,
+        "PatternMatches": [
+          "pattern:^.+$"
+        ]
+      }
+    ]
+  },
+  {
+    "Description": "Canonical coupling-and-cohesion encoded trailing slash without query",
+    "Enabled": true,
+    "ActionType": 1,
+    "ActionParameter1": "https://bastrich.tech/coupling-and-cohesion/",
+    "ActionParameter2": "301",
+    "ActionParameter3": "",
+    "ExtraActions": [],
+    "OrderIndex": 42,
+    "TriggerMatchingType": 1,
+    "Triggers": [
+      {
+        "Type": 0,
+        "PatternMatchingType": 0,
+        "PatternMatches": [
+          "pattern:^https?://bastrich%.tech/+coupling%-and%-cohesion/*%%2[fF]/*$",
+          "pattern:^https?://bastrich%.tech/+coupling%-and%-cohesion/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$",
+          "pattern:^https?://www%.bastrich%.tech/+coupling%-and%-cohesion/*%%2[fF]/*$",
+          "pattern:^https?://www%.bastrich%.tech/+coupling%-and%-cohesion/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$"
+        ]
+      },
+      {
+        "Type": 0,
+        "PatternMatchingType": 2,
+        "PatternMatches": [
+          "https://bastrich.tech/coupling-and-cohesion/"
+        ]
+      },
+      {
+        "Type": 6,
+        "PatternMatchingType": 2,
+        "PatternMatches": [
+          "pattern:^.+$"
+        ]
+      }
+    ]
+  },
+  {
+    "Description": "Canonical coupling-and-cohesion encoded trailing slash with query",
+    "Enabled": true,
+    "ActionType": 1,
+    "ActionParameter1": "https://bastrich.tech/coupling-and-cohesion/?%{Request.QueryString}",
+    "ActionParameter2": "301",
+    "ActionParameter3": "",
+    "ExtraActions": [],
+    "OrderIndex": 43,
+    "TriggerMatchingType": 1,
+    "Triggers": [
+      {
+        "Type": 0,
+        "PatternMatchingType": 0,
+        "PatternMatches": [
           "pattern:^https?://bastrich%.tech/+coupling%-and%-cohesion/*%%2[fF]/*$",
           "pattern:^https?://bastrich%.tech/+coupling%-and%-cohesion/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$",
           "pattern:^https?://www%.bastrich%.tech/+coupling%-and%-cohesion/*%%2[fF]/*$",
