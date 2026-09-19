@@ -34,7 +34,11 @@ def main():
     current = json.loads(api("GET"))["EdgeRules"]
     old_redirects = [rule for rule in current if rule["ActionType"] == 1]
 
+    max_order = max((rule["OrderIndex"] for rule in current), default=0)
+    order_offset = (max_order // 100 + 1) * 100
+
     for rule in rules:
+        rule["OrderIndex"] += order_offset
         api("POST", "/edgerules/addOrUpdate", rule)
 
     for rule in old_redirects:
