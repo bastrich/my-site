@@ -95,13 +95,6 @@
         ]
       },
       {
-        "Type": 0,
-        "PatternMatchingType": 2,
-        "PatternMatches": [
-          "https://bastrich.tech/"
-        ]
-      },
-      {
         "Type": 6,
         "PatternMatchingType": 2,
         "PatternMatches": [
@@ -129,13 +122,6 @@
           "pattern:^https?://bastrich%.tech/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$",
           "pattern:^https?://www%.bastrich%.tech/+%%2[fF]/*$",
           "pattern:^https?://www%.bastrich%.tech/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$"
-        ]
-      },
-      {
-        "Type": 0,
-        "PatternMatchingType": 2,
-        "PatternMatches": [
-          "https://bastrich.tech/"
         ]
       },
       {
@@ -243,13 +229,6 @@
         ]
       },
       {
-        "Type": 0,
-        "PatternMatchingType": 2,
-        "PatternMatches": [
-          "https://bastrich.tech/story-points/"
-        ]
-      },
-      {
         "Type": 6,
         "PatternMatchingType": 2,
         "PatternMatches": [
@@ -277,13 +256,6 @@
           "pattern:^https?://bastrich%.tech/+story%-points/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$",
           "pattern:^https?://www%.bastrich%.tech/+story%-points/*%%2[fF]/*$",
           "pattern:^https?://www%.bastrich%.tech/+story%-points/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$"
-        ]
-      },
-      {
-        "Type": 0,
-        "PatternMatchingType": 2,
-        "PatternMatches": [
-          "https://bastrich.tech/story-points/"
         ]
       },
       {
@@ -391,13 +363,6 @@
         ]
       },
       {
-        "Type": 0,
-        "PatternMatchingType": 2,
-        "PatternMatches": [
-          "https://bastrich.tech/perfect-code-review/"
-        ]
-      },
-      {
         "Type": 6,
         "PatternMatchingType": 2,
         "PatternMatches": [
@@ -425,13 +390,6 @@
           "pattern:^https?://bastrich%.tech/+perfect%-code%-review/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$",
           "pattern:^https?://www%.bastrich%.tech/+perfect%-code%-review/*%%2[fF]/*$",
           "pattern:^https?://www%.bastrich%.tech/+perfect%-code%-review/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$"
-        ]
-      },
-      {
-        "Type": 0,
-        "PatternMatchingType": 2,
-        "PatternMatches": [
-          "https://bastrich.tech/perfect-code-review/"
         ]
       },
       {
@@ -539,13 +497,6 @@
         ]
       },
       {
-        "Type": 0,
-        "PatternMatchingType": 2,
-        "PatternMatches": [
-          "https://bastrich.tech/coupling-and-cohesion/"
-        ]
-      },
-      {
         "Type": 6,
         "PatternMatchingType": 2,
         "PatternMatches": [
@@ -573,13 +524,6 @@
           "pattern:^https?://bastrich%.tech/+coupling%-and%-cohesion/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$",
           "pattern:^https?://www%.bastrich%.tech/+coupling%-and%-cohesion/*%%2[fF]/*$",
           "pattern:^https?://www%.bastrich%.tech/+coupling%-and%-cohesion/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$"
-        ]
-      },
-      {
-        "Type": 0,
-        "PatternMatchingType": 2,
-        "PatternMatches": [
-          "https://bastrich.tech/coupling-and-cohesion/"
         ]
       },
       {
