@@ -603,5 +603,111 @@
         ]
       }
     ]
+  },
+  {
+    "Enabled": true,
+    "ActionType": 5,
+    "ActionParameter3": "",
+    "ExtraActions": [
+      {
+        "ActionType": 5,
+        "ActionParameter1": "X-Url-Audit-Nginx",
+        "ActionParameter2": "request_uri=[$request_uri]; uri=[$uri]",
+        "ActionParameter3": ""
+      },
+      {
+        "ActionType": 5,
+        "ActionParameter1": "X-Url-Audit-Request-Path",
+        "ActionParameter2": "[%{Request.Path}]",
+        "ActionParameter3": ""
+      },
+      {
+        "ActionType": 5,
+        "ActionParameter1": "X-Url-Audit-Url-Path",
+        "ActionParameter2": "[%{Url.Path}]",
+        "ActionParameter3": ""
+      },
+      {
+        "ActionType": 5,
+        "ActionParameter1": "X-Url-Audit-Basic-Path",
+        "ActionParameter2": "[{{path}}]",
+        "ActionParameter3": ""
+      }
+    ],
+    "TriggerMatchingType": 1,
+    "Description": "Temporary URL audit: variables",
+    "ActionParameter1": "X-Url-Audit-Active",
+    "ActionParameter2": "slash-v1",
+    "OrderIndex": 80,
+    "Triggers": [
+      {
+        "Type": 0,
+        "PatternMatchingType": 0,
+        "PatternMatches": [
+          "https://bastrich.tech/coupling-and-cohesion*"
+        ]
+      },
+      {
+        "Type": 6,
+        "PatternMatchingType": 0,
+        "PatternMatches": [
+          "pattern:^__url_audit=slash%-v1$"
+        ]
+      }
+    ]
+  },
+  {
+    "Enabled": true,
+    "ActionType": 5,
+    "ActionParameter3": "",
+    "ExtraActions": [],
+    "TriggerMatchingType": 1,
+    "Description": "Temporary URL audit: slash pattern",
+    "ActionParameter1": "X-Url-Audit-Matches-Slash",
+    "ActionParameter2": "yes",
+    "OrderIndex": 81,
+    "Triggers": [
+      {
+        "Type": 0,
+        "PatternMatchingType": 0,
+        "PatternMatches": [
+          "pattern:^https://bastrich%.tech/coupling%-and%-cohesion/$"
+        ]
+      },
+      {
+        "Type": 6,
+        "PatternMatchingType": 0,
+        "PatternMatches": [
+          "pattern:^__url_audit=slash%-v1$"
+        ]
+      }
+    ]
+  },
+  {
+    "Enabled": true,
+    "ActionType": 5,
+    "ActionParameter3": "",
+    "ExtraActions": [],
+    "TriggerMatchingType": 1,
+    "Description": "Temporary URL audit: encoded slash pattern",
+    "ActionParameter1": "X-Url-Audit-Matches-Encoded",
+    "ActionParameter2": "yes",
+    "OrderIndex": 82,
+    "Triggers": [
+      {
+        "Type": 0,
+        "PatternMatchingType": 0,
+        "PatternMatches": [
+          "pattern:^https://bastrich%.tech/coupling%-and%-cohesion%%2[fF]$"
+        ]
+      },
+      {
+        "Type": 6,
+        "PatternMatchingType": 0,
+        "PatternMatches": [
+          "pattern:^__url_audit=slash%-v1$"
+        ]
+      }
+    ]
   }
 ]
