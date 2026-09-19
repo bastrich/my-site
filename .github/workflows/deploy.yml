@@ -73,7 +73,7 @@ jobs:
 
       - name: Minify and obfuscate JS
         run: |
-          for file in "index.js" "image-modal.js"; do
+          for file in "index.js" "image-modal.js" "share.js"; do
             terser "$file" -c -m -o "dist/$file"
             javascript-obfuscator "dist/$file" --output "dist/$file"
           done

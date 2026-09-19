@@ -1011,3 +1011,200 @@ section + section {
         padding: 14px 14px 16px;
     }
 }
+
+.share-btn[hidden] {
+    display: none;
+}
+
+.share-btn--linkedin { --brand: #0a66c2; }
+.share-btn--x { --brand: #0f172a; }
+.share-btn--facebook { --brand: #1877f2; }
+.share-btn--reddit { --brand: #ff4500; }
+.share-btn--hackernews { --brand: #ff6600; }
+.share-btn--telegram { --brand: #229ed9; }
+.share-btn--whatsapp { --brand: #1da851; }
+.share-btn--email,
+.share-btn--copy,
+.share-btn--native { --brand: var(--accent); }
+
+.share-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.share-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font: inherit;
+    color: var(--text-main);
+    background: var(--bg-card);
+    border: 1px solid var(--border-soft);
+    cursor: pointer;
+    transition: all 0.15s ease-out;
+    box-shadow: 0 2px 4px rgba(15, 23, 42, 0.02);
+}
+
+.share-icon {
+    color: var(--brand);
+}
+
+.share-icon--check {
+    display: none;
+}
+
+.share-btn.is-copied .share-icon {
+    display: none;
+}
+
+.share-btn.is-copied .share-icon--check {
+    display: block;
+    color: var(--accent-green);
+}
+
+.share-icon {
+    flex: 0 0 auto;
+    width: 16px;
+    height: 16px;
+}
+
+.share-btn:hover {
+    color: var(--brand);
+    border-color: var(--brand);
+    background: color-mix(in srgb, var(--brand) 7%, #ffffff);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px color-mix(in srgb, var(--brand) 16%, transparent);
+}
+
+.share-btn:focus-visible {
+    outline: 3px solid rgba(37, 99, 235, 0.25);
+    outline-offset: 2px;
+}
+
+.share-btn.is-copied {
+    color: var(--accent-green);
+    border-color: var(--accent-green);
+    background: rgba(16, 185, 129, 0.08);
+}
+
+.share-status:not(.is-visible) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+.share-status.is-visible {
+    display: block;
+    margin-top: 14px;
+    font-size: 14px;
+    color: #64748b;
+}
+
+.share-status__url {
+    font-weight: 600;
+    color: var(--text-main);
+    overflow-wrap: anywhere;
+    user-select: all;
+}
+
+.share-section {
+    margin-top: 32px;
+    padding: 28px 24px;
+    text-align: center;
+    background: rgba(37, 99, 235, 0.05);
+    border: 1px solid rgba(37, 99, 235, 0.2);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 8px 16px rgba(37, 99, 235, 0.06);
+}
+
+.share-section__title {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--text-main);
+}
+
+.share-section__text {
+    margin: 6px 0 20px;
+    font-size: 15px;
+    color: #64748b;
+}
+
+.share-section .share-btn {
+    padding: 9px 12px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.share-section .share-btn:hover {
+    color: var(--brand);
+}
+
+.share-section .share-btn.is-copied {
+    color: var(--accent-green);
+}
+
+@media (max-width: 600px) {
+    .share-section {
+        padding: 22px 16px;
+    }
+
+    .share-section__title {
+        font-size: 20px;
+    }
+
+    .share-section .share-buttons {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .share-section .share-btn {
+        justify-content: flex-start;
+    }
+}
+
+.subscribe-line {
+    margin-top: 14px;
+    text-align: center;
+}
+
+.rss-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 12px;
+    border: 1px solid var(--border-soft);
+    border-radius: 10px;
+    background: var(--bg-card);
+    color: #475569;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.15s ease-out;
+}
+
+.rss-link:hover {
+    color: #f26522;
+    border-color: #f26522;
+    background: rgba(242, 101, 34, 0.07);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(242, 101, 34, 0.16);
+}
+
+.rss-link:focus-visible {
+    outline: 3px solid rgba(37, 99, 235, 0.25);
+    outline-offset: 2px;
+}
+
+.rss-icon {
+    flex: 0 0 auto;
+    width: 15px;
+    height: 15px;
+    color: #f26522;
+}
