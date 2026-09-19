@@ -3,6 +3,10 @@ name: Deploy
 on:
   workflow_dispatch:
 
+concurrency:
+  group: deploy-bastrich-tech
+  cancel-in-progress: false
+
 jobs:
   ftp-deploy:
     runs-on: ubuntu-latest
@@ -26,18 +30,21 @@ jobs:
           mkdir dist
           mkdir dist/perfect-code-review
           mkdir dist/story-points
+          mkdir dist/coupling-and-cohesion
           cp -R img dist
           cp -R perfect-code-review/img dist/perfect-code-review/img
           cp -R story-points/img dist/story-points/img
+          cp -R coupling-and-cohesion/img dist/coupling-and-cohesion/img
           cp favicon.ico dist
           cp favicon.svg dist
           cp robots.txt dist
           cp sitemap.xml dist
+          cp rss.xml dist
 
       - name: Add cache-busting version to CSS/JS imports
         run: |
           VERSION="${{ github.run_number }}"
-          for file in "index.html" "perfect-code-review/index.html" "story-points/index.html"; do
+          for file in "index.html" "perfect-code-review/index.html" "story-points/index.html" "coupling-and-cohesion/index.html"; do
             sed -i 's|href="css/main/main.css"|href="main.css"|g' "$file"
             sed -i 's|href="../css/article/article.css"|href="../article.css"|g' "$file"
             sed -i -E 's/(href="[^"]+\.css)(")/\1?v='"$VERSION"'\2/g' "$file"
@@ -46,7 +53,7 @@ jobs:
 
       - name: Minify HTML
         run: |
-          for file in "index.html" "perfect-code-review/index.html" "story-points/index.html"; do
+          for file in "index.html" "perfect-code-review/index.html" "story-points/index.html" "coupling-and-cohesion/index.html"; do
             html-minifier-terser \
             --collapse-whitespace \
             --remove-comments \

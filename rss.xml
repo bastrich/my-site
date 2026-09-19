@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Daniil Bastrich</title>
+        <link>https://bastrich.tech/</link>
+        <description>Articles on software engineering, architecture and development process</description>
+        <language>en</language>
+        <copyright>Copyright Daniil Bastrich. All rights reserved.</copyright>
+        <lastBuildDate>Sat, 30 May 2026 10:00:00 GMT</lastBuildDate>
+        <atom:link rel="self" type="application/rss+xml" href="https://bastrich.tech/rss.xml"/>
+
+        <item>
+            <title>Story Points: Explicit, Honest, Predictable. Already in Use.</title>
+            <link>https://bastrich.tech/story-points/</link>
+            <guid isPermaLink="true">https://bastrich.tech/story-points/</guid>
+            <pubDate>Sat, 30 May 2026 10:00:00 GMT</pubDate>
+            <description>Every time a software estimate is inflated to absorb uncertainty and daily overhead, it
+                stops measuring actual time and turns into a messy abstraction. Once your "hours" and "days" become a
+                proxy for effort rather than the clock, you are already using Story Points implicitly. Dropping the
+                self-deception and openly embracing this abstraction brings structure to your planning and helps
+                reliably predict delivery without the guessing game.
+            </description>
+        </item>
+
+        <item>
+            <title>The PERFECT Code Review: How to Reduce Cognitive Load While Improving Quality</title>
+            <link>https://bastrich.tech/perfect-code-review/</link>
+            <guid isPermaLink="true">https://bastrich.tech/perfect-code-review/</guid>
+            <pubDate>Sat, 03 Jan 2026 10:00:00 GMT</pubDate>
+            <description>A clear, practical guide to code review: why it matters, the PERFECT principles, and how to
+                build an effective review process.
+            </description>
+        </item>
+    </channel>
+</rss>
