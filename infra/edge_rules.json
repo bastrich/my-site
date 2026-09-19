@@ -74,66 +74,6 @@
     ]
   },
   {
-    "Description": "Canonical home encoded trailing slash without query",
-    "Enabled": true,
-    "ActionType": 1,
-    "ActionParameter1": "https://bastrich.tech/",
-    "ActionParameter2": "301",
-    "ActionParameter3": "",
-    "ExtraActions": [],
-    "OrderIndex": 12,
-    "TriggerMatchingType": 1,
-    "Triggers": [
-      {
-        "Type": 0,
-        "PatternMatchingType": 0,
-        "PatternMatches": [
-          "pattern:^https?://bastrich%.tech/+%%2[fF]/*$",
-          "pattern:^https?://bastrich%.tech/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$",
-          "pattern:^https?://www%.bastrich%.tech/+%%2[fF]/*$",
-          "pattern:^https?://www%.bastrich%.tech/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$"
-        ]
-      },
-      {
-        "Type": 6,
-        "PatternMatchingType": 2,
-        "PatternMatches": [
-          "pattern:^.+$"
-        ]
-      }
-    ]
-  },
-  {
-    "Description": "Canonical home encoded trailing slash with query",
-    "Enabled": true,
-    "ActionType": 1,
-    "ActionParameter1": "https://bastrich.tech/?%{Request.QueryString}",
-    "ActionParameter2": "301",
-    "ActionParameter3": "",
-    "ExtraActions": [],
-    "OrderIndex": 13,
-    "TriggerMatchingType": 1,
-    "Triggers": [
-      {
-        "Type": 0,
-        "PatternMatchingType": 0,
-        "PatternMatches": [
-          "pattern:^https?://bastrich%.tech/+%%2[fF]/*$",
-          "pattern:^https?://bastrich%.tech/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$",
-          "pattern:^https?://www%.bastrich%.tech/+%%2[fF]/*$",
-          "pattern:^https?://www%.bastrich%.tech/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$"
-        ]
-      },
-      {
-        "Type": 6,
-        "PatternMatchingType": 0,
-        "PatternMatches": [
-          "pattern:^.+$"
-        ]
-      }
-    ]
-  },
-  {
     "Description": "Canonical story-points without query",
     "Enabled": true,
     "ActionType": 1,
@@ -196,66 +136,6 @@
         "PatternMatchingType": 2,
         "PatternMatches": [
           "https://bastrich.tech/story-points/"
-        ]
-      },
-      {
-        "Type": 6,
-        "PatternMatchingType": 0,
-        "PatternMatches": [
-          "pattern:^.+$"
-        ]
-      }
-    ]
-  },
-  {
-    "Description": "Canonical story-points encoded trailing slash without query",
-    "Enabled": true,
-    "ActionType": 1,
-    "ActionParameter1": "https://bastrich.tech/story-points/",
-    "ActionParameter2": "301",
-    "ActionParameter3": "",
-    "ExtraActions": [],
-    "OrderIndex": 22,
-    "TriggerMatchingType": 1,
-    "Triggers": [
-      {
-        "Type": 0,
-        "PatternMatchingType": 0,
-        "PatternMatches": [
-          "pattern:^https?://bastrich%.tech/+story%-points/*%%2[fF]/*$",
-          "pattern:^https?://bastrich%.tech/+story%-points/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$",
-          "pattern:^https?://www%.bastrich%.tech/+story%-points/*%%2[fF]/*$",
-          "pattern:^https?://www%.bastrich%.tech/+story%-points/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$"
-        ]
-      },
-      {
-        "Type": 6,
-        "PatternMatchingType": 2,
-        "PatternMatches": [
-          "pattern:^.+$"
-        ]
-      }
-    ]
-  },
-  {
-    "Description": "Canonical story-points encoded trailing slash with query",
-    "Enabled": true,
-    "ActionType": 1,
-    "ActionParameter1": "https://bastrich.tech/story-points/?%{Request.QueryString}",
-    "ActionParameter2": "301",
-    "ActionParameter3": "",
-    "ExtraActions": [],
-    "OrderIndex": 23,
-    "TriggerMatchingType": 1,
-    "Triggers": [
-      {
-        "Type": 0,
-        "PatternMatchingType": 0,
-        "PatternMatches": [
-          "pattern:^https?://bastrich%.tech/+story%-points/*%%2[fF]/*$",
-          "pattern:^https?://bastrich%.tech/+story%-points/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$",
-          "pattern:^https?://www%.bastrich%.tech/+story%-points/*%%2[fF]/*$",
-          "pattern:^https?://www%.bastrich%.tech/+story%-points/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$"
         ]
       },
       {
@@ -342,66 +222,6 @@
     ]
   },
   {
-    "Description": "Canonical perfect-code-review encoded trailing slash without query",
-    "Enabled": true,
-    "ActionType": 1,
-    "ActionParameter1": "https://bastrich.tech/perfect-code-review/",
-    "ActionParameter2": "301",
-    "ActionParameter3": "",
-    "ExtraActions": [],
-    "OrderIndex": 32,
-    "TriggerMatchingType": 1,
-    "Triggers": [
-      {
-        "Type": 0,
-        "PatternMatchingType": 0,
-        "PatternMatches": [
-          "pattern:^https?://bastrich%.tech/+perfect%-code%-review/*%%2[fF]/*$",
-          "pattern:^https?://bastrich%.tech/+perfect%-code%-review/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$",
-          "pattern:^https?://www%.bastrich%.tech/+perfect%-code%-review/*%%2[fF]/*$",
-          "pattern:^https?://www%.bastrich%.tech/+perfect%-code%-review/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$"
-        ]
-      },
-      {
-        "Type": 6,
-        "PatternMatchingType": 2,
-        "PatternMatches": [
-          "pattern:^.+$"
-        ]
-      }
-    ]
-  },
-  {
-    "Description": "Canonical perfect-code-review encoded trailing slash with query",
-    "Enabled": true,
-    "ActionType": 1,
-    "ActionParameter1": "https://bastrich.tech/perfect-code-review/?%{Request.QueryString}",
-    "ActionParameter2": "301",
-    "ActionParameter3": "",
-    "ExtraActions": [],
-    "OrderIndex": 33,
-    "TriggerMatchingType": 1,
-    "Triggers": [
-      {
-        "Type": 0,
-        "PatternMatchingType": 0,
-        "PatternMatches": [
-          "pattern:^https?://bastrich%.tech/+perfect%-code%-review/*%%2[fF]/*$",
-          "pattern:^https?://bastrich%.tech/+perfect%-code%-review/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$",
-          "pattern:^https?://www%.bastrich%.tech/+perfect%-code%-review/*%%2[fF]/*$",
-          "pattern:^https?://www%.bastrich%.tech/+perfect%-code%-review/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$"
-        ]
-      },
-      {
-        "Type": 6,
-        "PatternMatchingType": 0,
-        "PatternMatches": [
-          "pattern:^.+$"
-        ]
-      }
-    ]
-  },
-  {
     "Description": "Canonical coupling-and-cohesion without query",
     "Enabled": true,
     "ActionType": 1,
@@ -464,66 +284,6 @@
         "PatternMatchingType": 2,
         "PatternMatches": [
           "https://bastrich.tech/coupling-and-cohesion/"
-        ]
-      },
-      {
-        "Type": 6,
-        "PatternMatchingType": 0,
-        "PatternMatches": [
-          "pattern:^.+$"
-        ]
-      }
-    ]
-  },
-  {
-    "Description": "Canonical coupling-and-cohesion encoded trailing slash without query",
-    "Enabled": true,
-    "ActionType": 1,
-    "ActionParameter1": "https://bastrich.tech/coupling-and-cohesion/",
-    "ActionParameter2": "301",
-    "ActionParameter3": "",
-    "ExtraActions": [],
-    "OrderIndex": 42,
-    "TriggerMatchingType": 1,
-    "Triggers": [
-      {
-        "Type": 0,
-        "PatternMatchingType": 0,
-        "PatternMatches": [
-          "pattern:^https?://bastrich%.tech/+coupling%-and%-cohesion/*%%2[fF]/*$",
-          "pattern:^https?://bastrich%.tech/+coupling%-and%-cohesion/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$",
-          "pattern:^https?://www%.bastrich%.tech/+coupling%-and%-cohesion/*%%2[fF]/*$",
-          "pattern:^https?://www%.bastrich%.tech/+coupling%-and%-cohesion/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$"
-        ]
-      },
-      {
-        "Type": 6,
-        "PatternMatchingType": 2,
-        "PatternMatches": [
-          "pattern:^.+$"
-        ]
-      }
-    ]
-  },
-  {
-    "Description": "Canonical coupling-and-cohesion encoded trailing slash with query",
-    "Enabled": true,
-    "ActionType": 1,
-    "ActionParameter1": "https://bastrich.tech/coupling-and-cohesion/?%{Request.QueryString}",
-    "ActionParameter2": "301",
-    "ActionParameter3": "",
-    "ExtraActions": [],
-    "OrderIndex": 43,
-    "TriggerMatchingType": 1,
-    "Triggers": [
-      {
-        "Type": 0,
-        "PatternMatchingType": 0,
-        "PatternMatches": [
-          "pattern:^https?://bastrich%.tech/+coupling%-and%-cohesion/*%%2[fF]/*$",
-          "pattern:^https?://bastrich%.tech/+coupling%-and%-cohesion/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$",
-          "pattern:^https?://www%.bastrich%.tech/+coupling%-and%-cohesion/*%%2[fF]/*$",
-          "pattern:^https?://www%.bastrich%.tech/+coupling%-and%-cohesion/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$"
         ]
       },
       {
@@ -605,107 +365,197 @@
     ]
   },
   {
+    "Description": "Temporary URL audit: copy raw path to headers",
     "Enabled": true,
-    "ActionType": 5,
+    "ActionType": 6,
+    "ActionParameter1": "X-Url-Audit-Raw-Path",
+    "ActionParameter2": "%{Request.Path}",
     "ActionParameter3": "",
     "ExtraActions": [
       {
         "ActionType": 5,
-        "ActionParameter1": "X-Url-Audit-Nginx",
-        "ActionParameter2": "request_uri=[$request_uri]; uri=[$uri]",
-        "ActionParameter3": ""
-      },
-      {
-        "ActionType": 5,
-        "ActionParameter1": "X-Url-Audit-Request-Path",
-        "ActionParameter2": "[%{Request.Path}]",
-        "ActionParameter3": ""
-      },
-      {
-        "ActionType": 5,
-        "ActionParameter1": "X-Url-Audit-Url-Path",
-        "ActionParameter2": "[%{Url.Path}]",
-        "ActionParameter3": ""
-      },
-      {
-        "ActionType": 5,
-        "ActionParameter1": "X-Url-Audit-Basic-Path",
-        "ActionParameter2": "[{{path}}]",
+        "ActionParameter1": "X-Url-Audit-Raw-Path",
+        "ActionParameter2": "%{Request.Path}",
         "ActionParameter3": ""
       }
     ],
-    "TriggerMatchingType": 1,
-    "Description": "Temporary URL audit: variables",
-    "ActionParameter1": "X-Url-Audit-Active",
-    "ActionParameter2": "slash-v1",
     "OrderIndex": 80,
+    "TriggerMatchingType": 1,
     "Triggers": [
-      {
-        "Type": 0,
-        "PatternMatchingType": 0,
-        "PatternMatches": [
-          "https://bastrich.tech/coupling-and-cohesion*"
-        ]
-      },
       {
         "Type": 6,
         "PatternMatchingType": 0,
         "PatternMatches": [
-          "pattern:^__url_audit=slash%-v1$"
+          "pattern:^__url_audit=slash%-v2$",
+          "pattern:^__url_audit=slash%-v2%-redirect$"
         ]
       }
     ]
   },
   {
+    "Description": "Temporary URL audit: request header visible",
     "Enabled": true,
     "ActionType": 5,
+    "ActionParameter1": "X-Url-Audit-Req-Seen",
+    "ActionParameter2": "yes",
     "ActionParameter3": "",
     "ExtraActions": [],
-    "TriggerMatchingType": 1,
-    "Description": "Temporary URL audit: slash pattern",
-    "ActionParameter1": "X-Url-Audit-Matches-Slash",
-    "ActionParameter2": "yes",
     "OrderIndex": 81,
+    "TriggerMatchingType": 1,
     "Triggers": [
       {
-        "Type": 0,
+        "Type": 1,
         "PatternMatchingType": 0,
         "PatternMatches": [
-          "pattern:^https://bastrich%.tech/coupling%-and%-cohesion/$"
-        ]
+          "pattern:^.+$"
+        ],
+        "Parameter1": "X-Url-Audit-Raw-Path"
       },
       {
         "Type": 6,
         "PatternMatchingType": 0,
         "PatternMatches": [
-          "pattern:^__url_audit=slash%-v1$"
+          "pattern:^__url_audit=slash%-v2$"
         ]
       }
     ]
   },
   {
+    "Description": "Temporary URL audit: request header encoded",
     "Enabled": true,
     "ActionType": 5,
+    "ActionParameter1": "X-Url-Audit-Req-Encoded",
+    "ActionParameter2": "yes",
     "ActionParameter3": "",
     "ExtraActions": [],
-    "TriggerMatchingType": 1,
-    "Description": "Temporary URL audit: encoded slash pattern",
-    "ActionParameter1": "X-Url-Audit-Matches-Encoded",
-    "ActionParameter2": "yes",
     "OrderIndex": 82,
+    "TriggerMatchingType": 1,
     "Triggers": [
       {
-        "Type": 0,
+        "Type": 1,
         "PatternMatchingType": 0,
         "PatternMatches": [
-          "pattern:^https://bastrich%.tech/coupling%-and%-cohesion%%2[fF]$"
-        ]
+          "pattern:^[^?]*%%2[fF].*$"
+        ],
+        "Parameter1": "X-Url-Audit-Raw-Path"
       },
       {
         "Type": 6,
         "PatternMatchingType": 0,
         "PatternMatches": [
-          "pattern:^__url_audit=slash%-v1$"
+          "pattern:^__url_audit=slash%-v2$"
+        ]
+      }
+    ]
+  },
+  {
+    "Description": "Temporary URL audit: response header visible",
+    "Enabled": true,
+    "ActionType": 5,
+    "ActionParameter1": "X-Url-Audit-Resp-Seen",
+    "ActionParameter2": "yes",
+    "ActionParameter3": "",
+    "ExtraActions": [],
+    "OrderIndex": 83,
+    "TriggerMatchingType": 1,
+    "Triggers": [
+      {
+        "Type": 2,
+        "PatternMatchingType": 0,
+        "PatternMatches": [
+          "pattern:^.+$"
+        ],
+        "Parameter1": "X-Url-Audit-Raw-Path"
+      },
+      {
+        "Type": 6,
+        "PatternMatchingType": 0,
+        "PatternMatches": [
+          "pattern:^__url_audit=slash%-v2$"
+        ]
+      }
+    ]
+  },
+  {
+    "Description": "Temporary URL audit: response header encoded",
+    "Enabled": true,
+    "ActionType": 5,
+    "ActionParameter1": "X-Url-Audit-Resp-Encoded",
+    "ActionParameter2": "yes",
+    "ActionParameter3": "",
+    "ExtraActions": [],
+    "OrderIndex": 84,
+    "TriggerMatchingType": 1,
+    "Triggers": [
+      {
+        "Type": 2,
+        "PatternMatchingType": 0,
+        "PatternMatches": [
+          "pattern:^[^?]*%%2[fF].*$"
+        ],
+        "Parameter1": "X-Url-Audit-Raw-Path"
+      },
+      {
+        "Type": 6,
+        "PatternMatchingType": 0,
+        "PatternMatches": [
+          "pattern:^__url_audit=slash%-v2$"
+        ]
+      }
+    ]
+  },
+  {
+    "Description": "Temporary URL audit: redirect by request header",
+    "Enabled": true,
+    "ActionType": 1,
+    "ActionParameter1": "https://bastrich.tech/coupling-and-cohesion/?__url_audit=req-redirect",
+    "ActionParameter2": "302",
+    "ActionParameter3": "",
+    "ExtraActions": [],
+    "OrderIndex": 85,
+    "TriggerMatchingType": 1,
+    "Triggers": [
+      {
+        "Type": 1,
+        "PatternMatchingType": 0,
+        "PatternMatches": [
+          "pattern:^[^?]*%%2[fF].*$"
+        ],
+        "Parameter1": "X-Url-Audit-Raw-Path"
+      },
+      {
+        "Type": 6,
+        "PatternMatchingType": 0,
+        "PatternMatches": [
+          "pattern:^__url_audit=slash%-v2%-redirect$"
+        ]
+      }
+    ]
+  },
+  {
+    "Description": "Temporary URL audit: redirect by response header",
+    "Enabled": true,
+    "ActionType": 1,
+    "ActionParameter1": "https://bastrich.tech/coupling-and-cohesion/?__url_audit=resp-redirect",
+    "ActionParameter2": "302",
+    "ActionParameter3": "",
+    "ExtraActions": [],
+    "OrderIndex": 86,
+    "TriggerMatchingType": 1,
+    "Triggers": [
+      {
+        "Type": 2,
+        "PatternMatchingType": 0,
+        "PatternMatches": [
+          "pattern:^[^?]*%%2[fF].*$"
+        ],
+        "Parameter1": "X-Url-Audit-Raw-Path"
+      },
+      {
+        "Type": 6,
+        "PatternMatchingType": 0,
+        "PatternMatches": [
+          "pattern:^__url_audit=slash%-v2%-redirect$"
         ]
       }
     ]
