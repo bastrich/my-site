@@ -78,6 +78,12 @@ jobs:
             javascript-obfuscator "dist/$file" --output "dist/$file"
           done
 
+      - name: Configure CDN redirect rules
+        env:
+          BUNNYNET_API_KEY: ${{ secrets.CDN_API_KEY }}
+          CDN_PULL_ZONE_ID: ${{ secrets.CDN_PULL_ZONE_ID }}
+        run: python3 infra/configure_redirects.py
+
       - name: Upload to FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
