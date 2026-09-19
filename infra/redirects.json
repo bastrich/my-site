@@ -17,7 +17,11 @@
           "pattern:^https?://bastrich%.tech/+$",
           "pattern:^https?://bastrich%.tech/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*$",
           "pattern:^https?://www%.bastrich%.tech/+$",
-          "pattern:^https?://www%.bastrich%.tech/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*$"
+          "pattern:^https?://www%.bastrich%.tech/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*$",
+          "pattern:^https?://bastrich%.tech/+%%2[fF]/*$",
+          "pattern:^https?://bastrich%.tech/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$",
+          "pattern:^https?://www%.bastrich%.tech/+%%2[fF]/*$",
+          "pattern:^https?://www%.bastrich%.tech/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$"
         ]
       },
       {
@@ -54,7 +58,11 @@
           "pattern:^https?://bastrich%.tech/+$",
           "pattern:^https?://bastrich%.tech/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*$",
           "pattern:^https?://www%.bastrich%.tech/+$",
-          "pattern:^https?://www%.bastrich%.tech/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*$"
+          "pattern:^https?://www%.bastrich%.tech/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*$",
+          "pattern:^https?://bastrich%.tech/+%%2[fF]/*$",
+          "pattern:^https?://bastrich%.tech/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$",
+          "pattern:^https?://www%.bastrich%.tech/+%%2[fF]/*$",
+          "pattern:^https?://www%.bastrich%.tech/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$"
         ]
       },
       {
@@ -91,7 +99,11 @@
           "pattern:^https?://bastrich%.tech/+story%-points/*$",
           "pattern:^https?://bastrich%.tech/+story%-points/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*$",
           "pattern:^https?://www%.bastrich%.tech/+story%-points/*$",
-          "pattern:^https?://www%.bastrich%.tech/+story%-points/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*$"
+          "pattern:^https?://www%.bastrich%.tech/+story%-points/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*$",
+          "pattern:^https?://bastrich%.tech/+story%-points/*%%2[fF]/*$",
+          "pattern:^https?://bastrich%.tech/+story%-points/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$",
+          "pattern:^https?://www%.bastrich%.tech/+story%-points/*%%2[fF]/*$",
+          "pattern:^https?://www%.bastrich%.tech/+story%-points/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$"
         ]
       },
       {
@@ -128,7 +140,11 @@
           "pattern:^https?://bastrich%.tech/+story%-points/*$",
           "pattern:^https?://bastrich%.tech/+story%-points/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*$",
           "pattern:^https?://www%.bastrich%.tech/+story%-points/*$",
-          "pattern:^https?://www%.bastrich%.tech/+story%-points/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*$"
+          "pattern:^https?://www%.bastrich%.tech/+story%-points/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*$",
+          "pattern:^https?://bastrich%.tech/+story%-points/*%%2[fF]/*$",
+          "pattern:^https?://bastrich%.tech/+story%-points/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$",
+          "pattern:^https?://www%.bastrich%.tech/+story%-points/*%%2[fF]/*$",
+          "pattern:^https?://www%.bastrich%.tech/+story%-points/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$"
         ]
       },
       {
@@ -165,7 +181,11 @@
           "pattern:^https?://bastrich%.tech/+perfect%-code%-review/*$",
           "pattern:^https?://bastrich%.tech/+perfect%-code%-review/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*$",
           "pattern:^https?://www%.bastrich%.tech/+perfect%-code%-review/*$",
-          "pattern:^https?://www%.bastrich%.tech/+perfect%-code%-review/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*$"
+          "pattern:^https?://www%.bastrich%.tech/+perfect%-code%-review/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*$",
+          "pattern:^https?://bastrich%.tech/+perfect%-code%-review/*%%2[fF]/*$",
+          "pattern:^https?://bastrich%.tech/+perfect%-code%-review/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$",
+          "pattern:^https?://www%.bastrich%.tech/+perfect%-code%-review/*%%2[fF]/*$",
+          "pattern:^https?://www%.bastrich%.tech/+perfect%-code%-review/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$"
         ]
       },
       {
@@ -202,7 +222,11 @@
           "pattern:^https?://bastrich%.tech/+perfect%-code%-review/*$",
           "pattern:^https?://bastrich%.tech/+perfect%-code%-review/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*$",
           "pattern:^https?://www%.bastrich%.tech/+perfect%-code%-review/*$",
-          "pattern:^https?://www%.bastrich%.tech/+perfect%-code%-review/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*$"
+          "pattern:^https?://www%.bastrich%.tech/+perfect%-code%-review/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*$",
+          "pattern:^https?://bastrich%.tech/+perfect%-code%-review/*%%2[fF]/*$",
+          "pattern:^https?://bastrich%.tech/+perfect%-code%-review/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$",
+          "pattern:^https?://www%.bastrich%.tech/+perfect%-code%-review/*%%2[fF]/*$",
+          "pattern:^https?://www%.bastrich%.tech/+perfect%-code%-review/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$"
         ]
       },
       {
@@ -239,7 +263,11 @@
           "pattern:^https?://bastrich%.tech/+coupling%-and%-cohesion/*$",
           "pattern:^https?://bastrich%.tech/+coupling%-and%-cohesion/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*$",
           "pattern:^https?://www%.bastrich%.tech/+coupling%-and%-cohesion/*$",
-          "pattern:^https?://www%.bastrich%.tech/+coupling%-and%-cohesion/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*$"
+          "pattern:^https?://www%.bastrich%.tech/+coupling%-and%-cohesion/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*$",
+          "pattern:^https?://bastrich%.tech/+coupling%-and%-cohesion/*%%2[fF]/*$",
+          "pattern:^https?://bastrich%.tech/+coupling%-and%-cohesion/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$",
+          "pattern:^https?://www%.bastrich%.tech/+coupling%-and%-cohesion/*%%2[fF]/*$",
+          "pattern:^https?://www%.bastrich%.tech/+coupling%-and%-cohesion/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$"
         ]
       },
       {
@@ -276,7 +304,11 @@
           "pattern:^https?://bastrich%.tech/+coupling%-and%-cohesion/*$",
           "pattern:^https?://bastrich%.tech/+coupling%-and%-cohesion/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*$",
           "pattern:^https?://www%.bastrich%.tech/+coupling%-and%-cohesion/*$",
-          "pattern:^https?://www%.bastrich%.tech/+coupling%-and%-cohesion/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*$"
+          "pattern:^https?://www%.bastrich%.tech/+coupling%-and%-cohesion/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*$",
+          "pattern:^https?://bastrich%.tech/+coupling%-and%-cohesion/*%%2[fF]/*$",
+          "pattern:^https?://bastrich%.tech/+coupling%-and%-cohesion/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$",
+          "pattern:^https?://www%.bastrich%.tech/+coupling%-and%-cohesion/*%%2[fF]/*$",
+          "pattern:^https?://www%.bastrich%.tech/+coupling%-and%-cohesion/+[iI][nN][dD][eE][xX]%.[hH][tT][mM][lL]/*%%2[fF]/*$"
         ]
       },
       {
