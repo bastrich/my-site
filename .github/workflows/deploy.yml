@@ -78,7 +78,7 @@ jobs:
             javascript-obfuscator "dist/$file" --output "dist/$file"
           done
 
-      - name: Configure CDN redirect rules
+      - name: Configure CDN edge rules
         env:
           BUNNYNET_API_KEY: ${{ secrets.CDN_API_KEY }}
           CDN_PULL_ZONE_ID: ${{ secrets.CDN_PULL_ZONE_ID }}

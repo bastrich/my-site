@@ -556,5 +556,25 @@
         ]
       }
     ]
+  },
+  {
+    "Description": "RSS content type",
+    "Enabled": true,
+    "ActionType": 5,
+    "ActionParameter1": "Content-Type",
+    "ActionParameter2": "application/rss+xml; charset=utf-8",
+    "ActionParameter3": "",
+    "ExtraActions": [],
+    "OrderIndex": 60,
+    "TriggerMatchingType": 1,
+    "Triggers": [
+      {
+        "Type": 0,
+        "PatternMatchingType": 0,
+        "PatternMatches": [
+          "https://bastrich.tech/rss.xml"
+        ]
+      }
+    ]
   }
 ]

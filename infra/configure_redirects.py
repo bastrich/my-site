@@ -32,7 +32,11 @@ def api(method, path="", rule=None):
 def main():
     rules = json.loads(Path(__file__).with_name("redirects.json").read_text(encoding="utf-8"))
     current = json.loads(api("GET"))["EdgeRules"]
-    old_redirects = [rule for rule in current if rule["ActionType"] == 1]
+    old_rules = [
+        rule for rule in current
+        if rule["ActionType"] == 1
+        or (rule["ActionType"] == 5 and rule.get("Description") == "RSS content type")
+    ]
 
     max_order = max((rule["OrderIndex"] for rule in current), default=0)
     order_offset = (max_order // 100 + 1) * 100
@@ -41,10 +45,10 @@ def main():
         rule["OrderIndex"] += order_offset
         api("POST", "/edgerules/addOrUpdate", rule)
 
-    for rule in old_redirects:
+    for rule in old_rules:
         api("DELETE", f"/edgerules/{rule['Guid']}")
 
-    print(f"Created {len(rules)} redirects; deleted {len(old_redirects)} old redirects.")
+    print(f"Created {len(rules)} edge rules; deleted {len(old_rules)} old edge rules.")
 
 
 if __name__ == "__main__":
