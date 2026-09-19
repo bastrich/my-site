@@ -101,7 +101,7 @@ jobs:
           set net:timeout 30
           set net:max-retries 3
           open --env-password -u "$FTP_USERNAME" "ftp://$FTP_SERVER:21"
-          mirror --reverse --delete --no-perms --verbose ./dist/ /bastrich-tech/
+          mirror --reverse --delete --overwrite --no-perms --verbose ./dist/ /bastrich-tech/
           bye
           EOF
 

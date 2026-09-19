@@ -576,10 +576,10 @@
     ]
   },
   {
-    "Description": "Pages and feeds cache for one hour",
+    "Description": "CDN cache for one year, browser cache for one hour",
     "Enabled": true,
     "ActionType": 3,
-    "ActionParameter1": "3600",
+    "ActionParameter1": "31536000",
     "ActionParameter2": "",
     "ActionParameter3": "",
     "ExtraActions": [
