@@ -14,12 +14,9 @@
         "Type": 0,
         "PatternMatchingType": 0,
         "PatternMatches": [
-          "pattern:^https?://bastrich%.tech/+story%-points/*$",
-          "pattern:^https?://www%.bastrich%.tech/+story%-points/*$",
-          "pattern:^https?://bastrich%.tech/+perfect%-code%-review/*$",
-          "pattern:^https?://www%.bastrich%.tech/+perfect%-code%-review/*$",
-          "pattern:^https?://bastrich%.tech/+coupling%-and%-cohesion/*$",
-          "pattern:^https?://www%.bastrich%.tech/+coupling%-and%-cohesion/*$"
+          "pattern:^https?://[^/]+/+story%-points/*$",
+          "pattern:^https?://[^/]+/+perfect%-code%-review/*$",
+          "pattern:^https?://[^/]+/+coupling%-and%-cohesion/*$"
         ]
       }
     ]
