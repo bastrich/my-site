@@ -576,5 +576,32 @@
         ]
       }
     ]
+  },
+  {
+    "Description": "Pages and feeds cache for one hour",
+    "Enabled": true,
+    "ActionType": 3,
+    "ActionParameter1": "3600",
+    "ActionParameter2": "",
+    "ActionParameter3": "",
+    "ExtraActions": [
+      {
+        "ActionType": 16,
+        "ActionParameter1": "3600",
+        "ActionParameter2": "",
+        "ActionParameter3": ""
+      }
+    ],
+    "OrderIndex": 70,
+    "TriggerMatchingType": 1,
+    "Triggers": [
+      {
+        "Type": 0,
+        "PatternMatchingType": 0,
+        "PatternMatches": [
+          "https://bastrich.tech/*"
+        ]
+      }
+    ]
   }
 ]

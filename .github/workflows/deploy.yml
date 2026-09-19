@@ -82,7 +82,7 @@ jobs:
         env:
           BUNNYNET_API_KEY: ${{ secrets.CDN_API_KEY }}
           CDN_PULL_ZONE_ID: ${{ secrets.CDN_PULL_ZONE_ID }}
-        run: python3 infra/configure_redirects.py
+        run: python3 infra/configure_edge_rules.py
 
       - name: Upload to FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
