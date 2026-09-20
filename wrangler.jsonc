@@ -3,6 +3,11 @@
   "main": "infra/cloudflare/worker.js",
   "compatibility_date": "2026-09-19",
   "workers_dev": true,
+  // Custom domain on the Cloudflare zone. Wrangler creates the DNS record and
+  // the certificate on deploy; the worker keeps the workers.dev address too.
+  "routes": [
+    { "pattern": "cf.bastrich.tech", "custom_domain": true }
+  ],
   "assets": {
     "directory": "./dist/",
     "binding": "ASSETS",
