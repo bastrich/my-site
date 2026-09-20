@@ -78,42 +78,12 @@ jobs:
             javascript-obfuscator "dist/$file" --output "dist/$file"
           done
 
-      - name: Configure CDN edge rules
-        env:
-          BUNNYNET_API_KEY: ${{ secrets.CDN_API_KEY }}
-          CDN_PULL_ZONE_ID: ${{ secrets.CDN_PULL_ZONE_ID }}
-        run: python3 infra/configure_edge_rules.py
-
-      - name: Install lftp
-        run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y -qq lftp
-
-      - name: Upload to FTP
-        env:
-          FTP_SERVER: ${{ secrets.FTP_SERVER }}
-          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
-          LFTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-        run: |
-          lftp <<EOF
-          set cmd:fail-exit yes
-          set ftp:ssl-allow no
-          set net:timeout 30
-          set net:max-retries 3
-          open --env-password -u "$FTP_USERNAME" "ftp://$FTP_SERVER:21"
-          mirror --reverse --delete --overwrite --no-perms --verbose ./dist/ /bastrich-tech/
-          bye
-          EOF
-
-      - name: Install CDN CLI
-        run: npm install -g @bunny.net/cli@0.17.0
-
-      - name: Purge CDN cache
-        env:
-          BUNNYNET_API_KEY: ${{ secrets.CDN_API_KEY }}
-          CDN_PULL_ZONE_ID: ${{ secrets.CDN_PULL_ZONE_ID }}
-        run: |
-          bunny api POST "/pullzone/${CDN_PULL_ZONE_ID}/purgeCache"
+      - name: Deploy to Cloudflare
+        uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: deploy
 
       - name: Warm CDN cache
         env:
