@@ -40,6 +40,7 @@ jobs:
           cp robots.txt dist
           cp sitemap.xml dist
           cp rss.xml dist
+          cp infra/cloudflare/_headers dist
 
       - name: Add cache-busting version to CSS/JS imports
         run: |
@@ -78,6 +79,23 @@ jobs:
             javascript-obfuscator "dist/$file" --output "dist/$file"
           done
 
+      - name: Configure Cloudflare zone
+        env:
+          CF_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CF_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+        run: |
+          set -eo pipefail
+          cf() {
+            curl -sS --fail-with-body -X "$1" \
+              "https://api.cloudflare.com/client/v4/zones/$CF_ZONE_ID/$2" \
+              -H "Authorization: Bearer $CF_API_TOKEN" \
+              -H "Content-Type: application/json" \
+              --data "$3" | jq -e '.success' > /dev/null
+          }
+          cf PATCH settings/always_use_https '{"value":"on"}'
+          cf PUT rulesets/phases/http_request_dynamic_redirect/entrypoint \
+            "$(jq '{rules: .}' infra/cloudflare/redirect_rules.json)"
+
       - name: Deploy to Cloudflare
         uses: cloudflare/wrangler-action@v4
         with:
@@ -85,10 +103,10 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: deploy
 
-      - name: Warm CDN cache
-        env:
-          SITE: cf.bastrich.tech
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_LAMBDA_ROLE_ARN: ${{ secrets.AWS_LAMBDA_ROLE_ARN }}
-        run: bash infra/warm.sh
+#      - name: Warm CDN cache
+#        env:
+#          SITE: cf.bastrich.tech
+#          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+#          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+#          AWS_LAMBDA_ROLE_ARN: ${{ secrets.AWS_LAMBDA_ROLE_ARN }}
+#        run: bash infra/warm.sh

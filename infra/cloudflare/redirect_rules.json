@@ -1,0 +1,62 @@
+[
+  {
+    "ref": "canonical_apex_host",
+    "description": "www to apex",
+    "expression": "http.host eq \"www.bastrich.tech\"",
+    "action": "redirect",
+    "action_parameters": {
+      "from_value": {
+        "target_url": {
+          "expression": "concat(\"https://bastrich.tech\", http.request.uri.path)"
+        },
+        "status_code": 301,
+        "preserve_query_string": true
+      }
+    }
+  },
+  {
+    "ref": "canonical_index_html",
+    "description": "Strip index.html as a 301, not the 307 native html_handling returns",
+    "expression": "ends_with(http.request.uri.path, \"/index.html\")",
+    "action": "redirect",
+    "action_parameters": {
+      "from_value": {
+        "target_url": {
+          "expression": "concat(\"https://\", http.host, substring(http.request.uri.path, 0, -10))"
+        },
+        "status_code": 301,
+        "preserve_query_string": true
+      }
+    }
+  },
+  {
+    "ref": "canonical_index_html_slash",
+    "description": "Same, for index.html followed by a slash",
+    "expression": "ends_with(http.request.uri.path, \"/index.html/\")",
+    "action": "redirect",
+    "action_parameters": {
+      "from_value": {
+        "target_url": {
+          "expression": "concat(\"https://\", http.host, substring(http.request.uri.path, 0, -11))"
+        },
+        "status_code": 301,
+        "preserve_query_string": true
+      }
+    }
+  },
+  {
+    "ref": "canonical_trailing_slash",
+    "description": "Extensionless page paths get a trailing slash as a 301, not the 307 native html_handling returns. Percent-encoded paths are left to the worker.",
+    "expression": "not ends_with(http.request.uri.path, \"/\") and not http.request.uri.path contains \".\" and not http.request.uri.path contains \"%\"",
+    "action": "redirect",
+    "action_parameters": {
+      "from_value": {
+        "target_url": {
+          "expression": "concat(\"https://\", http.host, http.request.uri.path, \"/\")"
+        },
+        "status_code": 301,
+        "preserve_query_string": true
+      }
+    }
+  }
+]
