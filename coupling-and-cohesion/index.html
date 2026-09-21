@@ -172,14 +172,14 @@
                     <p style="margin-top: 12px;">
                         For example, suppose my function sorts an array of integers. If I have to modify the function to
                         make it sort an array of strings, the function is coupled to the integer type. If, instead, the
-                        function works with an abstract Comparable type, I can use it with any type that satisfies that
+                        function works with an abstract <em>Comparable</em> type, I can use it with any type that satisfies that
                         contract without modifying the function itself. In other words, it is not coupled to any
-                        specific element type, although it is still coupled to the Comparable contract. At the same
+                        specific element type, although it is still coupled to the <em>Comparable</em> contract. At the same
                         time, if the function is responsible only for sorting the array it receives - with no unrelated
                         transformations, business-rule validation, and so on - it has high cohesion.
                     </p>
                     <figure class="article-figure">
-                        <img src="img/example.png" alt="Example" class="article-image article-image--lg">
+                        <img src="img/example.png?v=1" alt="Example" class="article-image article-image--lg">
                     </figure>
                     <p style="margin-top: 12px;">
                         You may already see that neither coupling nor cohesion is an absolute measure. Both depend on
