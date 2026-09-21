@@ -40,7 +40,7 @@ jobs:
           cp robots.txt dist
           cp sitemap.xml dist
           cp rss.xml dist
-          cp infra/cloudflare/_headers dist
+          cp infra/_headers dist
 
       - name: Add cache-busting version to CSS/JS imports
         run: |
@@ -94,7 +94,7 @@ jobs:
           }
           cf PATCH settings/always_use_https '{"value":"on"}'
           cf PUT rulesets/phases/http_request_dynamic_redirect/entrypoint \
-            "$(jq '{rules: .}' infra/cloudflare/redirect_rules.json)"
+            "$(jq '{rules: .}' infra/redirect_rules.json)"
 
       - name: Deploy to Cloudflare
         uses: cloudflare/wrangler-action@v4
