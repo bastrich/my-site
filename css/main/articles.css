@@ -1,6 +1,7 @@
 .featured .article-list {
     list-style: none;
     display: grid;
+    align-content: start;
     gap: 10px;
     margin-top: 8px;
 }
@@ -13,7 +14,12 @@
 }
 
 .article-item a {
-    display: block;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+        "title title"
+        "meta  platform";
+    gap: 8px 12px;
     padding: 10px 12px;
 }
 
@@ -24,55 +30,56 @@
 }
 
 .article-link {
+    grid-area: title;
+    padding: 14px 16px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-lg);
+    font-size: 15px;
     font-weight: 800;
+    line-height: 1.35;
     letter-spacing: -0.01em;
-    display: inline-block;
 }
 
 .article-meta {
-    margin-top: 4px;
+    grid-area: meta;
     font-size: 13px;
+    line-height: 18px;
     color: var(--text-muted);
 }
 
-.articles-list {
-    margin-top: 18px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.article-link {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 16px;
-    padding: 14px 16px;
-    background: var(--bg-card);
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--border-soft);
-    text-decoration: none;
-    transition: all 0.12s ease-out;
-}
-
-.article-link-title {
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--text-main);
-    flex: 1;
-}
-
 .article-link-platform {
+    grid-area: platform;
     font-size: 13px;
+    line-height: 18px;
     font-weight: 600;
     color: var(--accent);
     white-space: nowrap;
     opacity: 0.7;
-    transition: opacity 0.12s ease-out;
 }
 
-.article-link:hover .article-link-platform {
-    opacity: 1;
+@media (min-width: 980px) {
+    .featured {
+        align-self: stretch;
+        contain: size;
+    }
+
+    .featured .card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .featured .article-list {
+        flex: 1;
+        min-height: 0;
+        overflow-y: auto;
+        margin: 4px -8px 0;
+        padding: 4px 8px 32px;
+        mask-image: linear-gradient(to bottom, #000 calc(100% - 32px), transparent);
+        scrollbar-width: thin;
+        scrollbar-color: var(--border-soft) transparent;
+    }
 }
 
 .section-head--with-action {
