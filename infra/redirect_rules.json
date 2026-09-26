@@ -17,7 +17,7 @@
   {
     "ref": "canonical_index_html",
     "description": "Strip index.html as a 301, not the 307 native html_handling returns",
-    "expression": "ends_with(http.request.uri.path, \"/index.html\")",
+    "expression": "ends_with(lower(http.request.uri.path), \"/index.html\")",
     "action": "redirect",
     "action_parameters": {
       "from_value": {
@@ -32,7 +32,7 @@
   {
     "ref": "canonical_index_html_slash",
     "description": "Same, for index.html followed by a slash",
-    "expression": "ends_with(http.request.uri.path, \"/index.html/\")",
+    "expression": "ends_with(lower(http.request.uri.path), \"/index.html/\")",
     "action": "redirect",
     "action_parameters": {
       "from_value": {
